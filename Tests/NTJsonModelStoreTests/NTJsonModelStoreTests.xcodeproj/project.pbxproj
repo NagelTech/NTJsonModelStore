@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1A631179B8543AD91AC9118 /* libPods-NTJsonModelStoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F95403485945E69A5D46ED /* libPods-NTJsonModelStoreTests.a */; };
+		F09D077C196D91810073ACCE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077B196D91810073ACCE /* XCTest.framework */; };
+		F09D077E196D91810073ACCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077D196D91810073ACCE /* Foundation.framework */; };
+		F09D0780196D91810073ACCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077F196D91810073ACCE /* UIKit.framework */; };
+		F09D0786196D91810073ACCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F09D0784196D91810073ACCE /* InfoPlist.strings */; };
+		F09D0788196D91810073ACCE /* NTJsonModelStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D0787196D91810073ACCE /* NTJsonModelStoreTests.m */; };
+		F09D0790196D95F60073ACCE /* NTJsonModelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D078F196D95F60073ACCE /* NTJsonModelStore.m */; };
+		F09D0793196D97110073ACCE /* NTJsonModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D0792196D97110073ACCE /* NTJsonModelCollection.m */; };
+		F09D0796196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D0795196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.m */; };
+		F09D079D196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D079C196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.m */; };
+		F09D07A0196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = F09D079F196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7644A1389F8F4AB1B74D1C92 /* Pods-NTJsonModelStoreTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTJsonModelStoreTests.xcconfig"; path = "Pods/Pods-NTJsonModelStoreTests.xcconfig"; sourceTree = "<group>"; };
+		94F95403485945E69A5D46ED /* libPods-NTJsonModelStoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F09D0778196D91810073ACCE /* NTJsonModelStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTJsonModelStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F09D077B196D91810073ACCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F09D077D196D91810073ACCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F09D077F196D91810073ACCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F09D0783196D91810073ACCE /* NTJsonModelStoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NTJsonModelStoreTests-Info.plist"; sourceTree = "<group>"; };
+		F09D0785196D91810073ACCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F09D0787196D91810073ACCE /* NTJsonModelStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStoreTests.m; sourceTree = "<group>"; };
+		F09D0789196D91810073ACCE /* NTJsonModelStoreTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelStoreTests-Prefix.pch"; sourceTree = "<group>"; };
+		F09D078E196D95F60073ACCE /* NTJsonModelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStore.h; sourceTree = "<group>"; };
+		F09D078F196D95F60073ACCE /* NTJsonModelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStore.m; sourceTree = "<group>"; };
+		F09D0791196D97110073ACCE /* NTJsonModelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJsonModelCollection.h; sourceTree = "<group>"; };
+		F09D0792196D97110073ACCE /* NTJsonModelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelCollection.m; sourceTree = "<group>"; };
+		F09D0794196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonModel+NTJsonModelStore.h"; sourceTree = "<group>"; };
+		F09D0795196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJsonModel+NTJsonModelStore.m"; sourceTree = "<group>"; };
+		F09D0797196DCFAE0073ACCE /* NTJsonModelCollection+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelCollection+Private.h"; sourceTree = "<group>"; };
+		F09D0798196DCFC60073ACCE /* NTJsonModelStore+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelStore+Private.h"; sourceTree = "<group>"; };
+		F09D079B196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonCollection+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
+		F09D079C196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJsonCollection+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
+		F09D079E196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonStore+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
+		F09D079F196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJsonStore+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F09D0775196D91810073ACCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09D077C196D91810073ACCE /* XCTest.framework in Frameworks */,
+				F09D0780196D91810073ACCE /* UIKit.framework in Frameworks */,
+				F09D077E196D91810073ACCE /* Foundation.framework in Frameworks */,
+				E1A631179B8543AD91AC9118 /* libPods-NTJsonModelStoreTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F09D076D196D91510073ACCE = {
+			isa = PBXGroup;
+			children = (
+				F09D078D196D95B30073ACCE /* NTJsonModelStore */,
+				F09D0781196D91810073ACCE /* NTJsonModelStoreTests */,
+				F09D077A196D91810073ACCE /* Frameworks */,
+				F09D0779196D91810073ACCE /* Products */,
+				7644A1389F8F4AB1B74D1C92 /* Pods-NTJsonModelStoreTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F09D0779196D91810073ACCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F09D0778196D91810073ACCE /* NTJsonModelStoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F09D077A196D91810073ACCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F09D077B196D91810073ACCE /* XCTest.framework */,
+				F09D077D196D91810073ACCE /* Foundation.framework */,
+				F09D077F196D91810073ACCE /* UIKit.framework */,
+				94F95403485945E69A5D46ED /* libPods-NTJsonModelStoreTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F09D0781196D91810073ACCE /* NTJsonModelStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				F09D0787196D91810073ACCE /* NTJsonModelStoreTests.m */,
+				F09D0782196D91810073ACCE /* Supporting Files */,
+			);
+			path = NTJsonModelStoreTests;
+			sourceTree = "<group>";
+		};
+		F09D0782196D91810073ACCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F09D0783196D91810073ACCE /* NTJsonModelStoreTests-Info.plist */,
+				F09D0784196D91810073ACCE /* InfoPlist.strings */,
+				F09D0789196D91810073ACCE /* NTJsonModelStoreTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F09D078D196D95B30073ACCE /* NTJsonModelStore */ = {
+			isa = PBXGroup;
+			children = (
+				F09D079B196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.h */,
+				F09D079C196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.m */,
+				F09D0794196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.h */,
+				F09D0795196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.m */,
+				F09D0797196DCFAE0073ACCE /* NTJsonModelCollection+Private.h */,
+				F09D0791196D97110073ACCE /* NTJsonModelCollection.h */,
+				F09D0792196D97110073ACCE /* NTJsonModelCollection.m */,
+				F09D0798196DCFC60073ACCE /* NTJsonModelStore+Private.h */,
+				F09D078E196D95F60073ACCE /* NTJsonModelStore.h */,
+				F09D078F196D95F60073ACCE /* NTJsonModelStore.m */,
+				F09D079E196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.h */,
+				F09D079F196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m */,
+			);
+			name = NTJsonModelStore;
+			path = ../../Classes/iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F09D0777196D91810073ACCE /* NTJsonModelStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F09D078A196D91810073ACCE /* Build configuration list for PBXNativeTarget "NTJsonModelStoreTests" */;
+			buildPhases = (
+				A84EAE6872B2413F95B0C78A /* Check Pods Manifest.lock */,
+				F09D0774196D91810073ACCE /* Sources */,
+				F09D0775196D91810073ACCE /* Frameworks */,
+				F09D0776196D91810073ACCE /* Resources */,
+				B18D488EF4494AD1921E3CAB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NTJsonModelStoreTests;
+			productName = NTJsonModelStoreTests;
+			productReference = F09D0778196D91810073ACCE /* NTJsonModelStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F09D076E196D91510073ACCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = F09D0771196D91510073ACCE /* Build configuration list for PBXProject "NTJsonModelStoreTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F09D076D196D91510073ACCE;
+			productRefGroup = F09D0779196D91810073ACCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F09D0777196D91810073ACCE /* NTJsonModelStoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F09D0776196D91810073ACCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09D0786196D91810073ACCE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A84EAE6872B2413F95B0C78A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B18D488EF4494AD1921E3CAB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-NTJsonModelStoreTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F09D0774196D91810073ACCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09D0788196D91810073ACCE /* NTJsonModelStoreTests.m in Sources */,
+				F09D0790196D95F60073ACCE /* NTJsonModelStore.m in Sources */,
+				F09D079D196DD13A0073ACCE /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */,
+				F09D0793196D97110073ACCE /* NTJsonModelCollection.m in Sources */,
+				F09D0796196D975E0073ACCE /* NTJsonModel+NTJsonModelStore.m in Sources */,
+				F09D07A0196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F09D0784196D91810073ACCE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F09D0785196D91810073ACCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F09D0772196D91510073ACCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F09D0773196D91510073ACCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F09D078B196D91810073ACCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7644A1389F8F4AB1B74D1C92 /* Pods-NTJsonModelStoreTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTJsonModelStoreTests/NTJsonModelStoreTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NTJsonModelStoreTests/NTJsonModelStoreTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F09D078C196D91810073ACCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7644A1389F8F4AB1B74D1C92 /* Pods-NTJsonModelStoreTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTJsonModelStoreTests/NTJsonModelStoreTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NTJsonModelStoreTests/NTJsonModelStoreTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F09D0771196D91510073ACCE /* Build configuration list for PBXProject "NTJsonModelStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F09D0772196D91510073ACCE /* Debug */,
+				F09D0773196D91510073ACCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F09D078A196D91810073ACCE /* Build configuration list for PBXNativeTarget "NTJsonModelStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F09D078B196D91810073ACCE /* Debug */,
+				F09D078C196D91810073ACCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F09D076E196D91510073ACCE /* Project object */;
+}
