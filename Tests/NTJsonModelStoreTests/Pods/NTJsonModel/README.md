@@ -8,12 +8,9 @@ Proof of concept notes
 
 Seems like this all makes sense, but there are some gotchas:
 
- - Need to work out exactly how properties will be defined. (What is the right mix between "magical"
- syntax and explicit declarations?)
- 
  - Object Arrays need work. They need to use NTJsonModelArray and work basically the same way. Disabled for now.
  
- - Handle cases where multiple properties point to the same JsonKeyPath. The Cache would need to be cleaed for all matching properties
+ - Handle cases where multiple properties point to the same JsonKeyPath. The Cache would need to be cleared for all matching properties
    when the underlying json is changed. This will make creating look up properties (where only the ID is in the JSON) work well. In order
    to make look up properties work well, we may also need to add the ability to do cache expiration.
    
@@ -22,8 +19,6 @@ Seems like this all makes sense, but there are some gotchas:
    
  - need to make sure everything is threadsafe. (Or not?)
  
- - Store meta data using magical macros ;)
-
 Done-ish
 --------
    
@@ -51,6 +46,10 @@ Done-ish
   - ~~Best case for property access performance is NSDictionary access. Minimum would be 1 lookup for the property info
    and a second one to get the property value (either from the cache or from the dictionary its self.)~~
 
+ - ~~Need to work out exactly how properties will be defined. (What is the right mix between "magical"
+ syntax and explicit declarations?)~~
+
+ - ~~Store meta data using magical macros ;)~~
 
 
 

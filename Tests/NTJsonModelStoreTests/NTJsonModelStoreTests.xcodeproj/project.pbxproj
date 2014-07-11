@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1A631179B8543AD91AC9118 /* libPods-NTJsonModelStoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F95403485945E69A5D46ED /* libPods-NTJsonModelStoreTests.a */; };
+		F0760156196F5102002C888C /* NTJsonModelStore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F0760155196F5102002C888C /* NTJsonModelStore.podspec */; };
 		F09D077C196D91810073ACCE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077B196D91810073ACCE /* XCTest.framework */; };
 		F09D077E196D91810073ACCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077D196D91810073ACCE /* Foundation.framework */; };
 		F09D0780196D91810073ACCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09D077F196D91810073ACCE /* UIKit.framework */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		7644A1389F8F4AB1B74D1C92 /* Pods-NTJsonModelStoreTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTJsonModelStoreTests.xcconfig"; path = "Pods/Pods-NTJsonModelStoreTests.xcconfig"; sourceTree = "<group>"; };
 		94F95403485945E69A5D46ED /* libPods-NTJsonModelStoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0760155196F5102002C888C /* NTJsonModelStore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NTJsonModelStore.podspec; path = ../../NTJsonModelStore.podspec; sourceTree = "<group>"; };
 		F09D0778196D91810073ACCE /* NTJsonModelStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTJsonModelStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09D077B196D91810073ACCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F09D077D196D91810073ACCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,6 +124,7 @@
 				F09D0798196DCFC60073ACCE /* NTJsonModelStore+Private.h */,
 				F09D078E196D95F60073ACCE /* NTJsonModelStore.h */,
 				F09D078F196D95F60073ACCE /* NTJsonModelStore.m */,
+				F0760155196F5102002C888C /* NTJsonModelStore.podspec */,
 				F09D079E196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.h */,
 				F09D079F196DD32D0073ACCE /* NTJsonStore+NTJsonModelStore_Private.m */,
 			);
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0760156196F5102002C888C /* NTJsonModelStore.podspec in Resources */,
 				F09D0786196D91810073ACCE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

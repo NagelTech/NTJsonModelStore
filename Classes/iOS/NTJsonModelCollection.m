@@ -111,6 +111,30 @@
 }
 
 
+-(void)applyConfig:(NSDictionary *)config
+{
+    NSString *modelClass = config[@"modelClass"];
+    
+    if ( [modelClass isKindOfClass:[NSString class]] )
+        self.modelClass = NSClassFromString(modelClass);
+    
+    [_collection applyConfig:config];
+}
+
+
+-(BOOL)applyConfigFile:(NSString *)filename
+{
+    NSDictionary *config = [NTJsonStore loadConfigFile:filename];
+    
+    if ( !config )
+        return NO;
+    
+    [self applyConfig:config];
+    
+    return YES;
+}
+
+
 -(NSString *)name
 {
     return _collection.name;

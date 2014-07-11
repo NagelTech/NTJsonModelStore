@@ -245,7 +245,7 @@
 }
 
 
-#pragma mark - NAMutableArray overrides
+#pragma mark - NSMutableArray overrides
 
 
 -(void)insertObject:(id)value atIndex:(NSUInteger)index

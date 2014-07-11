@@ -34,6 +34,9 @@
 -(id)initWithName:(NSString *)storeName;
 -(id)initWithPath:(NSString *)storePath name:(NSString *)storeName;
 
+-(void)applyConfig:(NSDictionary *)config;
+-(BOOL)applyConfigFile:(NSString *)filename;
+
 -(void)close;
 
 -(NTJsonModelCollection *)collectionWithName:(NSString *)collectionName;

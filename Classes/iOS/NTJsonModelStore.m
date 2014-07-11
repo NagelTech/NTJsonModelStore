@@ -27,6 +27,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         defaultModelStore = [[NTJsonModelStore alloc] init];
+        
+        // Load a default configuration, if it exists
+        
+        [defaultModelStore applyConfigFile:@"NTJsonModelStore.config"];
     });
     
     return defaultModelStore;
@@ -74,6 +78,47 @@
     return self;
 }
 
+
+-(void)applyConfig:(NSDictionary *)config
+{
+    // Apply the store's configuration, less any collections - we do the collections special...
+    
+    NSMutableDictionary *tempConfig = [config mutableCopy];
+    
+    [tempConfig removeObjectForKey:@"collections"]; // if it exists
+    
+    [_store applyConfig:tempConfig];
+    
+    NSDictionary *collections = config[@"collections"];
+    
+    if ( [collections isKindOfClass:[NSDictionary class]] )
+    {
+        for(NSString *collectionName in collections.allKeys)
+        {
+            NSDictionary *collectionConfig = collections[collectionName];
+            
+            if ( [collectionConfig isKindOfClass:[NSDictionary class]] )
+            {
+                NTJsonModelCollection *collection = [self collectionWithName:collectionName];
+                
+                [collection applyConfig:collectionConfig];
+            }
+        }
+    }
+}
+
+
+-(BOOL)applyConfigFile:(NSString *)filename
+{
+    NSDictionary *config = [NTJsonStore loadConfigFile:filename];
+    
+    if ( !config )
+        return NO;
+    
+    [self applyConfig:config];
+    
+    return YES;
+}
 
 -(NSString *)storePath
 {

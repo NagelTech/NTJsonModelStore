@@ -28,6 +28,9 @@
 -(void)addUniqueIndexWithKeys:(NSString *)keys;
 -(void)addQueryableFields:(NSString *)fields;
 
+-(void)applyConfig:(NSDictionary *)config;
+-(BOOL)applyConfigFile:(NSString *)filename;
+
 -(void)flushCache;
 
 -(void)beginEnsureSchemaWithCompletionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
