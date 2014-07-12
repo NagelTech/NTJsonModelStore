@@ -6,6 +6,8 @@
 //
 //
 
+#import <objc/runtime.h>
+
 #import "NTJsonModelStore.h"
 
 
@@ -17,6 +19,7 @@
     return [NTJsonModelStore defaultModelStore];
 }
 
+
 +(NSString *)defaultModelCollectionName
 {
     return NSStringFromClass(self);
@@ -25,15 +28,15 @@
 
 +(NTJsonModelCollection *)defaultModelCollection
 {
-    static NTJsonModelCollection *defaultModelCollection;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^
+    NTJsonModelCollection *defaultModelCollection = objc_getAssociatedObject(self, @selector(defaultModelCollection));
+
+    if ( !defaultModelCollection )
     {
         defaultModelCollection = [[self defaultModelStore] collectionWithName:[self defaultModelCollectionName]];
-        
         defaultModelCollection.modelClass = self;
-    });
+        
+        objc_setAssociatedObject(self, @selector(defaultModelCollection), defaultModelCollection, OBJC_ASSOCIATION_RETAIN);
+    }
     
     return defaultModelCollection;
 }
