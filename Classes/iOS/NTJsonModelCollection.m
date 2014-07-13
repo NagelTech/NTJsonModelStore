@@ -35,7 +35,7 @@
 -(NSMutableDictionary *)modelInfo
 {
     if ( !_modelInfo )
-        _modelInfo = [[_collection.store metadataWithKey:[self modelInfoKey]] mutableCopy];
+        _modelInfo = [[_collection.store metadataWithKey:[self modelInfoKey]] mutableCopy] ?: [NSMutableDictionary dictionary];
     
     return _modelInfo;
 }

@@ -19,7 +19,10 @@
     NTJsonModelCollection *modelCollection = objc_getAssociatedObject(self, @selector(modelCollection));
     
     if ( !modelCollection )
+    {
         modelCollection = [[NTJsonModelCollection alloc] initWithCollection:self];
+        objc_setAssociatedObject(self, @selector(modelCollection), modelCollection, OBJC_ASSOCIATION_RETAIN);
+    }
     
     return modelCollection;
 }
