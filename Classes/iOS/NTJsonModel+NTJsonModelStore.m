@@ -11,6 +11,13 @@
 #import "NTJsonModelStore.h"
 
 
+@interface NTJsonModel (NTJsonModel_Stolen)
+
++(BOOL)modelClassForJsonOverridden; // this should be published somehow in NTJsonModel.h/c, for now we are stealing it
+
+@end
+
+
 @implementation NTJsonModel (NTJsonModelStore)
 
 
@@ -32,8 +39,29 @@
 
     if ( !defaultModelCollection )
     {
-        defaultModelCollection = [[self defaultModelStore] collectionWithName:[self defaultModelCollectionName]];
-        defaultModelCollection.modelClass = self;
+        // See if we have a polymorphic base class...
+        
+        Class baseClass = nil;
+        
+        for(Class c=[self superclass]; c && c != [NTJsonModel class]; c = [c superclass])
+        {
+            if ( [c modelClassForJsonOverridden] )
+            {
+                baseClass = c;
+                break;
+            }
+        }
+        
+        if ( baseClass )    // if we have a polymorph, use it's modelCollection
+        {
+            defaultModelCollection = [baseClass defaultModelCollection];
+        }
+        
+        else // normal case, just create a collection using the default name.
+        {
+            defaultModelCollection = [[self defaultModelStore] collectionWithName:[self defaultModelCollectionName]];
+            defaultModelCollection.modelClass = self;
+        }
         
         objc_setAssociatedObject(self, @selector(defaultModelCollection), defaultModelCollection, OBJC_ASSOCIATION_RETAIN);
     }
