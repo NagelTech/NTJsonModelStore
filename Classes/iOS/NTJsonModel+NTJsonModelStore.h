@@ -12,6 +12,7 @@
 @interface NTJsonModel (NTJsonModelStore)
 
 @property (nonatomic) NTJsonRowId rowid;
+@property (nonatomic,readonly) BOOL isJsonCurrent;
 
 +(NTJsonModelStore *)defaultModelStore;
 +(NSString *)defaultModelCollectionName;

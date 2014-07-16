@@ -8,7 +8,7 @@
 
 #import <objc/runtime.h>
 
-#import "NTJsonModelStore.h"
+#import "NTJsonModelStore+Private.h"
 
 
 @interface NTJsonModel (NTJsonModel_Stolen)
@@ -22,6 +22,12 @@
 
 
 NTJsonProperty(rowid, jsonPath="__rowid__")
+
+
+-(BOOL)isJsonCurrent
+{
+    return [NTJsonStore isJsonCurrent:self.json];
+}
 
 
 +(NTJsonModelStore *)defaultModelStore
