@@ -21,6 +21,9 @@
 @implementation NTJsonModel (NTJsonModelStore)
 
 
+NTJsonProperty(rowid, jsonPath="__rowid__")
+
+
 +(NTJsonModelStore *)defaultModelStore
 {
     return [NTJsonModelStore defaultModelStore];
