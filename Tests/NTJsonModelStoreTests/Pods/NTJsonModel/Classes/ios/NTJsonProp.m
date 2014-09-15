@@ -65,10 +65,31 @@ static NSString *ObjcAttributeIvar = @"V";
     if ( !attributes[ObjcAttributeDynamic] )
         return nil;
     
+    // Create our class and set the basics...
+    
     NTJsonProp *prop = [[NTJsonProp alloc] init];
     
     prop->_modelClass = class;
     prop->_name = @(property_getName(objcProperty));
+    
+    // Get to our propInfo...
+    
+    __NTJsonPropertyInfo propInfo;
+    
+    SEL propInfoSelector = NSSelectorFromString([NSString stringWithFormat:@"__NTJsonProperty__%@", prop->_name]);
+    
+    if ( [class respondsToSelector:propInfoSelector] )
+    {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[class methodSignatureForSelector:propInfoSelector]];
+        invocation.target = class;
+        invocation.selector = propInfoSelector;
+        [invocation invoke];
+        
+        [invocation getReturnValue:&propInfo];
+    }
+    
+    else
+        memset(&propInfo, 0, sizeof(propInfo)); // zero is all defaults.
     
     // Figure out the base type...
     
@@ -77,7 +98,7 @@ static NSString *ObjcAttributeIvar = @"V";
     NSDictionary *simplePropertyTypes =
     @{
       @(@encode(int)): @(NTJsonPropTypeInt),
-      @(@encode(BOOL)): @(NTJsonPropTypeBool),  // == char, but that's an unlikely type for a property
+      @(@encode(signed char)): @(NTJsonPropTypeBool),  // sometimes BOOls look like this, that's an unlikely type for a property
       @(@encode(bool)): @(NTJsonPropTypeBool),
       @(@encode(float)): @(NTJsonPropTypeFloat),
       @(@encode(double)): @(NTJsonPropTypeDouble),
@@ -111,19 +132,50 @@ static NSString *ObjcAttributeIvar = @"V";
             [protocols addObject:[objcType substringWithRange:[result rangeAtIndex:1]]];
         }];
         
-        NSSet *arrayClassNames = [NSSet setWithArray:@[@"NSArray", @"NSMutableArray", @"NTJsonModelArray"]];
+        NSSet *arrayClassNames = [NSSet setWithArray:@[@"NSArray"]];        // only this one type for now
         
         if ( [arrayClassNames containsObject:className] )
         {
-            // It's an array type...
+            // It's an array type, let's figure out the element type...
+            // this can com from two different places, so we need to do a bit of validation here...
             
-            NSString *elementClassName = [protocols firstObject];   // todo: we will need to deal with multiple protocols
+            Class elementClass = propInfo.elementType;
+            NSString *protocolElementClassName = [protocols firstObject];
             
-            if ( !elementClassName )
-                elementClassName = @"NSObject";
+            if ( elementClass && protocolElementClassName.length ) // both were defined
+            {
+                @throw [NSException exceptionWithName:@"NTJsonModelInvalidType" reason:[NSString stringWithFormat:@"Array element type is defined as a protocol as well as explicitly in NTPropInfo: %@.%@ (%@ and %@)", NSStringFromClass(class), prop->_name, NSStringFromClass(elementClass), protocolElementClassName] userInfo:nil];
+            }
+            else if ( !elementClass && !protocolElementClassName.length ) // neither were defined
+            {
+                elementClass = [NSObject class];
+            }
+            else if ( protocolElementClassName.length )    // only defined in protocol
+            {
+                elementClass = NSClassFromString(protocolElementClassName);
+                
+                if ( !elementClass )
+                {
+                    @throw [NSException exceptionWithName:@"NTJsonModelInvalidType" reason:[NSString stringWithFormat:@"Invalid elementName defined as protocol: %@.%@ (%@)", NSStringFromClass(class), prop->_name, protocolElementClassName] userInfo:nil];
+                }
+            }
             
-            prop->_typeClass = NSClassFromString(elementClassName);  // todo: validate
-            prop->_type = [prop->_typeClass isSubclassOfClass:[NTJsonModel class]] ? NTJsonPropTypeModelArray : NTJsonPropTypeObjectArray;
+            if ( elementClass == [NSObject class] )
+            {
+                // Untyped arrays are handled as simple objects...
+                prop->_type = NTJsonPropTypeObject;
+                prop->_typeClass = NSClassFromString(className);
+            }
+            else
+            {
+                prop->_type = [prop->_typeClass isSubclassOfClass:[NTJsonModel class]] ? NTJsonPropTypeModelArray : NTJsonPropTypeObjectArray;
+                prop->_typeClass = elementClass;
+            }
+        }
+        
+        else if ( [className isEqualToString:@"NSMutableArray"] || [className isEqualToString:@"NSMutableDictionary"] )
+        {
+            @throw [NSException exceptionWithName:@"NTJsonModelInvalidType" reason:[NSString stringWithFormat:@"Mutable Arrays/Dictionaries are not supported. Property: %@.%@ (%@)", NSStringFromClass(class), prop->_name, objcType] userInfo:nil];
         }
         
         else
@@ -135,38 +187,45 @@ static NSString *ObjcAttributeIvar = @"V";
 
     if ( !prop->_type )
         @throw [NSException exceptionWithName:@"NTJsonModelInvalidType" reason:[NSString stringWithFormat:@"Unsupported type for property %@.%@ (%@)", NSStringFromClass(class), prop->_name, objcType] userInfo:nil];
+    
+    prop->_isReadOnly = (attributes[ObjcAttributeReadonly]) ? YES : NO;
+    
+    // Parse the keypath...
 
-    // Ok, now get remaining details from propInfo...
+    NSString *jsonKeyPath = (propInfo.jsonPath) ? @(propInfo.jsonPath) : prop->_name;
     
-    __NTJsonPropertyInfo propInfo;
+    NSInteger dotPos = [jsonKeyPath rangeOfString:@"."].location;
     
-    SEL propInfoSelector = NSSelectorFromString([NSString stringWithFormat:@"__NTJsonProperty__%@", prop->_name]);
-    
-    if ( [class respondsToSelector:propInfoSelector] )
+    if ( dotPos != NSNotFound )
     {
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[class methodSignatureForSelector:propInfoSelector]];
-        invocation.target = class;
-        invocation.selector = propInfoSelector;
-        [invocation invoke];
-        
-        [invocation getReturnValue:&propInfo];
+        prop->_jsonKey = [jsonKeyPath substringToIndex:dotPos];
+        prop->_remainingJsonKeyPath = [jsonKeyPath substringFromIndex:dotPos+1];
     }
-    
     else
-        memset(&propInfo, 0, sizeof(propInfo)); // zero is all defaults.
-
-    prop->_jsonKeyPath = (propInfo.jsonPath) ? @(propInfo.jsonPath) : prop->_name;
-    
-    if ( propInfo.elementType && (prop->_type == NTJsonPropTypeModel || prop->_type == NTJsonPropTypeObject) )
-    {
-        prop->_typeClass = propInfo.elementType;
-        prop->_type = [prop->_typeClass isSubclassOfClass:[NTJsonModel class]] ? NTJsonPropTypeModel : NTJsonPropTypeObject;
-    }
+        prop->_jsonKey = jsonKeyPath;
     
     if ( propInfo.enumValues && (prop->_type == NTJsonPropTypeString ||prop->_type == NTJsonPropTypeStringEnum) )
     {
         prop->_type = NTJsonPropTypeStringEnum;
         prop->_enumValues = [NSSet setWithArray:propInfo.enumValues];
+    }
+    
+    prop->_cachedObject = propInfo.cachedObject;
+    
+    if ( prop->_cachedObject )
+    {
+        // When a model is used as a cached object, we need to treat it as a simple object.
+        
+        if ( prop->_type == NTJsonPropTypeModel )
+            prop->_type = NTJsonPropTypeObject;
+        
+        else if ( prop->_type == NTJsonPropTypeModelArray )
+            prop->_type = NTJsonPropTypeObjectArray;
+    }
+    
+    if ( prop->_remainingJsonKeyPath.length && !prop->_isReadOnly )
+    {
+        @throw [NSException exceptionWithName:@"NTJsonModelInvalidType" reason:[NSString stringWithFormat:@"Properties with nested jsonKeyPaths must currently be read-only for property %@.%@ (%@)", NSStringFromClass(class), prop->_name, objcType] userInfo:nil];
     }
     
     return prop;
@@ -201,11 +260,17 @@ static NSString *ObjcAttributeIvar = @"V";
     
     [desc appendFormat:@"%@.%@(type=%@", NSStringFromClass(self.modelClass), self.name, [self typeDescription]];
     
-    if ( ![self.jsonKeyPath isEqualToString:self.name] )
-        [desc appendFormat:@", jsonKeyPath=\"%@\"", self.jsonKeyPath];
+    if ( self.remainingJsonKeyPath.length )
+        [desc appendFormat:@", jsonKeyPath=\"%@.%@\"", self.jsonKey, self.remainingJsonKeyPath];
+    
+    else if ( ![self.jsonKey isEqualToString:self.name] )
+        [desc appendFormat:@", jsonKeyPath=\"%@\"", self.jsonKey];
     
     if ( self.type == NTJsonPropTypeStringEnum )
         [desc appendFormat:@", enumValues=[%@]", [[self.enumValues allObjects] componentsJoinedByString:@", "]];
+    
+    if ( self.isReadOnly )
+        [desc appendFormat:@", readonly"];
     
     [desc appendString:@")"];
     
@@ -271,6 +336,15 @@ static NSString *ObjcAttributeIvar = @"V";
 }
 
 
+-(NSString *)jsonKeyPath
+{
+    if ( !self.remainingJsonKeyPath.length )
+        return self.jsonKey;
+    
+    return [NSString stringWithFormat:@"%@.%@", self.jsonKey, self.remainingJsonKeyPath];
+}
+
+
 #pragma mark - Conversion support
 
 
@@ -295,7 +369,7 @@ static NSString *ObjcAttributeIvar = @"V";
 }
 
 
--(id)convertJsonToValue:(id)json
+-(id)object_convertJsonToValue:(id)json
 {
     if ( self.type != NTJsonPropTypeObject && self.type != NTJsonPropTypeObjectArray )
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"convertJsonToValue: only supports Objects currently." userInfo:nil];
@@ -303,18 +377,21 @@ static NSString *ObjcAttributeIvar = @"V";
     if ( !_convertJsonToValueSelector )
     {
         NSString *convertJsonToProperty = [NSString stringWithFormat:@"convertJsonTo%@%@:", [[self.name substringToIndex:1] uppercaseString], [self.name substringFromIndex:1]];
-        NSString *convertJsonToClass = [NSString stringWithFormat:@"convertJsonTo%@:", NSStringFromClass(self.typeClass)];
         
         BOOL found = [self probeConverterToValue:YES Target:self.modelClass selector:NSSelectorFromString(convertJsonToProperty)];
         
         if ( !found )
+        {
+            NSString *convertJsonToClass = [NSString stringWithFormat:@"convertJsonTo%@:", NSStringFromClass(self.typeClass)];
+            
             found = [self probeConverterToValue:YES Target:self.modelClass selector:NSSelectorFromString(convertJsonToClass)];
+        }
         
         if ( !found )
             found = [self probeConverterToValue:YES Target:self.typeClass selector:@selector(convertJsonToValue:)];
-        
+
         if ( !found )
-            @throw [NSException exceptionWithName:@"UnableToConvert" reason:[NSString stringWithFormat:@"Unable to find a JsonToValue converter for %@.%@ of type %@. Tried %@ +%@, %@ +%@ and %@ +convertJsonToValue:",  NSStringFromClass(self.modelClass), self.name, NSStringFromClass(self.typeClass), NSStringFromClass(self.modelClass), convertJsonToProperty, NSStringFromClass(self.modelClass), convertJsonToClass, NSStringFromClass(self.modelClass)] userInfo:nil];
+            @throw [NSException exceptionWithName:@"UnableToConvert" reason:[NSString stringWithFormat:@"Unable to find a JsonToValue converter for %@.%@ of type %@.",  NSStringFromClass(self.modelClass), self.name, NSStringFromClass(self.typeClass)] userInfo:nil];
     }
 
     // somehow this is the "safe" way to call performSelector using ARC. Ironic? Yep!
@@ -326,7 +403,7 @@ static NSString *ObjcAttributeIvar = @"V";
 }
 
 
--(id)convertValueToJson:(id)value
+-(id)object_convertValueToJson:(id)value
 {
     if ( self.type != NTJsonPropTypeObject && self.type != NTJsonPropTypeObjectArray )
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"convertValueToJson: only supports Objects currently." userInfo:nil];
@@ -334,18 +411,21 @@ static NSString *ObjcAttributeIvar = @"V";
     if ( !_convertValueToJsonSelector )
     {
         NSString *convertPropertyToJson = [NSString stringWithFormat:@"convert%@%@ToJson:", [[self.name substringToIndex:1] uppercaseString], [self.name substringFromIndex:1]];
-        NSString *convertClassToJson = [NSString stringWithFormat:@"convert%@ToJson:", NSStringFromClass(self.typeClass)];
         
         BOOL found = [self probeConverterToValue:NO Target:self.modelClass selector:NSSelectorFromString(convertPropertyToJson)];
         
         if ( !found )
+        {
+            NSString *convertClassToJson = [NSString stringWithFormat:@"convert%@ToJson:", NSStringFromClass(self.typeClass)];
+            
             found = [self probeConverterToValue:NO Target:self.modelClass selector:NSSelectorFromString(convertClassToJson)];
+        }
         
         if ( !found )
             found = [self probeConverterToValue:NO Target:self.typeClass selector:@selector(convertValueToJson:)];
-        
+
         if ( !found )
-            @throw [NSException exceptionWithName:@"UnableToConvert" reason:[NSString stringWithFormat:@"Unable to find a ValueToJson converter for %@.%@ of type %@. Tried %@ +%@, %@ +%@ and %@ +convertValueToJson:",  NSStringFromClass(self.modelClass), self.name, NSStringFromClass(self.typeClass), NSStringFromClass(self.modelClass), convertPropertyToJson, NSStringFromClass(self.modelClass), convertClassToJson, NSStringFromClass(self.modelClass)] userInfo:nil];
+            @throw [NSException exceptionWithName:@"UnableToConvert" reason:[NSString stringWithFormat:@"Unable to find a ValueToJson converter for %@.%@ of type %@.",  NSStringFromClass(self.modelClass), self.name, NSStringFromClass(self.typeClass)] userInfo:nil];
     }
     
     // somehow this is the "safe" way to call performSelector using ARC. Ironic? Yep!
@@ -354,6 +434,136 @@ static NSString *ObjcAttributeIvar = @"V";
     id (*method)(id self, SEL _cmd, id json) = (void *)[_convertValueToJsonTarget methodForSelector:_convertValueToJsonSelector];
     
     return method(_convertValueToJsonTarget, _convertValueToJsonSelector, value);
+}
+
+
+-(id)convertJsonToValue:(id)json
+{
+    id value = json;
+    
+    switch (self.type)
+    {
+        case NTJsonPropTypeInt:
+        {
+            if ( ![value isKindOfClass:[NSNumber class]] )
+                value = [value respondsToSelector:@selector(intValue)] ? @([value intValue]) : self.defaultValue;
+            else if ( strcmp([value objCType], @encode(int)) != 0 )
+                value = [NSNumber numberWithInt:[value intValue]];
+            break;
+        }
+            
+        case NTJsonPropTypeBool:
+        {
+            if ( ![value isKindOfClass:[NSNumber class]] )
+                value = [value respondsToSelector:@selector(boolValue)] ? @([value boolValue]) : self.defaultValue;
+            else if ( strcmp([value objCType], @encode(bool)) != 0 && strcmp([value objCType], @encode(signed char)) != 0 )
+                value = [NSNumber numberWithBool:[value boolValue]];
+            break;
+        }
+            
+        case NTJsonPropTypeFloat:
+        {
+            if ( ![value isKindOfClass:[NSNumber class]] )
+                value = [value respondsToSelector:@selector(floatValue)] ? @([value floatValue]) : self.defaultValue;
+            else if ( strcmp([value objCType], @encode(float)) != 0 )
+                value = [NSNumber numberWithFloat:[value floatValue]];
+            break;
+        }
+            
+        case NTJsonPropTypeDouble:
+        {
+            if ( ![value isKindOfClass:[NSNumber class]] )
+                value = [value respondsToSelector:@selector(doubleValue)] ? @([value doubleValue]) : self.defaultValue;
+            else if ( strcmp([value objCType], @encode(double)) != 0 )
+                value = [NSNumber numberWithDouble:[value doubleValue]];
+            break;
+        }
+            
+            
+        case NTJsonPropTypeLongLong:
+        {
+            if ( ![value isKindOfClass:[NSNumber class]] )
+                value = [value respondsToSelector:@selector(longLongValue)] ? @([value longLongValue]) : self.defaultValue;
+            else if ( strcmp([value objCType], @encode(long long)) != 0 )
+                value = [NSNumber numberWithLongLong:[value longLongValue]];
+            break;
+        }
+            
+        case NTJsonPropTypeString:
+        {
+            if ( ![value isKindOfClass:[NSString class]] )
+                value = [value respondsToSelector:@selector(stringValue)] ? [value stringValue] : self.defaultValue;
+            break;
+        }
+            
+        case NTJsonPropTypeStringEnum:
+        {
+            if ( ![value isKindOfClass:[NSString class]] )
+                value = [value respondsToSelector:@selector(stringValue)] ? [value stringValue] : self.defaultValue;
+            
+            value = [self.enumValues member:value] ?: value;
+            break;
+        }
+            
+        case NTJsonPropTypeModel:
+        {
+            value = [value isKindOfClass:[NSDictionary class]] ? [[self.typeClass alloc] initWithJson:value] : self.defaultValue;
+            break;
+        }
+            
+        case NTJsonPropTypeObject:
+        {
+            value = [self object_convertJsonToValue:value] ?: self.defaultValue;
+            break;
+        }
+            
+        case NTJsonPropTypeObjectArray:
+        case NTJsonPropTypeModelArray:
+        {
+            value = [value isKindOfClass:[NSArray class]] ? [[NTJsonModelArray alloc] initWithProperty:self json:value] : self.defaultValue;
+            break ;
+        }
+    }
+    
+    return value;
+}
+
+
+-(id)convertValueToJson:(id)value
+{
+    switch (self.type)
+    {
+        case NTJsonPropTypeInt:
+        case NTJsonPropTypeBool:
+        case NTJsonPropTypeFloat:
+        case NTJsonPropTypeDouble:
+        case NTJsonPropTypeLongLong:
+        case NTJsonPropTypeString:
+        case NTJsonPropTypeStringEnum:
+            return value;   // the runtime shoul have given these to us in the correct format already.
+            
+        case NTJsonPropTypeModel:
+            return [value asJson];
+            
+        case NTJsonPropTypeObject:
+            return [self object_convertValueToJson:value];
+            
+        case NTJsonPropTypeObjectArray:
+        {
+            NSMutableArray *items = [NSMutableArray arrayWithCapacity:[value count]];
+            
+            for(id item in value)
+                [items addObject:[self object_convertValueToJson:item] ?: [NSNull null]];
+            
+            return [items copy];
+        }
+            
+        case NTJsonPropTypeModelArray:
+            return [value objectForKey:@"json"];
+            
+        default:
+            @throw [NSException exceptionWithName:@"NTJsonUnexpectedType" reason:@"Unexpected Property Type" userInfo:nil];
+    }
 }
 
 

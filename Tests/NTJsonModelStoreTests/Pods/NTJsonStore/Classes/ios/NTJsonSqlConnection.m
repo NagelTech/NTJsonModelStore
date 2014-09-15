@@ -13,6 +13,9 @@
 static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
 
 
+#define BUSY_TIMEOUT_MS 1000        // 1 second as a default for now. This should probably be made configurable?
+
+
 @interface NTJsonSqlConnection ()
 {
     sqlite3 *_db; // nil = auto open, other = connection, CONNECTION_CLOSED = closed or failed to open
@@ -117,7 +120,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
         
         if ( status != SQLITE_OK )
         {
-            _lastError = [NSError NSJsonStore_errorWithSqlite3:_db];
+            _lastError = [NSError NTJsonStore_errorWithSqlite3:_db];
             
             LOG_ERROR(@"Failed to open database: %@", _lastError.localizedDescription);
             
@@ -127,6 +130,8 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
         }
         
         LOG_SQL(@"Database opened, location %@", self.filename);
+        
+        sqlite3_busy_timeout(_db, BUSY_TIMEOUT_MS);
         
         if ( newDatabase )
         {
@@ -144,7 +149,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
     
     else if ( _db == CONNECTION_CLOSED )
     {
-        _lastError = [NSError NSJsonStore_errorWithCode:NTJsonStoreErrorClosed];
+        _lastError = [NSError NTJsonStore_errorWithCode:NTJsonStoreErrorClosed];
     }
     
     return (_db == CONNECTION_CLOSED) ? nil : _db;
@@ -215,6 +220,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
     
     if (status != SQLITE_OK )
     {
+        _lastError = [NSError NTJsonStore_errorWithSqlite3:_db];
         LOG_ERROR(@"Failed to prepare statement %@ - %@", sql, _lastError.localizedDescription);
         return NULL;
     }
@@ -247,7 +253,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
                 
                 else
                 {
-                    _lastError = [NSError NSJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument format:@"Invalid Sql Argument - unsupported numeric type %s", numType];
+                    _lastError = [NSError NTJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument format:@"Invalid Sql Argument - unsupported numeric type %s", numType];
                     
                     LOG_ERROR(@"%@", _lastError);
                     
@@ -269,7 +275,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
             
             else
             {
-                _lastError = [NSError NSJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument format:@"Invalid Sql Argument - unsupported type: %@", NSStringFromClass([arg class])];
+                _lastError = [NSError NTJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument format:@"Invalid Sql Argument - unsupported type: %@", NSStringFromClass([arg class])];
                 
                 LOG_ERROR(@"%@", _lastError.localizedDescription);
                 
@@ -297,7 +303,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
     
     if ( status != SQLITE_DONE && status != SQLITE_ROW )
     {
-        _lastError = [NSError NSJsonStore_errorWithSqlite3:self.db];
+        _lastError = [NSError NTJsonStore_errorWithSqlite3:self.db];
         
         LOG_ERROR(@"Failed to execute statement - %@", _lastError.localizedDescription);
         
@@ -323,9 +329,12 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
     
     if ( status != SQLITE_ROW )
     {
-        _lastError = [NSError NSJsonStore_errorWithSqlite3:self.db];
-        
-        LOG_ERROR(@"Failed to execute statement - %@", _lastError.localizedDescription);
+        if ( status != SQLITE_DONE )
+        {
+            _lastError = [NSError NTJsonStore_errorWithSqlite3:self.db];
+            
+            LOG_ERROR(@"Failed to execute statement - %@", _lastError.localizedDescription);
+        }
         
         sqlite3_finalize(statement);
         
@@ -358,7 +367,7 @@ static sqlite3 *CONNECTION_CLOSED = (sqlite3 *)(void *)1;
             
         default:
         {
-            _lastError = [NSError NSJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument];
+            _lastError = [NSError NTJsonStore_errorWithCode:NTJsonStoreErrorInvalidSqlArgument];
             value = nil;
             break;
         }

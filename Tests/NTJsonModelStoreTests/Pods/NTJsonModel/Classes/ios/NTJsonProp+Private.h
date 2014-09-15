@@ -30,14 +30,21 @@ typedef enum
 
 @property (nonatomic,readonly) Class modelClass;
 @property (nonatomic,readonly) NSString *name;
-@property (nonatomic,readonly) NSString *jsonKeyPath;
+@property (nonatomic,readonly) NSString *jsonKey;               // the first part of the key path
+@property (nonatomic,readonly) NSString *remainingJsonKeyPath;  // any remaining key path values (readonly properties only)
+@property (nonatomic,readonly) NSString *jsonKeyPath;           
 @property (nonatomic,readonly) NTJsonPropType type;
 @property (nonatomic,readonly) Class typeClass;
 @property (nonatomic,readonly) NSSet *enumValues;
 @property (nonatomic,readonly) id defaultValue;
 @property (nonatomic,readonly) BOOL shouldCache;
+@property (nonatomic,readonly) BOOL cachedObject;
+@property (nonatomic,readonly) BOOL isReadOnly;
 
 // conversion
+
+-(id)object_convertValueToJson:(id)object;
+-(id)object_convertJsonToValue:(id)json;
 
 -(id)convertValueToJson:(id)object;
 -(id)convertJsonToValue:(id)json;

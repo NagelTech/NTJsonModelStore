@@ -26,7 +26,7 @@ NTJsonProperty(rowid, jsonPath="__rowid__")
 
 -(BOOL)isJsonCurrent
 {
-    return [NTJsonStore isJsonCurrent:self.json];
+    return !self.isMutable && [NTJsonStore isJsonCurrent:[self asJson]];
 }
 
 

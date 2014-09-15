@@ -17,6 +17,9 @@ typedef struct
     
     /// Array of possible values for an enumerated type. Useful for String-based enumerations...
     __unsafe_unretained NSArray *enumValues;
+    
+    /// YES to treat this as a cached object
+    BOOL cachedObject;
 
 } __NTJsonPropertyInfo;
 

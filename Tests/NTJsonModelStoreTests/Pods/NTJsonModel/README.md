@@ -3,21 +3,27 @@ NTJsonModel
 
 [in development] A high performance model object wrapper for JSON.
 
-Proof of concept notes
-----------------------
 
-Seems like this all makes sense, but there are some gotchas:
+To Do
+-----
 
- - Object Arrays need work. They need to use NTJsonModelArray and work basically the same way. Disabled for now.
- 
+- Make mutability explicit. objects may be created read-only (initWithJson:) or mutable (initMutableWthJson:).  mutableCopy or copy to convert.
+  Mutable objects rely on the cache for reading and writing values, json is ceated on demand. This maintains the performance for read-only cases
+  and handles lots ot edge cases the "becomeMutable" approach struggles with. This is at the expense of some simplicity for the developer.
+
+- Add capability to validate cached values (have they changed). This would be a part of the conversion machinery in NTJsonProp. This will allow us
+to check isJsonValid for cached objects and re-get them when needed.
+
  - Handle cases where multiple properties point to the same JsonKeyPath. The Cache would need to be cleared for all matching properties
    when the underlying json is changed. This will make creating look up properties (where only the ID is in the JSON) work well. In order
    to make look up properties work well, we may also need to add the ability to do cache expiration.
-   
+ 
  - Add a method to be easily notified when properties are changed? Technically KVO can do the job, but it's so clumsy and we can't allow
    the user to override existing properties... or can we?
    
  - need to make sure everything is threadsafe. (Or not?)
+
+ - add tests for arrays that are members of a model. (Test JsonContainer functionality)
  
 Done-ish
 --------
@@ -50,6 +56,8 @@ Done-ish
  syntax and explicit declarations?)~~
 
  - ~~Store meta data using magical macros ;)~~
+
+ - ~~Object Arrays need work. They need to use NTJsonModelArray and work basically the same way. Disabled for now.~~
 
 
 

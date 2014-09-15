@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NTJsonModelArray.h"
+#import "NSArray+NTJsonModel.h"
+#import "NSDictionary+NTJsonModel.h"
+
 #import "NTJsonPropertyConversion.h"
 
 #import "NTJsonPropertyInfo.h"
@@ -16,25 +18,30 @@
 
 @interface NTJsonModel : NSObject <NSCopying, NSMutableCopying>
 
-@property (nonatomic,readonly) NSDictionary *json;
 @property (nonatomic,readonly) BOOL isMutable;
++(NSDictionary *)defaultJson;
+
+-(NSDictionary *)asJson;
+
++(Class)modelClassForJson:(NSDictionary *)json;
 
 -(id)init; // creates mutable instance
 -(id)initWithJson:(NSDictionary *)json;
--(id)initWithMutableJson:(NSMutableDictionary *)mutableJson;
+-(id)initMutableWithJson:(NSDictionary *)json;
 +(instancetype)modelWithJson:(NSDictionary *)json;
-+(instancetype)modelWithMutableJson:(NSMutableDictionary *)mutableJson;
++(instancetype)mutableModelWithJson:(NSDictionary *)json;
 
 +(NSArray *)arrayWithJsonArray:(NSArray *)jsonArray;
-+(NSMutableArray *)arrayWithMutableJsonArray:(NSMutableArray *)mutableJsonArray;
-
-+(NSArray *)jsonPropertyInfo;
-
-+(NSDictionary *)defaultJson;
++(NSMutableArray *)mutableArrayWithJsonArray:(NSArray *)jsonArray;
 
 -(id)copyWithZone:(NSZone *)zone;
 -(id)mutableCopyWithZone:(NSZone *)zone;
 
--(void)becomeMutable;
+-(BOOL)isEqualToModel:(NTJsonModel *)model;
+-(BOOL)isEqual:(id)object;
+-(NSUInteger)hash;
+
+-(NSString *)description;
+-(NSString *)fullDescription;
 
 @end

@@ -77,24 +77,6 @@
 }
 
 
--(NSArray *)jsonArrayFromModelArray:(NSArray *)modelArray
-{
-    if ( [modelArray isKindOfClass:[NTJsonModelArray class]] )
-    {
-        return [(NTJsonModelArray *)modelArray jsonArray];
-    }
-    
-    // Otherwise we need to do it the hard way...
-    
-    NSMutableArray *jsonArray = [NSMutableArray arrayWithCapacity:modelArray.count];
-    
-    for(NTJsonModel *model in modelArray)
-        [jsonArray addObject:model.json];
-    
-    return modelArray;
-}
-
-
 -(instancetype)initWithCollection:(NTJsonCollection *)collection
 {
     self = [super init];
@@ -216,97 +198,97 @@
 
 -(void)beginInsert:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
 {
-    [_collection beginInsert:model.json completionQueue:completionQueue completionHandler:completionHandler];
+    [_collection beginInsert:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
 -(void)beginInsert:(NTJsonModel *)model completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
 {
-    [_collection beginInsert:model.json completionHandler:completionHandler];
+    [_collection beginInsert:[model asJson] completionHandler:completionHandler];
 }
 
 
 -(NTJsonRowId)insert:(NTJsonModel *)model error:(NSError **)error
 {
-    return [_collection insert:model.json error:error];
+    return [_collection insert:[model asJson] error:error];
 }
 
 
 -(NTJsonRowId)insert:(NTJsonModel *)model
 {
-    return [_collection insert:model.json];
+    return [_collection insert:[model asJson]];
 }
 
 
 -(void)beginInsertBatch:(NSArray *)models completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginInsertBatch:[self jsonArrayFromModelArray:models] completionQueue:completionQueue completionHandler:completionHandler];
+    [_collection beginInsertBatch:[models asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
 -(void)beginInsertBatch:(NSArray *)models completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginInsertBatch:[self jsonArrayFromModelArray:models] completionHandler:completionHandler];
+    [_collection beginInsertBatch:[models asJson] completionHandler:completionHandler];
 }
 
 
 -(BOOL)insertBatch:(NSArray *)models error:(NSError **)error
 {
-    return [_collection insertBatch:[self jsonArrayFromModelArray:models] error:error];
+    return [_collection insertBatch:[models asJson] error:error];
 }
 
 
 -(BOOL)insertBatch:(NSArray *)models
 {
-    return [_collection insertBatch:[self jsonArrayFromModelArray:models]];
+    return [_collection insertBatch:[models asJson]];
 }
 
 
 -(void)beginUpdate:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginUpdate:model.json completionQueue:completionQueue completionHandler:completionHandler];
+    [_collection beginUpdate:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
 -(void)beginUpdate:(NTJsonModel *)model completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginUpdate:model.json completionHandler:completionHandler];
+    [_collection beginUpdate:[model asJson] completionHandler:completionHandler];
 }
 
 
 -(BOOL)update:(NTJsonModel *)model error:(NSError **)error
 {
-    return [_collection update:model.json error:error];
+    return [_collection update:[model asJson] error:error];
 }
 
 
 -(BOOL)update:(NTJsonModel *)model
 {
-    return [_collection update:model.json];
+    return [_collection update:[model asJson]];
 }
 
 
 -(void)beginRemove:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginRemove:model.json completionQueue:completionQueue completionHandler:completionHandler];
+    [_collection beginRemove:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
 -(void)beginRemove:(NTJsonModel *)model completionHandler:(void (^)(NSError *error))completionHandler
 {
-    [_collection beginRemove:model.json completionHandler:completionHandler];
+    [_collection beginRemove:[model asJson] completionHandler:completionHandler];
 }
 
 
 -(BOOL)remove:(NTJsonModel *)model error:(NSError **)error
 {
-    return [_collection remove:model.json error:error];
+    return [_collection remove:[model asJson] error:error];
 }
 
 
 -(BOOL)remove:(NTJsonModel *)model
 {
-    return [_collection remove:model.json];
+    return [_collection remove:[model asJson]];
 }
 
 
