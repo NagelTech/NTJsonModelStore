@@ -170,7 +170,7 @@
 		F09D076E196D91510073ACCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = F09D0771196D91510073ACCE /* Build configuration list for PBXProject "NTJsonModelStoreTests" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -265,6 +265,7 @@
 		F09D0772196D91510073ACCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

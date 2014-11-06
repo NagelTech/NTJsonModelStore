@@ -9,20 +9,11 @@
 #import "NTJsonModel.h"
 
 
-@protocol NTJsonStorableModel <NTJsonModel>
+@interface NTJsonStorableModel : NTJsonModel
 
 @property (nonatomic,readonly) NTJsonRowId rowid;
 @property (nonatomic,readonly) BOOL isJsonCurrent;
 
-@end
-
-@protocol NTJsonMutableStorableModel <NTJsonStorableModel>
-
-@property (nonatomic) NTJsonRowId rowid;
-
-@end
-
-@interface NTJsonStorableModel : NTJsonModel<NTJsonStorableModel>
 
 +(NTJsonModelStore *)defaultModelStore;
 +(NSString *)defaultModelCollectionName;
@@ -72,7 +63,7 @@
 +(NSArray *)findWhere:(NSString *)where args:(NSArray *)args orderBy:(NSString *)orderBy error:(NSError **)error;
 +(NSArray *)findWhere:(NSString *)where args:(NSArray *)args orderBy:(NSString *)orderBy;
 
-+(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(id<NTJsonStorableModel> model, NSError *error))completionHandler;
++(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(NTJsonStorableModel *model, NSError *error))completionHandler;
 +(instancetype)findOneWhere:(NSString *)where args:(NSArray *)args error:(NSError **)error;
 +(instancetype)findOneWhere:(NSString *)where args:(NSArray *)args;
 
@@ -88,5 +79,12 @@
 +(BOOL)syncWait:(dispatch_time_t)duration;
 +(void)sync;
 
+@end
+
+
+@protocol NTJsonMutableStorableModel <NTJsonMutableModel>
+
+@property (nonatomic) NTJsonRowId rowid;
 
 @end
+

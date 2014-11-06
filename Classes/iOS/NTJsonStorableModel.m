@@ -11,7 +11,7 @@
 #import "NTJsonModelStore+Private.h"
 
 
-@interface NTJsonStorableModel (Mutable) <NTJsonMutableStorableModel>
+@interface NTJsonStorableModel () <NTJsonMutableStorableModel>
 
 @end
 
@@ -269,7 +269,7 @@ NTJsonProperty(rowid, jsonPath="__rowid__")
 }
 
 
-+(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(id<NTJsonStorableModel>model, NSError *error))completionHandler
++(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(NTJsonStorableModel *model, NSError *error))completionHandler
 {
     [[self defaultModelCollection] beginFindOneWhere:where args:args completionHandler:completionHandler];
 }

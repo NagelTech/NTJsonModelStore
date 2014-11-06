@@ -196,25 +196,25 @@
 }
 
 
--(void)beginInsert:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
+-(void)beginInsert:(NTJsonStorableModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
 {
     [_collection beginInsert:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
--(void)beginInsert:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
+-(void)beginInsert:(NTJsonStorableModel *)model completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler
 {
     [_collection beginInsert:[model asJson] completionHandler:completionHandler];
 }
 
 
--(NTJsonRowId)insert:(id<NTJsonStorableModel>)model error:(NSError **)error
+-(NTJsonRowId)insert:(NTJsonStorableModel *)model error:(NSError **)error
 {
     return [_collection insert:[model asJson] error:error];
 }
 
 
--(NTJsonRowId)insert:(id<NTJsonStorableModel>)model
+-(NTJsonRowId)insert:(NTJsonStorableModel *)model
 {
     return [_collection insert:[model asJson]];
 }
@@ -244,49 +244,49 @@
 }
 
 
--(void)beginUpdate:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
+-(void)beginUpdate:(NTJsonStorableModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
 {
     [_collection beginUpdate:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
--(void)beginUpdate:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NSError *error))completionHandler
+-(void)beginUpdate:(NTJsonStorableModel *)model completionHandler:(void (^)(NSError *error))completionHandler
 {
     [_collection beginUpdate:[model asJson] completionHandler:completionHandler];
 }
 
 
--(BOOL)update:(id<NTJsonStorableModel>)model error:(NSError **)error
+-(BOOL)update:(NTJsonStorableModel *)model error:(NSError **)error
 {
     return [_collection update:[model asJson] error:error];
 }
 
 
--(BOOL)update:(id<NTJsonStorableModel>)model
+-(BOOL)update:(NTJsonStorableModel *)model
 {
     return [_collection update:[model asJson]];
 }
 
 
--(void)beginRemove:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
+-(void)beginRemove:(NTJsonStorableModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler
 {
     [_collection beginRemove:[model asJson] completionQueue:completionQueue completionHandler:completionHandler];
 }
 
 
--(void)beginRemove:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NSError *error))completionHandler
+-(void)beginRemove:(NTJsonStorableModel *)model completionHandler:(void (^)(NSError *error))completionHandler
 {
     [_collection beginRemove:[model asJson] completionHandler:completionHandler];
 }
 
 
--(BOOL)remove:(id<NTJsonStorableModel>)model error:(NSError **)error
+-(BOOL)remove:(NTJsonStorableModel *)model error:(NSError **)error
 {
     return [_collection remove:[model asJson] error:error];
 }
 
 
--(BOOL)remove:(id<NTJsonStorableModel>)model
+-(BOOL)remove:(NTJsonStorableModel *)model
 {
     return [_collection remove:[model asJson]];
 }
@@ -400,7 +400,7 @@
 }
 
 
--(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(id<NTJsonStorableModel>model, NSError *error))completionHandler
+-(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonStorableModel *model, NSError *error))completionHandler
 {
     [_collection beginFindOneWhere:where args:args completionQueue:completionQueue completionHandler:^(NSDictionary *item, NSError *error)
     {
@@ -409,7 +409,7 @@
 }
 
 
--(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(id<NTJsonStorableModel>model, NSError *error))completionHandler
+-(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(NTJsonStorableModel *model, NSError *error))completionHandler
 {
     [_collection beginFindOneWhere:where args:args completionHandler:^(NSDictionary *item, NSError *error)
     {
