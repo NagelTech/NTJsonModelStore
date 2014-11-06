@@ -16,34 +16,15 @@
 #import "NTJsonPropertyInfo.h"
 
 
-@protocol NTJsonModel <NSObject, NSCopying, NSMutableCopying>
 
-/**
- *  returns YES if this is a mutable instance
- */
-@property (nonatomic,readonly) BOOL isMutable;
-
-/**
- *  returns the JSON representation of the object
- *
- *  @return NSDictionary with the JSON representation of the object.
- */
--(NSDictionary *)asJson;
-
--(id)copy;
--(id)mutableCopy;
-
-@end
-
-
-@protocol NTJsonMutableModel <NTJsonModel>
+@protocol NTJsonMutableModel <NSObject>
 
 // The base model has no mutable properties
 
 @end
 
 
-@interface NTJsonModel : NSObject <NTJsonModel>
+@interface NTJsonModel : NSObject <NSCopying, NSMutableCopying>
 
 /**
  *  returns YES if this is a mutable instance

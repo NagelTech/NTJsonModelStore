@@ -13,16 +13,11 @@
 #import "__NTJsonModelSupport.h"
 
 
-@interface NTJsonModel ()
+@interface NTJsonModel () <NTJsonMutableModel>
 {
     id _json;
     BOOL _isMutable;
 }
-
-@end
-
-
-@interface NTJsonModel (Mutable) <NTJsonMutableModel>
 
 @end
 
@@ -299,13 +294,6 @@
     return [[self.class __ntJsonModelSupport] descriptionForModel:self fullDescription:YES parentModels:@[]];
 }
 
-
-@end
-
-
-@implementation NTJsonModel (Mutable)
-
-// we need to implement the category to make sure the compiler actually generates the meta data for NTJsonMutableModel
 
 @end
 
