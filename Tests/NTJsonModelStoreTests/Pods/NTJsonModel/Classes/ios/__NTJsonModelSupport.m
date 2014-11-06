@@ -178,6 +178,53 @@
 }
 
 
++(Protocol *)findMutableProtocolForClass:(Class)modelClass
+{
+    NSString *className = NSStringFromClass(modelClass);
+
+     // If it's one of our classes, try our format...
+    
+    if ( [className hasPrefix:@"NTJson"] )
+    {
+        Protocol *protocol = NSProtocolFromString([NSString stringWithFormat:@"NTJsonMutable%@", [className substringFromIndex:6]]);
+        
+        if ( protocol )
+            return protocol;
+    }
+    
+    // Ok, see if mutable is taked onto the front...
+    
+    Protocol *protocol = NSProtocolFromString([NSString stringWithFormat:@"Mutable%@", NSStringFromClass(modelClass)]);
+    
+    if ( protocol )
+        return protocol;
+
+    // Ok, we tried the easy things, now we look for a protocol that matches the class name, but with "Mutable" somewhere in it
+
+    unsigned int numProtocols;
+    Protocol * __unsafe_unretained *protocols = class_copyProtocolList(modelClass, &numProtocols);
+    
+    for(int index=0; index<numProtocols; index++)
+    {
+        NSString *protocolName = @(protocol_getName(protocols[index]));
+        
+        NSRange mutableRange = [protocolName rangeOfString:@"Mutable"];
+        
+        if ( mutableRange.location == NSNotFound )
+            continue;   // no mutable keyword
+        
+        // remove "Mutable"
+        
+        NSString *matchingClassName = [protocolName stringByReplacingCharactersInRange:mutableRange withString:@""];
+                                       
+        if ( [className isEqualToString:matchingClassName] )
+            return protocols[index];
+    }
+    
+    return nil;
+}
+
+
 +(NSArray *)extractPropertiesForModelClass:(Class)modelClass
 {
     unsigned int numProperties;
@@ -196,6 +243,55 @@
     }
     
     free(objc_properties);
+    
+    // If there is a mutable protocol, then we also parse the properties out of that...
+    
+    Protocol *mutableProtocol = [self findMutableProtocolForClass:modelClass];
+    
+    if ( mutableProtocol )
+    {
+        // Make sure read-only properties are read-only...
+        
+        for(NTJsonProp *prop in properties)
+        {
+            if (!prop.isReadOnly )
+            {
+                @throw [NSException exceptionWithName:@"NTJsonPropertyError"
+                                               reason:[NSString stringWithFormat:@"NTJsonModel property %@.%@ must be declared read-only if a mutable protocol (Mutable%@) is also declared.", NSStringFromClass(modelClass), prop.name, NSStringFromClass(modelClass)]
+                                             userInfo:nil];
+            }
+        }
+        
+        unsigned int numProperties;
+        objc_property_t *objc_properties = protocol_copyPropertyList(mutableProtocol, &numProperties);
+        
+        for(unsigned int index=0; index<numProperties; index++)
+        {
+            objc_property_t objc_property = objc_properties[index];
+            
+            NTJsonProp *prop = [NTJsonProp propertyWithClass:modelClass objcProperty:objc_property];
+            
+            if ( !prop )
+                continue ;
+            
+            // Replace any existing or append new properties...
+            
+            NSInteger existingIndex = [properties indexOfObjectPassingTest:^BOOL(NTJsonProp *item, NSUInteger idx, BOOL *stop) {
+                return [item.name isEqualToString:prop.name];
+            }];
+            
+            if ( existingIndex != NSNotFound )
+            {
+                [properties replaceObjectAtIndex:existingIndex withObject:prop];
+            }
+            else
+            {
+                [properties addObject:prop];
+            }
+        }
+        
+        free(objc_properties);
+    }
     
     return[properties copy];
 }
@@ -589,7 +685,7 @@
     if ( !model.isMutable )
         @throw [NSException exceptionWithName:@"NTJsonModelImmutable"
                                        reason:[NSString stringWithFormat:@"Attempt to modify immutable NTJsonModel: %@.%@", NSStringFromClass(self.modelClass), prop.name]
-                                      userInfo:nil];
+                                     userInfo:nil];
     
     NSMutableDictionary *json = [model __json];
     
@@ -646,7 +742,7 @@
 #pragma mark - description
 
 
--(NSString *)descriptionForModel:(NTJsonModel *)model fullDescription:(BOOL)fullDescription
+-(NSString *)descriptionForModel:(NTJsonModel *)model fullDescription:(BOOL)fullDescription parentModels:(NSArray *)parentModels
 {
     NSMutableString *desc = [NSMutableString string];
     
@@ -685,25 +781,36 @@
                 [desc appendString:@"["];
                 
                 [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
-                {
-                    if ( idx > 0 )
-                        [desc appendString:@", "];
-                    
-                    if ( value == [NSNull null] )
-                    {
-                        [desc appendString:@"NSNull"];
-                    }
-                    
-                    else if ( fullDescription && [value respondsToSelector:@selector(fullDescription)] )
-                    {
-                        [desc appendString:[obj fullDescription]];
-                    }
-                    
-                    else
-                    {
-                        [desc appendString:[obj description]];
-                    }
-                }];
+                 {
+                     if ( idx > 0 )
+                         [desc appendString:@", "];
+                     
+                     if ( obj == [NSNull null] )
+                     {
+                         [desc appendString:@"NSNull"];
+                     }
+                     
+                     else if ( [obj isKindOfClass:[NTJsonModel class]] )
+                     {
+                         if ( [parentModels indexOfObjectIdenticalTo:obj] == NSNotFound )
+                         {
+                             __NTJsonModelSupport *support = [[obj class] __ntJsonModelSupport];
+                             
+                             [desc appendString:[support descriptionForModel:obj
+                                                             fullDescription:fullDescription
+                                                                parentModels:[parentModels arrayByAddingObject:model]]];
+                         }
+                         else
+                         {
+                             [desc appendFormat:@"%@({recursive}])", NSStringFromClass([obj class])];
+                         }
+                     }
+                     
+                     else
+                     {
+                         [desc appendString:[obj description]];
+                     }
+                 }];
             }
             else
             {
@@ -736,8 +843,27 @@
         
         else    // child objects, etc
         {
-            if ( fullDescription && [value respondsToSelector:@selector(fullDescription)] )
-                [desc appendString:[value fullDescription]];
+            if ( [value isKindOfClass:[NTJsonModel class]] )
+            {
+                if ( !fullDescription )
+                {
+                    [desc appendFormat:@"%@(...)", NSStringFromClass([value class])];
+                }
+                
+                else if ( [parentModels indexOfObjectIdenticalTo:value] == NSNotFound )
+                {
+                    __NTJsonModelSupport *support = [[value class] __ntJsonModelSupport];
+                    
+                    [desc appendString:[support descriptionForModel:value
+                                                    fullDescription:fullDescription
+                                                       parentModels:[parentModels arrayByAddingObject:model]]];
+                }
+                else
+                {
+                    [desc appendFormat:@"%@({recursive}])", NSStringFromClass([value class])];
+                }
+            }
+            
             else
                 [desc appendString:[value description]];
         }

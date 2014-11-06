@@ -1,1 +1,0 @@
-../../NTJsonStore/Classes/ios/NTJsonIndex+Private.h

@@ -20,6 +20,6 @@
 
 -(instancetype)initWithModelClass:(Class)modelClass;
 
--(NSString *)descriptionForModel:(NTJsonModel *)model fullDescription:(BOOL)fullDescription;
+-(NSString *)descriptionForModel:(NTJsonModel *)model fullDescription:(BOOL)fullDescription parentModels:(NSArray *)parentModels;
 
 @end

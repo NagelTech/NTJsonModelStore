@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.libraries           = 'sqlite3'
 
   s.source_files        = 'Classes/ios/*.{h,m}'
-  s.public_header_files = 'NTJsonModelStore.h', 'NTJsonModelCollection.h', 'NTJsonModel+NTJsonModelStore.h'
+  s.public_header_files = 'NTJsonModelStore.h', 'NTJsonModelCollection.h', 'NTJsonStorableModel.h'
   
   s.dependency 'NTJsonStore'
   s.dependency 'NTJsonModel'

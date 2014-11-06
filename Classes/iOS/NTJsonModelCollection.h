@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
+@protocol NTJsonStorableModel;
 @class NTJsonCollection;
-@class NTJsonModel;
 @class NTJsonModelStore;
 
 
@@ -38,25 +38,25 @@
 -(BOOL)ensureSchemaWithError:(NSError **)error;
 -(BOOL)ensureSchema;
 
--(void)beginInsert:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler;
--(void)beginInsert:(NTJsonModel *)model completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler;
--(NTJsonRowId)insert:(NTJsonModel *)model error:(NSError **)error;
--(NTJsonRowId)insert:(NTJsonModel *)model;
+-(void)beginInsert:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler;
+-(void)beginInsert:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NTJsonRowId rowid, NSError *error))completionHandler;
+-(NTJsonRowId)insert:(id<NTJsonStorableModel>)model error:(NSError **)error;
+-(NTJsonRowId)insert:(id<NTJsonStorableModel>)model;
 
 -(void)beginInsertBatch:(NSArray *)models completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
 -(void)beginInsertBatch:(NSArray *)models completionHandler:(void (^)(NSError *error))completionHandler;
 -(BOOL)insertBatch:(NSArray *)models error:(NSError **)error;
 -(BOOL)insertBatch:(NSArray *)models;
 
--(void)beginUpdate:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
--(void)beginUpdate:(NTJsonModel *)model completionHandler:(void (^)(NSError *error))completionHandler;
--(BOOL)update:(NTJsonModel *)model error:(NSError **)error;
--(BOOL)update:(NTJsonModel *)model;
+-(void)beginUpdate:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
+-(void)beginUpdate:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NSError *error))completionHandler;
+-(BOOL)update:(id<NTJsonStorableModel>)model error:(NSError **)error;
+-(BOOL)update:(id<NTJsonStorableModel>)model;
 
--(void)beginRemove:(NTJsonModel *)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
--(void)beginRemove:(NTJsonModel *)model completionHandler:(void (^)(NSError *error))completionHandler;
--(BOOL)remove:(NTJsonModel *)model error:(NSError **)error;
--(BOOL)remove:(NTJsonModel *)model;
+-(void)beginRemove:(id<NTJsonStorableModel>)model completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NSError *error))completionHandler;
+-(void)beginRemove:(id<NTJsonStorableModel>)model completionHandler:(void (^)(NSError *error))completionHandler;
+-(BOOL)remove:(id<NTJsonStorableModel>)model error:(NSError **)error;
+-(BOOL)remove:(id<NTJsonStorableModel>)model;
 
 -(void)beginCountWhere:(NSString *)where args:(NSArray *)args completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(int count, NSError *error))completionHandler;
 -(void)beginCountWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(int count, NSError *error))completionHandler;
@@ -78,8 +78,8 @@
 -(NSArray *)findWhere:(NSString *)where args:(NSArray *)args orderBy:(NSString *)orderBy error:(NSError **)error;
 -(NSArray *)findWhere:(NSString *)where args:(NSArray *)args orderBy:(NSString *)orderBy;
 
--(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(NTJsonModel *model, NSError *error))completionHandler;
--(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(NTJsonModel *model, NSError *error))completionHandler;
+-(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionQueue:(dispatch_queue_t)completionQueue completionHandler:(void (^)(id<NTJsonStorableModel>model, NSError *error))completionHandler;
+-(void)beginFindOneWhere:(NSString *)where args:(NSArray *)args completionHandler:(void (^)(id<NTJsonStorableModel>model, NSError *error))completionHandler;
 -(id)findOneWhere:(NSString *)where args:(NSArray *)args error:(NSError **)error;
 -(id)findOneWhere:(NSString *)where args:(NSArray *)args;
 

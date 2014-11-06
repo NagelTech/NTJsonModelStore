@@ -60,36 +60,32 @@ static NSString *ObjcAttributeIvar = @"V";
 {
     NSDictionary *attributes = [self attributesForObjcProperty:objcProperty];
     
-    // If it's not dynamic, then it's not one of our properties...
+    NSString *name = @(property_getName(objcProperty));
     
-    if ( !attributes[ObjcAttributeDynamic] )
-        return nil;
+    // Get to our propInfo...
+    
+    SEL propInfoSelector = NSSelectorFromString([NSString stringWithFormat:@"__NTJsonProperty__%@", name]);
+    
+    if ( ![class respondsToSelector:propInfoSelector] )
+        return nil; // it's not one of ours...
     
     // Create our class and set the basics...
     
     NTJsonProp *prop = [[NTJsonProp alloc] init];
     
     prop->_modelClass = class;
-    prop->_name = @(property_getName(objcProperty));
+    prop->_name = name;
     
     // Get to our propInfo...
     
     __NTJsonPropertyInfo propInfo;
     
-    SEL propInfoSelector = NSSelectorFromString([NSString stringWithFormat:@"__NTJsonProperty__%@", prop->_name]);
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[class methodSignatureForSelector:propInfoSelector]];
+    invocation.target = class;
+    invocation.selector = propInfoSelector;
+    [invocation invoke];
     
-    if ( [class respondsToSelector:propInfoSelector] )
-    {
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[class methodSignatureForSelector:propInfoSelector]];
-        invocation.target = class;
-        invocation.selector = propInfoSelector;
-        [invocation invoke];
-        
-        [invocation getReturnValue:&propInfo];
-    }
-    
-    else
-        memset(&propInfo, 0, sizeof(propInfo)); // zero is all defaults.
+    [invocation getReturnValue:&propInfo];
     
     // Figure out the base type...
     
@@ -168,7 +164,7 @@ static NSString *ObjcAttributeIvar = @"V";
             }
             else
             {
-                prop->_type = [prop->_typeClass isSubclassOfClass:[NTJsonModel class]] ? NTJsonPropTypeModelArray : NTJsonPropTypeObjectArray;
+                prop->_type = [elementClass isSubclassOfClass:[NTJsonModel class]] ? NTJsonPropTypeModelArray : NTJsonPropTypeObjectArray;
                 prop->_typeClass = elementClass;
             }
         }
@@ -540,26 +536,33 @@ static NSString *ObjcAttributeIvar = @"V";
         case NTJsonPropTypeLongLong:
         case NTJsonPropTypeString:
         case NTJsonPropTypeStringEnum:
-            return value;   // the runtime shoul have given these to us in the correct format already.
+            return value;   // the runtime should have given these to us in the correct format already.
             
         case NTJsonPropTypeModel:
+        case NTJsonPropTypeModelArray:
             return [value asJson];
-            
-        case NTJsonPropTypeObject:
-            return [self object_convertValueToJson:value];
             
         case NTJsonPropTypeObjectArray:
         {
-            NSMutableArray *items = [NSMutableArray arrayWithCapacity:[value count]];
+            NSArray *valueArray = value;
+            NSMutableArray *jsonArray = [NSMutableArray arrayWithCapacity:valueArray.count];
             
-            for(id item in value)
-                [items addObject:[self object_convertValueToJson:item] ?: [NSNull null]];
+            if ( [valueArray isKindOfClass:[NSArray class]] )
+            {
+                for(id itemValue in valueArray)
+                {
+                    id itemJson = [self object_convertValueToJson:itemValue];
+                    
+                    if ( itemJson )
+                        [jsonArray addObject:itemJson];
+                }
+            }
             
-            return [items copy];
+            return [jsonArray copy];
         }
             
-        case NTJsonPropTypeModelArray:
-            return [value objectForKey:@"json"];
+        case NTJsonPropTypeObject:
+            return [self object_convertValueToJson:value];
             
         default:
             @throw [NSException exceptionWithName:@"NTJsonUnexpectedType" reason:@"Unexpected Property Type" userInfo:nil];

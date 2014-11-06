@@ -1,1 +1,0 @@
-../../NTJsonStore/Classes/ios/NSError+NTJsonStorePrivate.h

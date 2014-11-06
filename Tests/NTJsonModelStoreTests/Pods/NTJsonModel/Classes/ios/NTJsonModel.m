@@ -22,6 +22,11 @@
 @end
 
 
+@interface NTJsonModel (Mutable) <NTJsonMutableModel>
+
+@end
+
+
 @implementation NTJsonModel
 
 
@@ -62,21 +67,21 @@
 }
 
 
--(id)init
+-(instancetype)init
 {
     self = [super init];
     
     if ( self )
     {
-        _json = [NSMutableDictionary dictionary];
-        _isMutable = YES;
+        _json = @{};
+        _isMutable = NO;
     }
     
     return self;
 }
 
 
--(id)initWithJson:(NSDictionary *)json
+-(instancetype)initWithJson:(NSDictionary *)json
 {
     if ( [self.class __ntJsonModelSupport].modelClassForJsonOverridden )
     {
@@ -98,7 +103,32 @@
 }
 
 
--(id)initMutableWithJson:(NSDictionary *)json
+-(instancetype)initWithMutationBlock:(void (^)(id mutable))mutationBlock
+{
+    NTJsonModel *mutable = [self initMutable];
+    
+    if ( mutable )
+        mutationBlock(mutable);
+    
+    return [mutable copy];
+}
+
+
+-(instancetype)initMutable
+{
+    self = [super init];
+    
+    if ( self )
+    {
+        _json = [NSMutableDictionary dictionary];
+        _isMutable = YES;
+    }
+    
+    return self;
+}
+
+
+-(instancetype)initMutableWithJson:(NSDictionary *)json
 {
     if ( [self.class __ntJsonModelSupport].modelClassForJsonOverridden )
     {
@@ -129,12 +159,28 @@
 }
 
 
++(instancetype)modelWithMutationBlock:(void (^)(id mutable))mutationBlock
+{
+    return [[self alloc] initWithMutationBlock:mutationBlock];
+}
+
+
 +(instancetype)mutableModelWithJson:(NSDictionary *)json
 {
     if ( ![json isKindOfClass:[NSDictionary class]] )
         return nil;
     
     return [[self alloc] initMutableWithJson:json];
+}
+
+
+-(id)mutate:(void (^)(id mutable))mutationBlock
+{
+    NTJsonModel *mutable = [self mutableCopy];
+    
+    mutationBlock(mutable);
+    
+    return [mutable copy];
 }
 
 
@@ -154,12 +200,23 @@
 {
     if ( ![jsonArray isKindOfClass:[NSArray class]] )
         return nil;
+
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:jsonArray.count];
     
-    return nil; // todo
+    for(NSDictionary *json in jsonArray)
+        [array addObject:[[self alloc] initMutableWithJson:json]];
+    
+    return array;
 }
 
 
 #pragma mark - Properties
+
+
++(BOOL)modelClassForJsonOverridden
+{
+    return [self __ntJsonModelSupport].modelClassForJsonOverridden;
+}
 
 
 +(NSDictionary *)defaultJson
@@ -233,14 +290,24 @@
 
 -(NSString *)description
 {
-    return [[self.class __ntJsonModelSupport] descriptionForModel:self fullDescription:NO];
+    return [[self.class __ntJsonModelSupport] descriptionForModel:self fullDescription:NO parentModels:@[]];
 }
 
 
 -(NSString *)fullDescription
 {
-    return [[self.class __ntJsonModelSupport] descriptionForModel:self fullDescription:YES];
+    return [[self.class __ntJsonModelSupport] descriptionForModel:self fullDescription:YES parentModels:@[]];
 }
 
 
 @end
+
+
+@implementation NTJsonModel (Mutable)
+
+// we need to implement the category to make sure the compiler actually generates the meta data for NTJsonMutableModel
+
+@end
+
+
+

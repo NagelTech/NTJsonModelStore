@@ -10,7 +10,7 @@
 
 #import "NTJsonStoreTypes.h"
 #import "NTJsonModelCollection.h"
-#import "NTJsonModel+NTJsonModelStore.h"
+#import "NTJsonStorableModel.h"
 
 
 @class NTJsonStore;
