@@ -88,3 +88,6 @@
 
 @end
 
+
+typedef NTJsonStorableModel<NTJsonMutableStorableModel> NTJsonMutableStorableModel;
+
