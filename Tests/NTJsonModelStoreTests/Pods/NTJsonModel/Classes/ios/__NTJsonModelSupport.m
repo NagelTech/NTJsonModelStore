@@ -16,7 +16,8 @@
     NSArray *_properties;
     NSDictionary *_allRelatedProperties;
     NSDictionary *_defaultJson;
-    BOOL _modelClassForJsonOverridden;
+    NSNumber *_modelClassForJsonOverridden;
+    BOOL _isImmutableClass;
 }
 
 @property (nonatomic,readonly) NSDictionary *allRelatedProperties;
@@ -33,6 +34,33 @@
         return nil;
     else
         return [self.modelClass.superclass __ntJsonModelSupport];
+}
+
+
+#pragma mark - Helpers
+
+
+static BOOL classImplementsSelector(Class class, SEL selector)
+{
+    BOOL found = NO;
+    
+    unsigned int count;
+    Method *methods = class_copyMethodList(object_getClass(class), &count);
+    
+    for(unsigned int index=0; index<count; index++)
+    {
+        SEL sel = method_getName(methods[index]);
+        
+        if ( sel == selector )
+        {
+            found = YES;
+            break;
+        }
+    }
+    
+    free(methods);
+
+    return found;
 }
 
 
@@ -180,46 +208,8 @@
 
 +(Protocol *)findMutableProtocolForClass:(Class)modelClass
 {
-    NSString *className = NSStringFromClass(modelClass);
-
-     // If it's one of our classes, try our format...
-    
-    if ( [className hasPrefix:@"NTJson"] )
-    {
-        Protocol *protocol = NSProtocolFromString([NSString stringWithFormat:@"NTJsonMutable%@", [className substringFromIndex:6]]);
-        
-        if ( protocol )
-            return protocol;
-    }
-    
-    // Ok, see if mutable is taked onto the front...
-    
-    Protocol *protocol = NSProtocolFromString([NSString stringWithFormat:@"Mutable%@", NSStringFromClass(modelClass)]);
-    
-    if ( protocol )
-        return protocol;
-
-    // Ok, we tried the easy things, now we look for a protocol that matches the class name, but with "Mutable" somewhere in it
-
-    unsigned int numProtocols;
-    Protocol * __unsafe_unretained *protocols = class_copyProtocolList(modelClass, &numProtocols);
-    
-    for(int index=0; index<numProtocols; index++)
-    {
-        NSString *protocolName = @(protocol_getName(protocols[index]));
-        
-        NSRange mutableRange = [protocolName rangeOfString:@"Mutable"];
-        
-        if ( mutableRange.location == NSNotFound )
-            continue;   // no mutable keyword
-        
-        // remove "Mutable"
-        
-        NSString *matchingClassName = [protocolName stringByReplacingCharactersInRange:mutableRange withString:@""];
-                                       
-        if ( [className isEqualToString:matchingClassName] )
-            return protocols[index];
-    }
+    if ( classImplementsSelector(modelClass, @selector(__ntJsonModelMutableProtocol)) )
+        return [modelClass __ntJsonModelMutableProtocol];
     
     return nil;
 }
@@ -250,14 +240,15 @@
     
     if ( mutableProtocol )
     {
-        // Make sure read-only properties are read-only...
+        // Force all properties to be read-only...
         
         for(NTJsonProp *prop in properties)
         {
+
             if (!prop.isReadOnly )
             {
                 @throw [NSException exceptionWithName:@"NTJsonPropertyError"
-                                               reason:[NSString stringWithFormat:@"NTJsonModel property %@.%@ must be declared read-only if a mutable protocol (Mutable%@) is also declared.", NSStringFromClass(modelClass), prop.name, NSStringFromClass(modelClass)]
+                                               reason:[NSString stringWithFormat:@"NTJsonModel property %@.%@ must be declared read-only if a mutable protocol (%@) is declared.", NSStringFromClass(modelClass), prop.name, NSStringFromProtocol(mutableProtocol)]
                                              userInfo:nil];
             }
         }
@@ -385,6 +376,8 @@
         
         // Add our properties and create the implementations for them...
         
+        BOOL isImmutable = YES;
+        
         for(NTJsonProp *property in [self.class extractPropertiesForModelClass:self.modelClass])
         {
             // If another property exists with the same name, we are overriding it...
@@ -409,9 +402,14 @@
             [self addImpsForProperty:property];
             
             [properties addObject:property];
+            
+            if ( !property.isReadOnly )
+                isImmutable = NO;
         }
         
         _properties = [properties copy];
+        
+        _isImmutableClass = isImmutable;
         
         // Get our related properties...
         
@@ -429,32 +427,20 @@
 #pragma mark - Properties
 
 
+-(BOOL)isMutableClass
+{
+    return !_isImmutableClass;
+}
+
+
 -(BOOL)modelClassForJsonOverridden
 {
     if ( !_modelClassForJsonOverridden )
     {
-        BOOL modelClassForJsonOverridden = NO;
-        
-        unsigned int count;
-        Method *methods = class_copyMethodList(object_getClass(self.modelClass), &count);
-        
-        for(unsigned int index=0; index<count; index++)
-        {
-            SEL selector = method_getName(methods[index]);
-            
-            if ( selector == @selector(modelClassForJson:) )
-            {
-                modelClassForJsonOverridden = YES;
-                break;
-            }
-        }
-        
-        free(methods);
-        
-        _modelClassForJsonOverridden = modelClassForJsonOverridden;
+         _modelClassForJsonOverridden = @(classImplementsSelector(self.modelClass, @selector(modelClassForJson:)));
     }
     
-    return _modelClassForJsonOverridden;
+    return [_modelClassForJsonOverridden boolValue];
 }
 
 

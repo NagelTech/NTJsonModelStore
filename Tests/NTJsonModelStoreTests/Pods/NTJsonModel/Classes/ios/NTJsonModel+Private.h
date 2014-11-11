@@ -22,6 +22,7 @@
 @interface NTJsonModel (Private)
 
 +(__NTJsonModelSupport *)__ntJsonModelSupport;
++(Protocol *)__ntJsonModelMutableProtocol;
 
 -(id)__json;
 

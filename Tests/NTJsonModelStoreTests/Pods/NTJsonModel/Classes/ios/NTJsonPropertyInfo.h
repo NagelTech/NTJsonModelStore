@@ -37,3 +37,6 @@ typedef struct
 
 #define NTJsonProperty(property, ...) __NTJsonProperty_X(,##__VA_ARGS__, __NTJsonProperty_6(property, __VA_ARGS__), __NTJsonProperty_5(property, __VA_ARGS__), __NTJsonProperty_4(property, __VA_ARGS__), __NTJsonProperty_3(property, __VA_ARGS__), __NTJsonProperty_2(property, __VA_ARGS__), __NTJsonProperty_1(property, __VA_ARGS__), __NTJsonProperty_0(property))
 
+
+#define NTJsonMutable(proto) +(Protocol *)__ntJsonModelMutableProtocol { return @protocol(proto); }
+

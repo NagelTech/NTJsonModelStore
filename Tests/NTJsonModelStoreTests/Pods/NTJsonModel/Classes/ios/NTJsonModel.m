@@ -13,7 +13,7 @@
 #import "__NTJsonModelSupport.h"
 
 
-@interface NTJsonModel () <NTJsonMutableModel>
+@interface NTJsonModel ()
 {
     id _json;
     BOOL _isMutable;
@@ -31,6 +31,12 @@
 +(__NTJsonModelSupport *)__ntJsonModelSupport
 {
     return objc_getAssociatedObject(self, @selector(__ntJsonModelSupport));
+}
+
+
++(Protocol *)__ntJsonModelMutableProtocol
+{
+    return @protocol(NTJsonMutableModel);
 }
 
 
@@ -62,7 +68,7 @@
 }
 
 
--(instancetype)init
+-(id)init
 {
     self = [super init];
     
@@ -76,7 +82,7 @@
 }
 
 
--(instancetype)initWithJson:(NSDictionary *)json
+-(id)initWithJson:(NSDictionary *)json
 {
     if ( [self.class __ntJsonModelSupport].modelClassForJsonOverridden )
     {
@@ -98,7 +104,7 @@
 }
 
 
--(instancetype)initWithMutationBlock:(void (^)(id mutable))mutationBlock
+-(id)initWithMutationBlock:(void (^)(id mutable))mutationBlock
 {
     NTJsonModel *mutable = [self initMutable];
     
@@ -109,7 +115,7 @@
 }
 
 
--(instancetype)initMutable
+-(id)initMutable
 {
     self = [super init];
     
@@ -123,7 +129,7 @@
 }
 
 
--(instancetype)initMutableWithJson:(NSDictionary *)json
+-(id)initMutableWithJson:(NSDictionary *)json
 {
     if ( [self.class __ntJsonModelSupport].modelClassForJsonOverridden )
     {
@@ -145,7 +151,7 @@
 }
 
 
-+(instancetype)modelWithJson:(NSDictionary *)json
++(id)modelWithJson:(NSDictionary *)json
 {
     if ( ![json isKindOfClass:[NSDictionary class]] )
         return nil;
@@ -154,13 +160,13 @@
 }
 
 
-+(instancetype)modelWithMutationBlock:(void (^)(id mutable))mutationBlock
++(id)modelWithMutationBlock:(void (^)(id mutable))mutationBlock
 {
     return [[self alloc] initWithMutationBlock:mutationBlock];
 }
 
 
-+(instancetype)mutableModelWithJson:(NSDictionary *)json
++(id)mutableModelWithJson:(NSDictionary *)json
 {
     if ( ![json isKindOfClass:[NSDictionary class]] )
         return nil;

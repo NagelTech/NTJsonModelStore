@@ -17,6 +17,8 @@
 @property (nonatomic,readonly) NSArray *properties;
 @property (nonatomic,readonly) NSDictionary *defaultJson;
 @property (nonatomic,readonly) BOOL modelClassForJsonOverridden;
+@property (nonatomic,readonly) BOOL isImmutableClass;
+@property (nonatomic,readonly) BOOL isMutableClass;
 
 -(instancetype)initWithModelClass:(Class)modelClass;
 
