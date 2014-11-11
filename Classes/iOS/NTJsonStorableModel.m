@@ -11,13 +11,12 @@
 #import "NTJsonModelStore+Private.h"
 
 
-@interface NTJsonStorableModel () <NTJsonMutableStorableModel>
-
-@end
 
 
 @implementation NTJsonStorableModel
 
+
+NTJsonMutable(NTJsonMutableStorableModel)
 
 NTJsonProperty(rowid, jsonPath="__rowid__")
 
