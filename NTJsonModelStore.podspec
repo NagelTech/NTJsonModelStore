@@ -6,11 +6,11 @@ Pod::Spec.new do |s|
   s.license             = { :type => 'MIT', :file => 'LICENSE' }
   s.author              = { "Ethan Nagel" => "eanagel@gmail.com" }
   s.platform            = :ios, '6.0'
-  s.source              = { :git => "https://github.com/NagelTech/NTJsonModelStore.git", :branch => "feature/explicit-mutability" }
+  s.source              = { :git => "https://github.com/NagelTech/NTJsonModelStore.git", :branch => "develop" }
   s.requires_arc        = true
   s.libraries           = 'sqlite3'
 
-  s.source_files        = 'Classes/ios/*.{h,m}'
+  s.source_files        = 'Pod/Classes/*.{h,m}'
   s.public_header_files = 'NTJsonModelStore.h', 'NTJsonModelCollection.h', 'NTJsonStorableModel.h'
   
   s.dependency 'NTJsonStore'
