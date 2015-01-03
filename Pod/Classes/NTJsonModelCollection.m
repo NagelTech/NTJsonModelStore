@@ -60,7 +60,18 @@
     self.modelInfo[@"modelClass"] = NSStringFromClass(_modelClass);
     [self saveModelInfo];
     
-    _collection.defaultJson = [_modelClass defaultJson];
+    // build and apply our alias list...
+    
+    NSMutableDictionary *aliases = [NSMutableDictionary dictionary];
+    
+    for(NSDictionary *metadata in [modelClass jsonPropertyMetadata])
+        aliases[metadata[@"name"]] = metadata[@"jsonKeyPath"];
+    
+    _collection.aliases = [aliases copy];
+    
+    // apply metadata (Index Macros, etc)...
+    
+    [self applyMetadataFromModelClass:_modelClass];
 }
 
 
