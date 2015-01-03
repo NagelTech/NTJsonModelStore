@@ -18,6 +18,7 @@
     NSDictionary *_defaultJson;
     NSNumber *_modelClassForJsonOverridden;
     BOOL _isImmutableClass;
+    NSArray *_propertyMetadata;
 }
 
 @property (nonatomic,readonly) NSDictionary *allRelatedProperties;
@@ -441,6 +442,29 @@ static BOOL classImplementsSelector(Class class, SEL selector)
     }
     
     return [_modelClassForJsonOverridden boolValue];
+}
+
+
+-(NSArray *)propertyMetadata
+{
+    if ( !_propertyMetadata )
+    {
+        NSMutableArray *propertyMetadata = [NSMutableArray new];
+        
+        for(NTJsonProp *prop in self.properties)
+        {
+            [propertyMetadata addObject:
+            @{
+                @"name": prop.name,
+                @"jsonKeyPath": prop.jsonKeyPath,
+                @"modelClass": prop.modelClass,
+                }];
+        }
+        
+        _propertyMetadata = [propertyMetadata copy];
+    }
+    
+    return _propertyMetadata;
 }
 
 

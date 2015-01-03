@@ -16,10 +16,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NTJsonModel:
-    :commit: 4c5c31974012c12511b69f6d004f1d97f1551033
+    :commit: e6b453d347932f4b2e3c391c8285c32ca015e8bc
     :git: https://github.com/NagelTech/NTJsonModel.git
   NTJsonStore:
-    :commit: f6f3db70b30dea7e35a278c90070e2e1f45237cf
+    :commit: 82cb49f66f8a701f3dae22c97bbfbc5a982c419d
     :git: https://github.com/NagelTech/NTJsonStore.git
 
 SPEC CHECKSUMS:

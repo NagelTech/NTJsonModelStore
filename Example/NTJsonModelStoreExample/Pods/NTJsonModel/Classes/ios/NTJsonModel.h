@@ -41,6 +41,15 @@
 
 
 /**
+ *  returns an array with meta data for all JSON properties in this class.
+ *  Each item is a dictionary with the following keys: @"name" (NSString), @"jsonKeyPath" (NSString), @"modelClass" (Class)
+ *
+ *  @return NSArray with metadata for all properties in this class.
+ */
++(NSArray *)jsonPropertyMetadata;
+
+
+/**
  *  returns the JSON representation of the object
  *
  *  @return NSDictionary with the JSON representation of the object.

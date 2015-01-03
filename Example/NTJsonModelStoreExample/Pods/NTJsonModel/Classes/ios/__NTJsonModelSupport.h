@@ -19,6 +19,7 @@
 @property (nonatomic,readonly) BOOL modelClassForJsonOverridden;
 @property (nonatomic,readonly) BOOL isImmutableClass;
 @property (nonatomic,readonly) BOOL isMutableClass;
+@property (nonatomic,readonly) NSArray *propertyMetadata;
 
 -(instancetype)initWithModelClass:(Class)modelClass;
 

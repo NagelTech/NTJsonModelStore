@@ -10,6 +10,8 @@
 
 @protocol NTJsonPropertyConversion <NSObject>
 
+@optional
+
 +(id)convertJsonToValue:(id)json;
 +(id)convertValueToJson:(id)value;
 

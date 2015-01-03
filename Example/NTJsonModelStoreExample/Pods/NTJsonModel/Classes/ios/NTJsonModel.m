@@ -226,6 +226,12 @@
 }
 
 
++(NSArray *)jsonPropertyMetadata
+{
+    return [self __ntJsonModelSupport].propertyMetadata;
+}
+
+
 -(id)__json
 {
     return _json;
