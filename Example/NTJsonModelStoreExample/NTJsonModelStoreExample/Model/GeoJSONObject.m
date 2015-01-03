@@ -20,6 +20,8 @@ GeoJSONType GeoJSONTypeFeatureCollection = @"FeatureCollection";
 @implementation GeoJSONObject
 
 
+NTJsonCacheSize(100)
+NTJsonIndex(type)
 NTJsonProperty(type, enumValues=[GeoJSONObject types])
 NTJsonProperty(bbox)
 

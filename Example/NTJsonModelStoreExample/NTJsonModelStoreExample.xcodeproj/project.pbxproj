@@ -68,7 +68,7 @@
 		F00C05471A48ABEA0076343A /* NTJsonModelStore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NTJsonModelStore.podspec; path = ../../NTJsonModelStore.podspec; sourceTree = "<group>"; };
 		F00C05481A48ABEA0076343A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		F00C05491A48ABEA0076343A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		F00C054D1A48AC510076343A /* NTJsonModelStoreTests.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStoreTests.pch; sourceTree = "<group>"; };
+		F00C054D1A48AC510076343A /* NTJsonModelStoreExample.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStoreExample.pch; sourceTree = "<group>"; };
 		F00C054E1A48ACFB0076343A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F00C05521A48B3BF0076343A /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = Earthquakes/EarthquakesViewController.h; sourceTree = "<group>"; };
 		F00C05531A48B3BF0076343A /* EarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesViewController.m; path = Earthquakes/EarthquakesViewController.m; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				F00C054E1A48ACFB0076343A /* Podfile */,
 				F00C05101A48AAE60076343A /* Info.plist */,
 				F00C05111A48AAE60076343A /* main.m */,
-				F00C054D1A48AC510076343A /* NTJsonModelStoreTests.pch */,
+				F00C054D1A48AC510076343A /* NTJsonModelStoreExample.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -511,6 +511,7 @@
 			baseConfigurationReference = ECFDFB151E11E8F0221B4389 /* Pods-NTJsonModelStoreExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = NTJsonModelStoreExample/NTJsonModelStoreExample.pch;
 				INFOPLIST_FILE = NTJsonModelStoreExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +523,7 @@
 			baseConfigurationReference = C847DFCAB75FB2E00A0017F2 /* Pods-NTJsonModelStoreExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = NTJsonModelStoreExample/NTJsonModelStoreExample.pch;
 				INFOPLIST_FILE = NTJsonModelStoreExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

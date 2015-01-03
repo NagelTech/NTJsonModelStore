@@ -7,7 +7,6 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#import <NTJsonPropertyConversion.h>
 
 
 @interface CLLocation (GeoJSON) <NTJsonPropertyConversion>

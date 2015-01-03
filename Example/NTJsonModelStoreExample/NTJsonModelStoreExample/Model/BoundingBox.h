@@ -10,8 +10,6 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-#import <NTJsonPropertyConversion.h>
-
 
 @interface BoundingBox : NSObject <NTJsonPropertyConversion>
 
