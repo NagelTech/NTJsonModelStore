@@ -8,6 +8,8 @@
 
 #import "NTJsonModelStore+Private.h"
 
+#import <objc/runtime.h>
+
 
 @interface NTJsonModelCollection ()
 {
@@ -174,6 +176,46 @@
 -(void)addQueryableFields:(NSString *)fields
 {
     [_collection addQueryableFields:fields];
+}
+
+
+-(void)applyMetadataFromModelClass:(Class)modelClass
+{
+    // indexes, queryable fields and cache size...
+    
+    unsigned int count;
+    Method *methods = class_copyMethodList(object_getClass(modelClass), &count);
+    
+    for(unsigned int index=0; index<count; index++)
+    {
+        SEL sel = method_getName(methods[index]);
+        
+        NSString *methodName = NSStringFromSelector(sel);
+        
+        if ( ![methodName hasPrefix:@"__NTJsonMetadata__"] )
+            continue;
+        
+        NSString *type = [methodName substringWithRange:NSMakeRange(18, 2)];
+        
+        id (*imp)(Class target, SEL sel) = (void *)[modelClass methodForSelector:sel];
+        id value = imp(modelClass, sel);
+        
+        if ( [type isEqualToString:@"IX"] )
+            [self addIndexWithKeys:value];
+        
+        else if ( [type isEqualToString:@"UX"] )
+            [self addUniqueIndexWithKeys:value];
+        
+        else if ( [type isEqualToString:@"QF"] )
+            [self addQueryableFields:value];
+        
+        else if ( [type isEqualToString:@"CS"] )
+            [self setCacheSize:[value intValue]];
+    }
+    
+    free(methods);
+    
+    _collection.defaultJson = [_modelClass defaultJson];
 }
 
 
