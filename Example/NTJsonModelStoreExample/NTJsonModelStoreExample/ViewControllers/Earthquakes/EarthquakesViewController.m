@@ -28,11 +28,55 @@
 @implementation EarthquakesViewController
 
 
+-(void)beginReload
+{
+    [Earthquake beginFindWhere:nil args:nil orderBy:@"magnitude desc" completionHandler:^(NSArray *earthquakes, NSError *error) {
+        _earthquakes = earthquakes;
+        [self.tableView reloadData];
+    }];
+}
+
+-(void)beginRefreshDataFromServer
+{
+    self.navigationItem.rightBarButtonItem.title = @"...";
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    [[ApiClient new] beginGetCategory:CategoryAll recent:RecentMonth responseHandler:^(GeoJSONFeatureCollection *collection, NSError *error) {
+        
+        self.navigationItem.rightBarButtonItem.title = @"Refesh";
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+
+        // We only want actual earthquakes..
+        
+        NSMutableArray *earthquakes = [NSMutableArray array];
+        
+        for(GeoJSONFeature *feature in collection.features)
+        {
+            if ( [feature isKindOfClass:[Earthquake class]] )
+                [earthquakes addObject:feature];
+        }
+        
+        // for now, just delete existing and replace with our new values...
+        
+        [Earthquake beginRemoveAllWithCompletionHandler:^(int count, NSError *error) {}];
+        [Earthquake beginInsertBatch:earthquakes completionHandler:^(NSError *error) {}];
+        [Earthquake beginSyncWithCompletionHandler:^{
+            [self beginReload];
+        }];
+    }];
+}
+
+
 - (void)viewDidLoad
 {
     self.title = @"Earthquakes!";
     
     [super viewDidLoad];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(refreshAction:)];
+    
+    self.navigationItem.rightBarButtonItem = item;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -47,11 +91,15 @@
 {
     [super viewWillAppear:animated];
     
-    [[ApiClient new] beginGetCategory:CategoryAll recent:RecentMonth responseHandler:^(GeoJSONFeatureCollection *earthquakes, NSError *error) {
-        
-        _earthquakes = earthquakes.features;
-        [self.tableView reloadData];
-    }];
+    [self beginReload];
+    
+    [self beginRefreshDataFromServer];
+}
+
+
+-(void)refreshAction:(id)sender
+{
+    [self beginRefreshDataFromServer];
 }
 
 

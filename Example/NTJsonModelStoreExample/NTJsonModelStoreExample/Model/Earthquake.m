@@ -13,9 +13,29 @@
 
 @implementation Earthquake
 
+NTJsonUniqueIndex(code)
+NTJsonIndex(magnitude)
+NTJsonIndex(title)
+NTJsonIndex(time)
+
 NTJsonProperty(code, jsonPath="properties.code")
 NTJsonProperty(title, jsonPath="properties.title")
 NTJsonProperty(magnitude, jsonPath="properties.mag")
+NTJsonProperty(time, jsonPath="properties.time")
+
+
++(NTJsonModelCollection *)defaultModelCollection
+{
+    static NTJsonModelCollection *modelCollection;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        modelCollection = [[self defaultModelStore] collectionWithName:[self defaultModelCollectionName]];
+        modelCollection.modelClass = self;
+    });
+    
+    return modelCollection;
+}
 
 
 -(CLLocation *)location

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Nagel Technologies, Inc. All rights reserved.
 //
 
+#import "ApiClient.h"
+
 #import "GeoJSONObject.h"
 
 #import "GeoJSONPoint.h"
@@ -20,8 +22,6 @@ GeoJSONType GeoJSONTypeFeatureCollection = @"FeatureCollection";
 @implementation GeoJSONObject
 
 
-NTJsonCacheSize(100)
-NTJsonIndex(type)
 NTJsonProperty(type, enumValues=[GeoJSONObject types])
 NTJsonProperty(bbox)
 

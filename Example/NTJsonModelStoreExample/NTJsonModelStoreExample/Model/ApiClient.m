@@ -25,6 +25,12 @@ CategoryType Category1_0 = @"1.0";
 @implementation ApiClient
 
 
++(instancetype)apiClient
+{
+    return [[ApiClient alloc] init];
+}
+
+
 +(NSOperationQueue *)operationQueue
 {
     static NSOperationQueue *operationQueue;
@@ -68,7 +74,7 @@ CategoryType Category1_0 = @"1.0";
 -(void)beginGetCategory:(CategoryType)categoryType recent:(RecentType)recentType responseHandler:(void (^)(GeoJSONFeatureCollection *earthquakes, NSError *error))responseHandler
 {
     [self beginRequestWithUrl:[NSString stringWithFormat:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/%@_%@.geojson", categoryType, recentType] responseHandler:^(NSDictionary *json, NSError *error) {
-        NSLog(@"JSON = %@",  json);
+//        NSLog(@"JSON = %@",  json);
         
         responseHandler([GeoJSONFeatureCollection modelWithJson:json], error);
     }];

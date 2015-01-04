@@ -28,6 +28,7 @@
 		F00C05701A48D8DA0076343A /* GeoJSONFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C056F1A48D8DA0076343A /* GeoJSONFeature.m */; };
 		F00C05731A48DA600076343A /* GeoJSONFeatureCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05721A48DA600076343A /* GeoJSONFeatureCollection.m */; };
 		F00C05761A48DDCF0076343A /* Earthquake.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05751A48DDCF0076343A /* Earthquake.m */; };
+		F06DA9DE1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DA9DD1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m */; };
 		FD12DFB5EAC2EE7023CD9C4B /* libPods-NTJsonModelStoreExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B0EA94576D0F3CFD9ED03 /* libPods-NTJsonModelStoreExample.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		F00C05721A48DA600076343A /* GeoJSONFeatureCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSONFeatureCollection.m; sourceTree = "<group>"; };
 		F00C05741A48DDCF0076343A /* Earthquake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Earthquake.h; sourceTree = "<group>"; };
 		F00C05751A48DDCF0076343A /* Earthquake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Earthquake.m; sourceTree = "<group>"; };
+		F06DA9DC1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NTJsonPropertyConversion.h"; sourceTree = "<group>"; };
+		F06DA9DD1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NTJsonPropertyConversion.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				F00C05601A48C4290076343A /* GeoJSONObject.m */,
 				F00C056B1A48D8570076343A /* GeoJSONPoint.h */,
 				F00C056C1A48D8570076343A /* GeoJSONPoint.m */,
+				F06DA9DC1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.h */,
+				F06DA9DD1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F00C05461A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m in Sources */,
+				F06DA9DE1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m in Sources */,
 				F00C056D1A48D8570076343A /* GeoJSONPoint.m in Sources */,
 				F00C05761A48DDCF0076343A /* Earthquake.m in Sources */,
 				F00C05421A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */,

@@ -29,4 +29,6 @@ extern CategoryType Category1_0;
 
 -(void)beginGetCategory:(CategoryType)categoryType recent:(RecentType)recentType responseHandler:(void (^)(GeoJSONFeatureCollection *earthquakes, NSError *error))responseHandler;
 
++(instancetype)apiClient;
+
 @end

@@ -34,10 +34,4 @@
 }
 
 
-+(id)convertValueToJson:(id)value
-{
-    return nil;
-}
-
-
 @end
