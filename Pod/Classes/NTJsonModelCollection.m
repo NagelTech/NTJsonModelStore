@@ -62,15 +62,6 @@
     self.modelInfo[@"modelClass"] = NSStringFromClass(_modelClass);
     [self saveModelInfo];
     
-    // build and apply our alias list...
-    
-    NSMutableDictionary *aliases = [NSMutableDictionary dictionary];
-    
-    for(NSDictionary *metadata in [modelClass jsonPropertyMetadata])
-        aliases[metadata[@"name"]] = metadata[@"jsonKeyPath"];
-    
-    _collection.aliases = [aliases copy];
-    
     // apply metadata (Index Macros, etc)...
     
     [self applyMetadataFromModelClass:_modelClass];
@@ -99,7 +90,8 @@
         _collection = collection;
         
         if ( self.modelClass )
-            _collection.defaultJson = [_modelClass defaultJson];
+            [self applyMetadataFromModelClass:self.modelClass];
+
     }
     
     return self;
@@ -181,6 +173,15 @@
 
 -(void)applyMetadataFromModelClass:(Class)modelClass
 {
+    // build and apply our alias list...
+    
+    NSMutableDictionary *aliases = [NSMutableDictionary dictionary];
+    
+    for(NSDictionary *metadata in [modelClass jsonPropertyMetadata])
+        aliases[metadata[@"name"]] = [NSString stringWithFormat:@"[%@]", metadata[@"jsonKeyPath"]];
+    
+    _collection.aliases = [aliases copy];
+    
     // indexes, queryable fields and cache size...
     
     unsigned int count;

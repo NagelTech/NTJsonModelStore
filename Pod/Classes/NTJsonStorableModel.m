@@ -11,8 +11,6 @@
 #import "NTJsonModelStore+Private.h"
 
 
-
-
 @implementation NTJsonStorableModel
 
 
