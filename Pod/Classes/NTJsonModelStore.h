@@ -22,8 +22,8 @@
 
 @property (nonatomic,readonly)      NTJsonStore *store;
 
-@property (nonatomic,readonly)      NSString *storePath;
-@property (nonatomic,readonly)      NSString *storeName;
+@property (nonatomic,readwrite)     NSString *storePath;
+@property (nonatomic,readwrite)     NSString *storeName;
 
 @property (nonatomic,readonly)      NSString *storeFilename;
 @property (nonatomic,readonly)      BOOL exists;

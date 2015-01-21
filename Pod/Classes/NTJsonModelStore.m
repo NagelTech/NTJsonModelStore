@@ -120,15 +120,28 @@
     return YES;
 }
 
+
 -(NSString *)storePath
 {
     return _store.storePath;
 }
 
 
+-(void)setStorePath:(NSString *)storePath
+{
+    [_store setStorePath:storePath];
+}
+
+
 -(NSString *)storeName
 {
     return _store.storeName;
+}
+
+
+-(void)setStoreName:(NSString *)storeName
+{
+    [_store setStoreName:storeName];
 }
 
 
