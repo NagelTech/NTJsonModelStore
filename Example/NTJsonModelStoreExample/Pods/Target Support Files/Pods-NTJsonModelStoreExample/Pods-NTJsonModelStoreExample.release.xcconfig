@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/NTJsonModel" "${PODS_ROOT}/Headers/Public/NTJsonStore"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/NTJsonModel" -isystem "${PODS_ROOT}/Headers/Public/NTJsonStore"
+OTHER_LDFLAGS = -ObjC -l"Pods-NTJsonModelStoreExample-NTJsonModel" -l"Pods-NTJsonModelStoreExample-NTJsonStore" -l"sqlite3"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
