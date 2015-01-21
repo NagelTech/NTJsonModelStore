@@ -171,8 +171,38 @@
 }
 
 
++(NSSet *)selectorNamesWithPrefix:(NSString *)prefix inClass:(Class)class
+{
+    NSMutableSet *selectorNames = [NSMutableSet set];
+
+    for(Class currentClass=class; currentClass!=nil; currentClass=[currentClass superclass])
+    {
+        unsigned int count;
+        Method *methods = class_copyMethodList(object_getClass(currentClass), &count);
+
+        for(unsigned int index=0; index<count; index++)
+        {
+            SEL sel = method_getName(methods[index]);
+
+            NSString *selectorName = NSStringFromSelector(sel);
+
+            if ( [selectorName hasPrefix:prefix] )
+                [selectorNames addObject:selectorName];
+        }
+
+        free(methods);
+    }
+
+    return [selectorNames copy];
+}
+
+
 -(void)applyMetadataFromModelClass:(Class)modelClass
 {
+    NSString * const PREFIX = @"__NTJsonMetadata__";
+    const NSInteger TYPE_OFFSET = 18;
+    const NSInteger TYPE_SIZE = 2;
+
     // build and apply our alias list...
     
     NSMutableDictionary *aliases = [NSMutableDictionary dictionary];
@@ -181,23 +211,15 @@
         aliases[metadata[@"name"]] = [NSString stringWithFormat:@"[%@]", metadata[@"jsonKeyPath"]];
     
     _collection.aliases = [aliases copy];
-    
+
     // indexes, queryable fields and cache size...
-    
-    unsigned int count;
-    Method *methods = class_copyMethodList(object_getClass(modelClass), &count);
-    
-    for(unsigned int index=0; index<count; index++)
+
+    for(NSString *selectorName in [self.class selectorNamesWithPrefix:PREFIX inClass:modelClass])
     {
-        SEL sel = method_getName(methods[index]);
-        
-        NSString *methodName = NSStringFromSelector(sel);
-        
-        if ( ![methodName hasPrefix:@"__NTJsonMetadata__"] )
-            continue;
-        
-        NSString *type = [methodName substringWithRange:NSMakeRange(18, 2)];
-        
+        SEL sel = NSSelectorFromString(selectorName);
+            
+        NSString *type = [selectorName substringWithRange:NSMakeRange(TYPE_OFFSET, TYPE_SIZE)];
+
         id (*imp)(Class target, SEL sel) = (void *)[modelClass methodForSelector:sel];
         id value = imp(modelClass, sel);
         
@@ -213,8 +235,6 @@
         else if ( [type isEqualToString:@"CS"] )
             [self setCacheSize:[value intValue]];
     }
-    
-    free(methods);
     
     _collection.defaultJson = [_modelClass defaultJson];
 }
