@@ -10,11 +10,6 @@
 		F00C05121A48AAE60076343A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05111A48AAE60076343A /* main.m */; };
 		F00C05151A48AAE60076343A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05141A48AAE60076343A /* AppDelegate.m */; };
 		F00C052C1A48AAE60076343A /* NTJsonModelStoreExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C052B1A48AAE60076343A /* NTJsonModelStoreExampleTests.m */; };
-		F00C05421A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05371A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m */; };
-		F00C05431A48ABCD0076343A /* NTJsonModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C053A1A48ABCD0076343A /* NTJsonModelCollection.m */; };
-		F00C05441A48ABCD0076343A /* NTJsonModelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C053D1A48ABCD0076343A /* NTJsonModelStore.m */; };
-		F00C05451A48ABCD0076343A /* NTJsonStorableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C053F1A48ABCD0076343A /* NTJsonStorableModel.m */; };
-		F00C05461A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05411A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m */; };
 		F00C054F1A48ACFB0076343A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F00C054E1A48ACFB0076343A /* Podfile */; };
 		F00C05551A48B3BF0076343A /* EarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C05531A48B3BF0076343A /* EarthquakesViewController.m */; };
 		F00C05561A48B3BF0076343A /* EarthquakesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00C05541A48B3BF0076343A /* EarthquakesViewController.xib */; };
@@ -54,21 +49,6 @@
 		F00C05251A48AAE60076343A /* NTJsonModelStoreExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTJsonModelStoreExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00C052A1A48AAE60076343A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00C052B1A48AAE60076343A /* NTJsonModelStoreExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStoreExampleTests.m; sourceTree = "<group>"; };
-		F00C05361A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonCollection+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
-		F00C05371A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJsonCollection+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
-		F00C05381A48ABCD0076343A /* NTJsonModelCollection+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelCollection+Private.h"; sourceTree = "<group>"; };
-		F00C05391A48ABCD0076343A /* NTJsonModelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJsonModelCollection.h; sourceTree = "<group>"; };
-		F00C053A1A48ABCD0076343A /* NTJsonModelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelCollection.m; sourceTree = "<group>"; };
-		F00C053B1A48ABCD0076343A /* NTJsonModelStore+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelStore+Private.h"; sourceTree = "<group>"; };
-		F00C053C1A48ABCD0076343A /* NTJsonModelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStore.h; sourceTree = "<group>"; };
-		F00C053D1A48ABCD0076343A /* NTJsonModelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStore.m; sourceTree = "<group>"; };
-		F00C053E1A48ABCD0076343A /* NTJsonStorableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJsonStorableModel.h; sourceTree = "<group>"; };
-		F00C053F1A48ABCD0076343A /* NTJsonStorableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJsonStorableModel.m; sourceTree = "<group>"; };
-		F00C05401A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJsonStore+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
-		F00C05411A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJsonStore+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
-		F00C05471A48ABEA0076343A /* NTJsonModelStore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NTJsonModelStore.podspec; path = ../../NTJsonModelStore.podspec; sourceTree = "<group>"; };
-		F00C05481A48ABEA0076343A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
-		F00C05491A48ABEA0076343A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		F00C054D1A48AC510076343A /* NTJsonModelStoreExample.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStoreExample.pch; sourceTree = "<group>"; };
 		F00C054E1A48ACFB0076343A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F00C05521A48B3BF0076343A /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = Earthquakes/EarthquakesViewController.h; sourceTree = "<group>"; };
@@ -135,7 +115,6 @@
 		F00C05031A48AAE60076343A = {
 			isa = PBXGroup;
 			children = (
-				F00C05351A48ABCD0076343A /* NTJsonModelStore */,
 				F00C050E1A48AAE60076343A /* NTJsonModelStoreExample */,
 				F00C05281A48AAE60076343A /* NTJsonModelStoreExampleTests */,
 				F00C050D1A48AAE60076343A /* Products */,
@@ -192,29 +171,6 @@
 				F00C052A1A48AAE60076343A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F00C05351A48ABCD0076343A /* NTJsonModelStore */ = {
-			isa = PBXGroup;
-			children = (
-				F00C05361A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.h */,
-				F00C05371A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m */,
-				F00C05391A48ABCD0076343A /* NTJsonModelCollection.h */,
-				F00C053A1A48ABCD0076343A /* NTJsonModelCollection.m */,
-				F00C05381A48ABCD0076343A /* NTJsonModelCollection+Private.h */,
-				F00C053C1A48ABCD0076343A /* NTJsonModelStore.h */,
-				F00C053D1A48ABCD0076343A /* NTJsonModelStore.m */,
-				F00C053B1A48ABCD0076343A /* NTJsonModelStore+Private.h */,
-				F00C053E1A48ABCD0076343A /* NTJsonStorableModel.h */,
-				F00C053F1A48ABCD0076343A /* NTJsonStorableModel.m */,
-				F00C05401A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.h */,
-				F00C05411A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m */,
-				F00C05481A48ABEA0076343A /* LICENSE */,
-				F00C05471A48ABEA0076343A /* NTJsonModelStore.podspec */,
-				F00C05491A48ABEA0076343A /* README.md */,
-			);
-			name = NTJsonModelStore;
-			path = ../../Pod/Classes;
 			sourceTree = "<group>";
 		};
 		F00C05501A48B32F0076343A /* Model */ = {
@@ -397,23 +353,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F00C05461A48ABCD0076343A /* NTJsonStore+NTJsonModelStore_Private.m in Sources */,
 				F06DA9DE1A58C2EA00E01A01 /* NSDate+NTJsonPropertyConversion.m in Sources */,
 				F00C056D1A48D8570076343A /* GeoJSONPoint.m in Sources */,
 				F00C05761A48DDCF0076343A /* Earthquake.m in Sources */,
-				F00C05421A48ABCD0076343A /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */,
-				F00C05451A48ABCD0076343A /* NTJsonStorableModel.m in Sources */,
 				F00C05641A48C8B30076343A /* BoundingBox.m in Sources */,
 				F00C05731A48DA600076343A /* GeoJSONFeatureCollection.m in Sources */,
 				F00C05611A48C4290076343A /* GeoJSONObject.m in Sources */,
 				F00C05591A48B5630076343A /* ApiClient.m in Sources */,
-				F00C05431A48ABCD0076343A /* NTJsonModelCollection.m in Sources */,
 				F00C05701A48D8DA0076343A /* GeoJSONFeature.m in Sources */,
 				F00C05151A48AAE60076343A /* AppDelegate.m in Sources */,
 				F00C05671A48CADE0076343A /* CLLocation+GeoJSON.m in Sources */,
 				F00C05551A48B3BF0076343A /* EarthquakesViewController.m in Sources */,
 				F00C05121A48AAE60076343A /* main.m in Sources */,
-				F00C05441A48ABCD0076343A /* NTJsonModelStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

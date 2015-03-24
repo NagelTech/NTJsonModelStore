@@ -7,6 +7,7 @@ target "NTJsonModelStoreExample" do
     
     pod 'NTJsonStore', :git => 'https://github.com/NagelTech/NTJsonStore.git', :branch => 'develop'
     pod 'NTJsonModel', :git => 'https://github.com/NagelTech/NTJsonModel.git', :branch => 'develop'
+    pod 'NTJsonModelStore', :path => '../../'
 
 end
 
