@@ -52,7 +52,7 @@
 		F00C052A1A48AAE60076343A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00C052B1A48AAE60076343A /* NTJsonModelStoreExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStoreExampleTests.m; sourceTree = "<group>"; };
 		F00C054D1A48AC510076343A /* NTJsonModelStoreExample.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStoreExample.pch; sourceTree = "<group>"; };
-		F00C054E1A48ACFB0076343A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F00C054E1A48ACFB0076343A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		F00C05521A48B3BF0076343A /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = Earthquakes/EarthquakesViewController.h; sourceTree = "<group>"; };
 		F00C05531A48B3BF0076343A /* EarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesViewController.m; path = Earthquakes/EarthquakesViewController.m; sourceTree = "<group>"; };
 		F00C05541A48B3BF0076343A /* EarthquakesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EarthquakesViewController.xib; path = Earthquakes/EarthquakesViewController.xib; sourceTree = "<group>"; };

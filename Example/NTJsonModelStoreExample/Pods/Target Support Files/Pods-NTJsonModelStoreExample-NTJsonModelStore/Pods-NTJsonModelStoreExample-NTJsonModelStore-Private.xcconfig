@@ -1,5 +1,6 @@
 #include "Pods-NTJsonModelStoreExample-NTJsonModelStore.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/NTJsonModelStore" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/NTJsonModel" "${PODS_ROOT}/Headers/Public/NTJsonModelStore" "${PODS_ROOT}/Headers/Public/NTJsonStore"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/NTJsonModelStore" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/NTJsonModel" "${PODS_ROOT}/Headers/Public/NTJsonModelStore" "${PODS_ROOT}/Headers/Public/NTJsonStore"
 OTHER_LDFLAGS = ${PODS_NTJSONMODELSTOREEXAMPLE_NTJSONMODELSTORE_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

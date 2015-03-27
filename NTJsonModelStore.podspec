@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.source_files        = 'Pod/Classes/*.{h,m}'
   s.public_header_files = 'NTJsonModelStore.h', 'NTJsonModelCollection.h', 'NTJsonStorableModel.h'
   
-  s.dependency 'NTJsonStore'
-  s.dependency 'NTJsonModel'
+  s.dependency 'NTJsonStore', '~> 1.00'
+  s.dependency 'NTJsonModel', '~> 1.00'
 
 end
 

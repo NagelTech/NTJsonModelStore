@@ -65,6 +65,77 @@ static BOOL classImplementsSelector(Class class, SEL selector)
 }
 
 
+static id fastDeepCopy(id value)
+{
+    if ( [value isKindOfClass:[NSArray class]] )
+    {
+        // perform a a deep copy of the array, but only if any values actually change when calling fastDeepCopy on them
+
+        NSArray *array = value;
+        NSMutableArray *mutableArray = nil;
+
+        for(int index=0; index<array.count; index++)
+        {
+            id value = array[index];
+            id valueCopy = fastDeepCopy(value);
+
+            // If the copy is not identical to the original and we haven't created the mutableArray yet,
+            // initialize it with the first values.
+
+            if ( value != valueCopy && !mutableArray )
+            {
+                mutableArray = (index > 0) ? [[array subarrayWithRange:NSMakeRange(0, index)] mutableCopy] : [NSMutableArray array];
+            }
+
+            // If we have created the mutableArray then we are performing a deep copy, so append the value...
+
+            if ( mutableArray )
+            {
+                [mutableArray addObject:valueCopy];
+            }
+        }
+
+        return (mutableArray) ? [mutableArray copy] : [array copy];
+    }
+
+    else if ( [value isKindOfClass:[NSDictionary class]] )
+    {
+        // NSDictionaries aren't as easy to enumerate and we expect them to be mostly immutable
+        // so we first do a pass to see if it is immutable and if it isn't then we fall back to full
+        // deep copy logic...
+
+        NSDictionary *dictionary = value;
+
+        __block BOOL allValuesImmutable = YES;
+
+        [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+            id valueCopy = fastDeepCopy(value);
+
+            if ( value != valueCopy )
+            {
+                allValuesImmutable = NO;
+                *stop = YES;
+            }
+        }];
+
+        if ( allValuesImmutable )
+            return [dictionary copy];   // values are immutable, so we can do a shallow copy
+
+        // Do it the old fashioned way....
+
+        NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
+
+        [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+            mutableDictionary[key] = fastDeepCopy(value);
+        }];
+        
+        return [mutableDictionary copy];
+    }
+    
+    return [value copy];
+}
+
+
 #pragma mark - Initialization
 
 
@@ -575,12 +646,14 @@ static BOOL classImplementsSelector(Class class, SEL selector)
 
 -(id)getValueForProperty:(NTJsonProp *)property inModel:(NTJsonModel *)model
 {
+    BOOL supportsCacheValidation = (property.type == NTJsonPropTypeObject && property.supportsCacheValidation) ? YES : NO;
+
     // get from cache, if it is present...
     
     id value = [self getCacheValueForProperty:property inModel:model];
     
-    if ( value )
-        return value;
+    if ( value && !supportsCacheValidation )
+        return value;   // short-circuit right here if it's safe
     
     // grab the value from our json...
     
@@ -614,15 +687,33 @@ static BOOL classImplementsSelector(Class class, SEL selector)
             jsonValue = [jsonValue objectForKey:key];
         }
     }
-    
-    // transform it, if needed...
 
-    value = [property convertJsonToValue:jsonValue];
+    // perform cache validation if we have an existing value...
+
+    if ( value && supportsCacheValidation )
+    {
+        id newValue = [property object_validateCachedValue:value forJson:jsonValue];
+
+        if ( !newValue )
+            newValue = [property convertJsonToValue:jsonValue];
+
+        if ( newValue && newValue != value )
+        {
+            value = newValue;
+            [self setCacheValue:value forProperty:property inModel:model];
+        }
+    }
+    else
+    {
+        // More normal case, we are returning a value for the first time or no caching is necessary.
+
+        value = [property convertJsonToValue:jsonValue];
     
-    // save in cache, if there was any conversion or we had to parse a path...
-    
-    if ( value != jsonValue || property.remainingJsonKeyPath.length > 0 )
-        [self setCacheValue:value forProperty:property inModel:model];
+        // save in cache, if there was any conversion or we had to parse a path...
+        
+        if ( value != jsonValue || property.remainingJsonKeyPath.length > 0 )
+            [self setCacheValue:value forProperty:property inModel:model];
+    }
     
     return value;
 }
@@ -649,7 +740,7 @@ static BOOL classImplementsSelector(Class class, SEL selector)
             const char *objcType = [originalValue objCType];
             
             if      ( strcmp(objcType, @encode(bool)) == 0 )            value = [NSNumber numberWithBool:[value boolValue]];
-            if      ( strcmp(objcType, @encode(signed char)) == 0 )     value = [NSNumber numberWithBool:[value boolValue]];
+            else if ( strcmp(objcType, @encode(signed char)) == 0 )     value = [NSNumber numberWithBool:[value boolValue]];
             else if ( strcmp(objcType, @encode(double)) == 0)           value = [NSNumber numberWithDouble:[value doubleValue]];
             else if ( strcmp(objcType, @encode(float)) == 0)            value = [NSNumber numberWithFloat:[value floatValue]];
             else if ( strcmp(objcType, @encode(int)) == 0)              value = [NSNumber numberWithInt:[value intValue]];
@@ -710,7 +801,7 @@ static BOOL classImplementsSelector(Class class, SEL selector)
 
     // Grab a COPY of the value, so we know it's immutable
     
-    value = [value copy];       // we always grab an immutable copy
+    value = fastDeepCopy(value);       // we always grab an immutable copy
     
     // Get the JSON for our value...
     

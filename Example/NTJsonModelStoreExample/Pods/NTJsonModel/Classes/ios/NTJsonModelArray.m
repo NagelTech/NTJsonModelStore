@@ -28,6 +28,7 @@
 
 @property (nonatomic,readonly) BOOL isModel;
 @property (nonatomic,readonly) Class typeClass;
+@property (nonatomic,readonly) BOOL supportsCacheValidation;
 
 @end
 
@@ -121,6 +122,12 @@
 }
 
 
+-(BOOL)supportsCacheValidation
+{
+    return (_property) ? NO : _property.supportsCacheValidation;
+}
+
+
 #pragma mark - cache support
 
 
@@ -176,37 +183,43 @@
 
 -(id)objectAtIndex:(NSUInteger)index
 {
-    // Grab from the cache if it exists...
-    
     id value = [self cachedObjectAtIndex:index];
-    
-    if ( value )
-        return value;
-    
+
+    if ( value && !self.supportsCacheValidation )
+        return value;   // short-curcuit right here if it's safe...
+
     id jsonValue = _json[index];
-    
+
     if ( self.isModel )
     {
         // handle NSNulls or invalid types right away
-        
+
         if ( ![jsonValue isKindOfClass:[NSDictionary class]] )
             value = [NSNull null];
         else
             value = [[self.modelClass alloc] initWithJson:jsonValue];
+
+        // cache...
+
+        if ( value )
+            [self setCachedValue:value atIndex:index];
+
+        return value;
     }
-    
-    else // it is an object array
+
+    // it's an object array - perform cache validation
+
+    id newValue = (value) ? [_property object_validateCachedValue:value forJson:jsonValue] : nil;
+
+    if ( !newValue )
+        newValue = [_property object_convertJsonToValue:jsonValue];
+
+    if ( newValue && newValue != value  )
     {
-        value = [_property object_convertJsonToValue:jsonValue];
-    }
-    
-    // cache...
-    
-    if ( value )
-    {
+        value = newValue;
         [self setCachedValue:value atIndex:index];
     }
-    
+
     return value;
 }
 

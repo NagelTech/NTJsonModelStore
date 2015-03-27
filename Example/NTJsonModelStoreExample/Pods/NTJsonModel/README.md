@@ -185,7 +185,7 @@ Unfortunately, the compiler won't warn you if you attempt to set a property on a
 
 ### [Mutable protocols](id:mutable-protocols)
 
-With a little more work in declaring your models, it's possible to get the compiler to help enforce mutability for your objects. This involves decalring all roperties as readonly in your class and creating a "paired" protocol with readwrite versions of the updatable properties. You can then use the class under normal (immutable) conditions and apply the protocol when you explicity create a mutable instance (or copy) of an object. This is easiest to see in code - here is an updated version of our `User` model:
+With a little more work in declaring your models, it's possible to get the compiler to help enforce mutability for your objects. This involves declaring all properties as readonly in your class and creating a "paired" protocol with readwrite versions of the updatable properties. You can then use the class under normal (immutable) conditions and apply the protocol when you explicity create a mutable instance (or copy) of an object. This is easiest to see in code - here is an updated version of our `User` model:
 
 	@interface User : NTJsonModel
 	
@@ -239,19 +239,19 @@ Here are some additional details:
  - The protocol should inherit from the paired classes' protocol. If we subclassed user with a new class, say `AdminUser` we could create a protocol `MutableAdminUser` which would implement `MutableUser`.
  - You may find it very tempting to actually implement the protocol in the class -- _don't_! While this seems perfectly reasonable, it will change the meta-data for the properties and create issues with the dynamic nature of NTJson properties. Take my word for it here, it may seem to work, but you will have problems.
  - Declaring a `typedef` as an instance of the class that implements the mutable protocol is optional but will simplify the syntax when using the mutable protocol later. The basic format for this with class 'XXX' is `typedef XXX<MutableXXX> *MutableXXX;` Which translates to create a type named `MutableXXX` that is a class `XXX` which implements protocol `MutableXXX`.
- - All NTJson properties in the class _must_ be declared `readonly` if you have a mutable protocol (declared with the `NTJsonMutable` macro.) Any `readwrite` NTJson properties will reqult in an exception the first time the type is accessed.
- - If you create methods that modify the object (mutable), declare the method in the mutable protocol. Since the properties are declared as `readonly` in the class, any attempt to modify the properties -- even in a method you intend to be mutable -- will result in a compiler error. A special property `mutableSelf` will allow you to explicitly access the setters for your properties. ()This is actually your `self` pointer cast to the mutable protocol.)
+ - All NTJson properties in the class _must_ be declared `readonly` if you have a mutable protocol (declared with the `NTJsonMutable` macro.) Any `readwrite` NTJson properties will reault in an exception the first time the type is accessed.
+ - If you create methods that modify the object (mutable), declare the method in the mutable protocol. Since the properties are declared as `readonly` in the class, any attempt to modify the properties -- even in a method you intend to be mutable -- will result in a compiler error. A special property `mutableSelf` will allow you to explicitly access the setters for your properties. (This is actually just your `self` pointer cast to the mutable protocol.)
  
 
-## []Property Conversion
+## [Property Conversion](id:property-conversion)
 
 ----
 
 While JSON is easy to parse and very universal, it does lack richness. NTJsonModel makes it easy to define converters (or transformers) that are automatically called to convert the underlying JSON to rich values. The system will search for a class method that can satisfy the conversion by checking in three places:
 
-1. Looking for a property-name override on the Model class. The signature convention is `+(id)convert<propertyName>ToJson:(id)json` and `+(id)convertJsonTo<propertyName>(id)json.` Additionally, cached value validation may be optionally done with `+(BOOL)validate<propertyName>JsonValue:(id)value`
-2. Looking for a class-name override on the value class. The signature convention is `+(id)convert<className>ToJson:(id)json` and `+(id)convertJsonTo<className>:(id)value.` Additionally, cached value validation may be optionally done with `+(BOOL)validate<className>JsonValue:(id)value`
-3. Looking for an implementation of the 'NTJsonPropertyConversion' protocol on the value class. The signature convention is `+(id)convertValueToJson:(id)value` and `+(id)convertJsonToValue:(id)value.` Additionally, cached value validation may be optionally done with `+(BOOL)validateJsonValue:(id)value`
+1. Looking for a property-name override on the Model class. The signature convention is `+(id)convert<propertyName>ToJson:(id)json` and `+(id)convertJsonTo<propertyName>(id)json.` Additionally, cached value validation may be optionally done with `+(id)validateCached<propertyName>:(id)value forJson:(id)json`
+2. Looking for a class-name override on the Model class. The signature convention is `+(id)convert<className>ToJson:(id)json` and `+(id)convertJsonTo<className>:(id)value.` Additionally, cached value validation may be optionally done with `+(id)validateCached<className>:(id)value forJson:(id)json`
+3. Looking for an implementation of the 'NTJsonPropertyConversion' protocol on the value class. The signature convention is `+(id)convertValueToJson:(id)value` and `+(id)convertJsonToValue:(id)value.` Additionally, cached value validation may be optionally done with `+(id)validateCachedValue:(id)value forJson:(id)json` These methods conform to the `NTJsonPropertyConversion` protocol.
 
 In the following example:
 
@@ -263,11 +263,11 @@ In the following example:
 	
 The system would search for the following selectors:
 
-1. `+(id)convertDateCreatedToJson:(id)json`,  `+(id)convertJsonToDateCreated(id)json` or  `+(BOOL)validateDateCreatedJsonValue:(id)value` in class `User`
-2. `+(id)convertNSDateToJson:(id)json`, `+(id)convertJsonToNSDate:(id)value.` or `+(BOOL)validateNSDateJsonValue:(id)value`in class `User`
-3. `+(id)convertValueToJson:(id)value`, `+(id)convertJsonToValue:(id)value.` or `+(BOOL)validateJsonValue:(id)value` in class `NSDate`
+1. `+(id)convertDateCreatedToJson:(id)json`,  `+(id)convertJsonToDateCreated(id)json` or  `+(id)validateCachedDateCreated:(id)value forJson:(id)json` in class `User`
+2. `+(id)convertNSDateToJson:(id)json`, `+(id)convertJsonToNSDate:(id)value.` or `+(id)validateCachedNSDate:(id)value forJson:(id)json`in class `User`
+3. `+(id)convertValueToJson:(id)value`, `+(id)convertJsonToValue:(id)value.` or `+(id)validateCachedValue:(id)value forJson:(id)json` in class `NSDate`
 
-The system will perform the conversion the first time it reads the value and cache the results, so repeated calls will be effecient. If there is a chance the value could expire, you can implement `-(BOOL)validateJsonValue:(id)value` If implemented this will be called each time the value is accessed; returning `NO` will cause the system to get the latest value 
+The system will perform the conversion the first time it reads the value and cache the results, so repeated calls will be effecient. If there is a chance the value could expire, you can implement `-(id)validateCachedValue:(id)value forJson:(id)json`. If implemented, this will be called each time the value is accessed; returning `NO` will cause the system to get the latest value. Validation can be particularly useful when working with [caching objects from a datastore](#object-caching).
 
 
 ### [Object Caching](id:object-caching)
@@ -306,11 +306,11 @@ The same machinery that allows conversion of primitives such as `NSDate`s, `UICo
 	}
 	
 
-## Polymorphic Objects
+## [Polymorphic Objects](id:polymorphic-objects)
 
 ----
 
-It's not unusual to have "plymorphic" objects in JSON, where a base class has several descendent classes that vary based on some field (the object type.) NTJsonModel can automatically create the correct descendent class, all you need to do is declare the following method in the base class:
+It's not unusual to have "ploymorphic" objects in JSON, where a base class has several descendent classes that vary based on some field (the object type.) NTJsonModel can automatically create the correct descendent class, all you need to do is declare the following method in the base class:
 
 	+(Class)modelClassForJson:(NSDictionary *)json;
 	
@@ -358,14 +358,14 @@ Now, creating an instance of Shape will actually create the correct type (Rectan
 Objects may be created based on the JSON content by overriding `+modelClassForJson:`
 
 
-## Converting Json Arrays
+## [Converting Json Arrays](id:converting-json-arrays)
 
 ----
 
 NTJsonModel includes helper methods (and classes) that convert an entire array of JSON objects to model objects. These methods return a special implementation of NSArray that is lazy-loaded - the actual NTJsonModel objects are only created as they are referenced. Using our shapes example above, you could write something like:
 
 	NSArray *shapesJson = (get array of JSON objects from somewhere)
-	NSArray *shapes = [Shape arayWithJsonArray:shapesJson];
+	NSArray *shapes = [Shape arrayWithJsonArray:shapesJson];
 	
 	for (Shape *shape in shapes)
 	{
@@ -375,7 +375,7 @@ NTJsonModel includes helper methods (and classes) that convert an entire array o
 In the above example each Shape object will be instantiated as it is used in the loop.
 
 
-## Odds and Ends
+## [Odds and Ends](id:odds-and-ends)
 
 ----
 

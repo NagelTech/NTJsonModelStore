@@ -1,2888 +1,938 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0167DD6CDD072133C54D897D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E35A178F98D697A0AFF02E0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>01A7CCDA4C3B6BF1778F4A95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonCollection+NTJsonModelStore_Private.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonCollection+NTJsonModelStore_Private.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>01D2577394D37FE099E443F1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NTJsonModelStoreExample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>01DAF7FD3513F28EC9615FEB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonStorableModel.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonStorableModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>03282690E1F7165A6456F49B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>100A5772B3428AD56C44A6FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04065E4BF02B1D8C51134406</key>
-		<dict>
-			<key>fileRef</key>
-			<string>01DAF7FD3513F28EC9615FEB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0443E1806CD2E92DD13E7464</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E06568383C916819E21B367D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>05127F12BD7E6D45B4AAAC2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A5B818226D52A462E2DDFFCC</string>
-				<string>8686BEEDD10960F4EC31FAC3</string>
-				<string>5404A89A13BB650753BCE479</string>
-				<string>16B981F635C85C0C7A154FEB</string>
-				<string>A910C58FF31AE2D76FA25628</string>
-				<string>6EEC3F6D55E8F24D589445CB</string>
-				<string>445E94E264F693250832D262</string>
-				<string>08014A25E4AA0A6C8B7DC5B4</string>
-				<string>AB67BADC883180F3353CB37C</string>
-				<string>D885F81CD336D82FF7DFD938</string>
-				<string>10F315949A6067AF74F9F219</string>
-				<string>43621474E127249794BBF03A</string>
-				<string>96B7A8B37D9A4A2016E26293</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>06BC162401145B6429F0867A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B0824E229AF9E488295E5C4B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>074E2209F0635B8530EB885A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>751EF97792D5AED5E1484E6D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>07546FF834A93DD1E9D76E47</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08014A25E4AA0A6C8B7DC5B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B75BECDCFB48B31826182642</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>08414990CB551EB14DE79D4A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonObjectCache+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonObjectCache+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A53685675A77DCD063B9F33</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0C2866E0BD46B17BDC36B533</string>
-			<key>buildPhases</key>
-			<array>
-				<string>898D86B5273606AD23C7B038</string>
-				<string>DB3C6DAF3A6C1A2BA098BE96</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>84BECA6431507DFBA35FBDBD</string>
-				<string>27F38E5CB54EDB845E844C3D</string>
-				<string>4D401F36E47C564515CEB9F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample</string>
-			<key>productName</key>
-			<string>Pods-NTJsonModelStoreExample</string>
-			<key>productReference</key>
-			<string>01D2577394D37FE099E443F1</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>0C2866E0BD46B17BDC36B533</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>06BC162401145B6429F0867A</string>
-				<string>EA02F6F4D5C7A8CD74A5B895</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>0FBF06C87313EF94E5865A67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSArray+NTJsonModel.h</string>
-			<key>path</key>
-			<string>Classes/ios/NSArray+NTJsonModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>100A5772B3428AD56C44A6FF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>__NTJsonModelSupport.h</string>
-			<key>path</key>
-			<string>Classes/ios/__NTJsonModelSupport.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10F315949A6067AF74F9F219</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2F4CBD6AFCF9BFB1F12A97AB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>12FB56A704583CF482F3231C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>935AFE2BF49620846D8971D6</string>
-				<string>AE180065B82D1FB4BE378AF3</string>
-				<string>AAF073A3E97BDF6775D0F5A9</string>
-				<string>4A2A4D6175FA9D76C2357223</string>
-				<string>63B816EF6B4AF22A2A9C750C</string>
-				<string>61AF20799FFD6AE43F5A302E</string>
-				<string>417C36EE675A4A3145954DDE</string>
-				<string>6FBC4DDA1044F3C965F87E08</string>
-				<string>9DEFF5933B4F3C400FC17BC7</string>
-				<string>03282690E1F7165A6456F49B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>16B981F635C85C0C7A154FEB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>58A268AF1E4C75C4E4057D88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1734FF539C678D1A04C1BDFA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>748B2E8D52839F526B51F209</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>17B57264708B4A547BE00BA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonObjectCache.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonObjectCache.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>181A62D333A90C90ACB3EF2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1CD531DDE3268AD7203F4C8C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0443E1806CD2E92DD13E7464</string>
-				<string>B3D886429E8D096C25AB08A9</string>
-				<string>074E2209F0635B8530EB885A</string>
-				<string>B931A9D2303E4E96ED79B229</string>
-				<string>3EB9C0D9FAD00AC8E66C2E86</string>
-				<string>0167DD6CDD072133C54D897D</string>
-				<string>53CB7185AC8CB3E0DDDB7668</string>
-				<string>EF1D7BDC01162617A36B0923</string>
-				<string>3ACED6D418EE3EB5AE062CA0</string>
-				<string>A4468E5406EF5D64F9DEEA8E</string>
-				<string>D34C8B579683802221776C8B</string>
-				<string>ED84C41DFF32C341E1B7DBFC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1D5248DCB9DB608A5A3E7C78</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>694992D815C215101B10BEE2</string>
-				<string>7AEFD8C867240ED271A33D33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1E8A1B0E02157195871A117D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C50567735F0F066DCCF0F927</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1FDC62FA557C2D78FE813115</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2562B2AE319D751B1AA75B54</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel/Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2562B2AE319D751B1AA75B54</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>26875687266D2F4116BF5C38</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>27F38E5CB54EDB845E844C3D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore</string>
-			<key>target</key>
-			<string>42E06EAB3CD0F5C245E101CD</string>
-			<key>targetProxy</key>
-			<string>8D4636D31B24CAD67A3551D7</string>
-		</dict>
-		<key>2A4E23EEF3D0260B452CED8F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C0DA32D6B072848F418189B5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore/Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2A87C1A0084B24F15A43CD65</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonModelStore.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelStore.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C747A82E07B73437D0DC4E0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B17D9DE90993E70F989027B</string>
-				<string>2562B2AE319D751B1AA75B54</string>
-				<string>5CDF0FB7CEA36AF0ED9B0BFC</string>
-				<string>5BE776C81074542AE3B7FD20</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2CCCB6879E392576607381E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonProp.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonProp.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DF8E646B5A512DF68ABAE38</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F901316F65DC111218B4F257</string>
-				<string>181A62D333A90C90ACB3EF2A</string>
-				<string>67433056F03D4B0C362B21B4</string>
-				<string>7E7B7EB0D0C8ED2066D32456</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/NTJsonModelStoreExample/Pods/Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2E766483FF7A3D539F09ADF9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>01A7CCDA4C3B6BF1778F4A95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2F4CBD6AFCF9BFB1F12A97AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonStore+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonStore+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F89E3A077B84FE6796E185E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B7DA17D972C359C9D846F18B</string>
-				<string>45CDAB0C99BBE12749B567CF</string>
-				<string>A323903DB987F8E194EF7119</string>
-				<string>D5707BFFC44529BE26F1729F</string>
-				<string>37EC7478FC6BF9152077C7C0</string>
-				<string>E9A7485A5A6B652B5000C8B2</string>
-				<string>6D7525D1B72A27C646D1D4ED</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3679D81202E6883315F56C35</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonStore+NTJsonModelStore_Private.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonStore+NTJsonModelStore_Private.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>37AA0561F6F2B4F60E4A8637</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>37EC7478FC6BF9152077C7C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FA018439489091A56EC5F423</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3ACED6D418EE3EB5AE062CA0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BBCF9382A60DA0BC55726A0C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3DDBA704EC5B4EA491267AC7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3679D81202E6883315F56C35</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3E35A178F98D697A0AFF02E0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonDictionary.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonDictionary.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EB9C0D9FAD00AC8E66C2E86</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BEF5059C23AEF092ABD04DCD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3F98BA01AA9C3581136EB73B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2CCCB6879E392576607381E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>40F7DB8E60B863E8D1CF552D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5841E2C268FDE4535ACD96F6</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C87AA5D89321B3CA41668382</string>
-				<string>77F1049589893CBFE6CA1746</string>
-				<string>12FB56A704583CF482F3231C</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-			<key>productName</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-			<key>productReference</key>
-			<string>B3A33E39058F26C5035ABE49</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>417C36EE675A4A3145954DDE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>951276E48128358AA01E6AA7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>42E06EAB3CD0F5C245E101CD</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CDCF2036F96C8FC7BA77D4DC</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F60D173A74ABA300509B4258</string>
-				<string>5652AB68CF086DDF78E5DD76</string>
-				<string>2F89E3A077B84FE6796E185E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E2432A0485AD3BC7685806A7</string>
-				<string>94F08788CECF5629D96DE3ED</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore</string>
-			<key>productName</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore</string>
-			<key>productReference</key>
-			<string>9F0036041CBD258F4EFE1AFD</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>43621474E127249794BBF03A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B56B29549D779E225139A29</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>445E94E264F693250832D262</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6ADA7B6A85E01399F34211A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>45CDAB0C99BBE12749B567CF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>69268D7520EB0381FAB2A73D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>49DCF3A9D35BDAB7D56CD0BB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2A87C1A0084B24F15A43CD65</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4A2A4D6175FA9D76C2357223</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9B4247CB8D9D522CC27DEDDA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4A89520E9D56C77DE9653505</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71FF56C1B1203B0AA58324A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>40F7DB8E60B863E8D1CF552D</string>
-			<key>remoteInfo</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-		</dict>
-		<key>4B5F0B19F2BD07F66C35C614</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BC6881A6E851CEA1BC2A956</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71FF56C1B1203B0AA58324A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A7EC7B5E37B56E029324F82A</string>
-			<key>remoteInfo</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-		</dict>
-		<key>4D401F36E47C564515CEB9F6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-			<key>target</key>
-			<string>A7EC7B5E37B56E029324F82A</string>
-			<key>targetProxy</key>
-			<string>4BC6881A6E851CEA1BC2A956</string>
-		</dict>
-		<key>50779B4AE6829F4836A77634</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5A1B8B2BAA3C85FC0FFC114C</string>
-				<string>C0DA32D6B072848F418189B5</string>
-				<string>07546FF834A93DD1E9D76E47</string>
-				<string>4B5F0B19F2BD07F66C35C614</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>53CB7185AC8CB3E0DDDB7668</key>
-		<dict>
-			<key>fileRef</key>
-			<string>81C9B1E4D1179020EE0A28B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5404A89A13BB650753BCE479</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1ECEC128EC5E72990330129</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>563045D6CD61F404844B487A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9CFB9F49A197FBC129DC2006</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5652AB68CF086DDF78E5DD76</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1E8A1B0E02157195871A117D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5841E2C268FDE4535ACD96F6</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1FDC62FA557C2D78FE813115</string>
-				<string>9BCE5036390FD24DA1E32987</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>588E45212A3EE019EE8C2309</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58A268AF1E4C75C4E4057D88</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonCollection+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonCollection+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A1B8B2BAA3C85FC0FFC114C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5BE776C81074542AE3B7FD20</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CDF0FB7CEA36AF0ED9B0BFC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CE0610AAFD4D6A618375A9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonPropertyInfo.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonPropertyInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CFF4F996A12B74E22A60BC1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSDictionary+NTJsonStorePrivate.h</string>
-			<key>path</key>
-			<string>Classes/ios/NSDictionary+NTJsonStorePrivate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E676542611105E81AB4BC56</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonColumn+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonColumn+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5F2D4CA8126EB6E81AC87DEB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonPropertyConversion.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonPropertyConversion.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6045AB56EC6DCEF9CBFA84DD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C49CF0566342305D7AC4C0D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>61AF20799FFD6AE43F5A302E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC01D9AA14DE1673D5E61365</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63B816EF6B4AF22A2A9C750C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>86C0C71999598FDF26652428</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>654F60EE83C36BE6D8DFAE32</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonCollection.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonCollection.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>67433056F03D4B0C362B21B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6894F612132667355FA8042D</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2A4E23EEF3D0260B452CED8F</string>
-				<string>D0DC945FF67B2F25EB408173</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>69268D7520EB0381FAB2A73D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModelCollection+Private.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelCollection+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>694992D815C215101B10BEE2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0FBF06C87313EF94E5865A67</string>
-				<string>C765837337961EC332D9CBD8</string>
-				<string>75278C4B81A1A61FD8D7C16F</string>
-				<string>D07FD12A809AE44F0227B870</string>
-				<string>86C0C71999598FDF26652428</string>
-				<string>748B2E8D52839F526B51F209</string>
-				<string>9ACB88D44B6204F252E2B734</string>
-				<string>F522509E2828EE13A268CAB0</string>
-				<string>9B4247CB8D9D522CC27DEDDA</string>
-				<string>C49CF0566342305D7AC4C0D4</string>
-				<string>CC01D9AA14DE1673D5E61365</string>
-				<string>2CCCB6879E392576607381E1</string>
-				<string>951276E48128358AA01E6AA7</string>
-				<string>5F2D4CA8126EB6E81AC87DEB</string>
-				<string>5CE0610AAFD4D6A618375A9D</string>
-				<string>100A5772B3428AD56C44A6FF</string>
-				<string>B04640A25EABDDE5161F9785</string>
-				<string>2C747A82E07B73437D0DC4E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NTJsonModel</string>
-			<key>path</key>
-			<string>NTJsonModel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6ADA7B6A85E01399F34211A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonDictionary+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonDictionary+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B56B29549D779E225139A29</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonStore.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonStore.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6CBFEDB97DCCD39C8E8B62B7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5CDF0FB7CEA36AF0ED9B0BFC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6D7525D1B72A27C646D1D4ED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F729DD0D8C210A5C9E342E98</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6EEC3F6D55E8F24D589445CB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E676542611105E81AB4BC56</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6FBC4DDA1044F3C965F87E08</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5F2D4CA8126EB6E81AC87DEB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>70492491DB3B7E0728C8D5B8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>26875687266D2F4116BF5C38</string>
-				<string>7EC0DE0E958D6A4F2CB377AC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>71FF56C1B1203B0AA58324A9</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>70492491DB3B7E0728C8D5B8</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>725B1C03B1B834B5B95D9E6B</string>
-			<key>productRefGroup</key>
-			<string>F69E8D4C0587CA9648B8BF82</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>0A53685675A77DCD063B9F33</string>
-				<string>40F7DB8E60B863E8D1CF552D</string>
-				<string>42E06EAB3CD0F5C245E101CD</string>
-				<string>A7EC7B5E37B56E029324F82A</string>
-			</array>
-		</dict>
-		<key>725B1C03B1B834B5B95D9E6B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9A6B689445A8A83D1279A7AA</string>
-				<string>563045D6CD61F404844B487A</string>
-				<string>83C3A2C8102C7026417D03B1</string>
-				<string>1D5248DCB9DB608A5A3E7C78</string>
-				<string>F69E8D4C0587CA9648B8BF82</string>
-				<string>7DA8630304333E2219546266</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7326130A15D757B7ECA0AAAE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>67433056F03D4B0C362B21B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>748B2E8D52839F526B51F209</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonModel.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>751EF97792D5AED5E1484E6D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSError+NTJsonStorePrivate.m</string>
-			<key>path</key>
-			<string>Classes/ios/NSError+NTJsonStorePrivate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75278C4B81A1A61FD8D7C16F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSDictionary+NTJsonModel.h</string>
-			<key>path</key>
-			<string>Classes/ios/NSDictionary+NTJsonModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77F1049589893CBFE6CA1746</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DC104E363E754C0D4F25F51F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7AEFD8C867240ED271A33D33</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7964BE7443B27DB99B03C31</string>
-				<string>E06568383C916819E21B367D</string>
-				<string>5CFF4F996A12B74E22A60BC1</string>
-				<string>FCE71908CEE4568EE77BB8EB</string>
-				<string>A1ECEC128EC5E72990330129</string>
-				<string>751EF97792D5AED5E1484E6D</string>
-				<string>AE1581122F22FE1B59372FC7</string>
-				<string>654F60EE83C36BE6D8DFAE32</string>
-				<string>58A268AF1E4C75C4E4057D88</string>
-				<string>BEF5059C23AEF092ABD04DCD</string>
-				<string>5E676542611105E81AB4BC56</string>
-				<string>3E35A178F98D697A0AFF02E0</string>
-				<string>6ADA7B6A85E01399F34211A4</string>
-				<string>81C9B1E4D1179020EE0A28B7</string>
-				<string>B75BECDCFB48B31826182642</string>
-				<string>17B57264708B4A547BE00BA3</string>
-				<string>08414990CB551EB14DE79D4A</string>
-				<string>BBCF9382A60DA0BC55726A0C</string>
-				<string>D8C20B93F1AA4C82E1433791</string>
-				<string>6B56B29549D779E225139A29</string>
-				<string>9D2E6DA2ACE9358B6474CBFE</string>
-				<string>2F4CBD6AFCF9BFB1F12A97AB</string>
-				<string>C7CA08149B3B758A5600699C</string>
-				<string>A55B2ABC1BA9DAAB782FB415</string>
-				<string>50779B4AE6829F4836A77634</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NTJsonStore</string>
-			<key>path</key>
-			<string>NTJsonStore</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B17D9DE90993E70F989027B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DA8630304333E2219546266</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>98126164CB3E8FBA98195F08</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E7B7EB0D0C8ED2066D32456</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EC0DE0E958D6A4F2CB377AC</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>81C9B1E4D1179020EE0A28B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonIndex.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonIndex.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>83C3A2C8102C7026417D03B1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9F7BD6F7F5B03814361EE5A7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>84BECA6431507DFBA35FBDBD</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-			<key>target</key>
-			<string>40F7DB8E60B863E8D1CF552D</string>
-			<key>targetProxy</key>
-			<string>4A89520E9D56C77DE9653505</string>
-		</dict>
-		<key>84DE1668E63E304CC99F513F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>862E876F58FAFC040BC4BD8E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8686BEEDD10960F4EC31FAC3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5CFF4F996A12B74E22A60BC1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>86C0C71999598FDF26652428</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModel.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>898D86B5273606AD23C7B038</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A17AF3C287298CC230E32D25</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8D4636D31B24CAD67A3551D7</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71FF56C1B1203B0AA58324A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>42E06EAB3CD0F5C245E101CD</string>
-			<key>remoteInfo</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore</string>
-		</dict>
-		<key>8EADC26E0CC3CEAF9401CA2D</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71FF56C1B1203B0AA58324A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A7EC7B5E37B56E029324F82A</string>
-			<key>remoteInfo</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-		</dict>
-		<key>91173CD8E69D7B48EA54ED20</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonModelCollection.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelCollection.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>935AFE2BF49620846D8971D6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0FBF06C87313EF94E5865A67</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>94F08788CECF5629D96DE3ED</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-			<key>target</key>
-			<string>A7EC7B5E37B56E029324F82A</string>
-			<key>targetProxy</key>
-			<string>8EADC26E0CC3CEAF9401CA2D</string>
-		</dict>
-		<key>951276E48128358AA01E6AA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonProp+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonProp+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96B7A8B37D9A4A2016E26293</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7CA08149B3B758A5600699C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98126164CB3E8FBA98195F08</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F7AB8FB5F00E92B55F5F5C33</string>
-				<string>BBEA3542BD3E190939A31C62</string>
-				<string>588E45212A3EE019EE8C2309</string>
-				<string>862E876F58FAFC040BC4BD8E</string>
-				<string>84DE1668E63E304CC99F513F</string>
-				<string>B0824E229AF9E488295E5C4B</string>
-				<string>37AA0561F6F2B4F60E4A8637</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-NTJsonModelStoreExample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9A6B689445A8A83D1279A7AA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>9ACB88D44B6204F252E2B734</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModel+NativeConversions.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModel+NativeConversions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B4247CB8D9D522CC27DEDDA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModel+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModel+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9BCE5036390FD24DA1E32987</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2562B2AE319D751B1AA75B54</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel/Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>9CFB9F49A197FBC129DC2006</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B76311FADE1A150C8164BB9E</string>
-				<string>01A7CCDA4C3B6BF1778F4A95</string>
-				<string>C7D7220620E0D3165A149143</string>
-				<string>91173CD8E69D7B48EA54ED20</string>
-				<string>69268D7520EB0381FAB2A73D</string>
-				<string>FA018439489091A56EC5F423</string>
-				<string>2A87C1A0084B24F15A43CD65</string>
-				<string>A4C95173CB7860BD35B169EB</string>
-				<string>E893FF6306E5F89778505E34</string>
-				<string>01DAF7FD3513F28EC9615FEB</string>
-				<string>F729DD0D8C210A5C9E342E98</string>
-				<string>3679D81202E6883315F56C35</string>
-				<string>2DF8E646B5A512DF68ABAE38</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NTJsonModelStore</string>
-			<key>path</key>
-			<string>../../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9D2E6DA2ACE9358B6474CBFE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonStore.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonStore.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DEFF5933B4F3C400FC17BC7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5CE0610AAFD4D6A618375A9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9F0036041CBD258F4EFE1AFD</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NTJsonModelStoreExample-NTJsonModelStore.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9F7BD6F7F5B03814361EE5A7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C50567735F0F066DCCF0F927</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A17AF3C287298CC230E32D25</key>
-		<dict>
-			<key>fileRef</key>
-			<string>588E45212A3EE019EE8C2309</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A1ECEC128EC5E72990330129</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSError+NTJsonStorePrivate.h</string>
-			<key>path</key>
-			<string>Classes/ios/NSError+NTJsonStorePrivate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2CCB81ABEC59FFC3B687B8F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C765837337961EC332D9CBD8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A323903DB987F8E194EF7119</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7D7220620E0D3165A149143</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A4468E5406EF5D64F9DEEA8E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9D2E6DA2ACE9358B6474CBFE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A4C95173CB7860BD35B169EB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModelStore+Private.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelStore+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A55B2ABC1BA9DAAB782FB415</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonStoreTypes.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonStoreTypes.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A5B818226D52A462E2DDFFCC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7964BE7443B27DB99B03C31</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A7EC7B5E37B56E029324F82A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6894F612132667355FA8042D</string>
-			<key>buildPhases</key>
-			<array>
-				<string>1CD531DDE3268AD7203F4C8C</string>
-				<string>C918DEFA457F5F2EAE4532F1</string>
-				<string>05127F12BD7E6D45B4AAAC2E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-			<key>productName</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore</string>
-			<key>productReference</key>
-			<string>EBCC871F4CC35E7EC4EC29EA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>A910C58FF31AE2D76FA25628</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AE1581122F22FE1B59372FC7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AAF073A3E97BDF6775D0F5A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9ACB88D44B6204F252E2B734</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AB67BADC883180F3353CB37C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>08414990CB551EB14DE79D4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AE1581122F22FE1B59372FC7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonCollection.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonCollection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE180065B82D1FB4BE378AF3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>75278C4B81A1A61FD8D7C16F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B04640A25EABDDE5161F9785</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>__NTJsonModelSupport.m</string>
-			<key>path</key>
-			<string>Classes/ios/__NTJsonModelSupport.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B0824E229AF9E488295E5C4B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3A33E39058F26C5035ABE49</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NTJsonModelStoreExample-NTJsonModel.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B3D886429E8D096C25AB08A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FCE71908CEE4568EE77BB8EB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B75BECDCFB48B31826182642</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonIndex+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonIndex+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B76311FADE1A150C8164BB9E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonCollection+NTJsonModelStore_Private.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonCollection+NTJsonModelStore_Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B7DA17D972C359C9D846F18B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B76311FADE1A150C8164BB9E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B828CE9B0282736AEC6BB0AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D07FD12A809AE44F0227B870</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B931A9D2303E4E96ED79B229</key>
-		<dict>
-			<key>fileRef</key>
-			<string>654F60EE83C36BE6D8DFAE32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BBCF9382A60DA0BC55726A0C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonSqlConnection.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonSqlConnection.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BBEA3542BD3E190939A31C62</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BEF5059C23AEF092ABD04DCD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonColumn.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonColumn.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C0DA32D6B072848F418189B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C49CF0566342305D7AC4C0D4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonModelArray.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModelArray.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C50567735F0F066DCCF0F927</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>C61A5FF12132F11DD6420287</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C50567735F0F066DCCF0F927</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C765837337961EC332D9CBD8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSArray+NTJsonModel.m</string>
-			<key>path</key>
-			<string>Classes/ios/NSArray+NTJsonModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7964BE7443B27DB99B03C31</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSArray+NTJsonStorePrivate.h</string>
-			<key>path</key>
-			<string>Classes/ios/NSArray+NTJsonStorePrivate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7CA08149B3B758A5600699C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonStoreTypes.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonStoreTypes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7D7220620E0D3165A149143</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModelCollection.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelCollection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C87AA5D89321B3CA41668382</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A2CCB81ABEC59FFC3B687B8F</string>
-				<string>B828CE9B0282736AEC6BB0AF</string>
-				<string>CDF652E2087AE93FD42E7320</string>
-				<string>1734FF539C678D1A04C1BDFA</string>
-				<string>6045AB56EC6DCEF9CBFA84DD</string>
-				<string>3F98BA01AA9C3581136EB73B</string>
-				<string>6CBFEDB97DCCD39C8E8B62B7</string>
-				<string>D170031254261DFF71D3B503</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C918DEFA457F5F2EAE4532F1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D4C4C2077A4992050771A56F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CC01D9AA14DE1673D5E61365</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModelArray+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModelArray+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CDCF2036F96C8FC7BA77D4DC</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FEB527971AC32F6E08917D75</string>
-				<string>F6D08695B6CF1E5FDF9CF3D2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CDF652E2087AE93FD42E7320</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F522509E2828EE13A268CAB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D07FD12A809AE44F0227B870</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSDictionary+NTJsonModel.m</string>
-			<key>path</key>
-			<string>Classes/ios/NSDictionary+NTJsonModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0DC945FF67B2F25EB408173</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C0DA32D6B072848F418189B5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore/Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D170031254261DFF71D3B503</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B04640A25EABDDE5161F9785</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D34C8B579683802221776C8B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A55B2ABC1BA9DAAB782FB415</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C4C2077A4992050771A56F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C50567735F0F066DCCF0F927</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D5707BFFC44529BE26F1729F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A4C95173CB7860BD35B169EB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D79A911E47E4926713375ABA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>71FF56C1B1203B0AA58324A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>40F7DB8E60B863E8D1CF552D</string>
-			<key>remoteInfo</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-		</dict>
-		<key>D885F81CD336D82FF7DFD938</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8C20B93F1AA4C82E1433791</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8C20B93F1AA4C82E1433791</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonSqlConnection+Private.h</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonSqlConnection+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB3C6DAF3A6C1A2BA098BE96</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C61A5FF12132F11DD6420287</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DC104E363E754C0D4F25F51F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C50567735F0F066DCCF0F927</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DC56D53F4488AA4FA056EA04</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91173CD8E69D7B48EA54ED20</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E06568383C916819E21B367D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSArray+NTJsonStorePrivate.m</string>
-			<key>path</key>
-			<string>Classes/ios/NSArray+NTJsonStorePrivate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2432A0485AD3BC7685806A7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModel</string>
-			<key>target</key>
-			<string>40F7DB8E60B863E8D1CF552D</string>
-			<key>targetProxy</key>
-			<string>D79A911E47E4926713375ABA</string>
-		</dict>
-		<key>E893FF6306E5F89778505E34</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonStorableModel.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonStorableModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E9A7485A5A6B652B5000C8B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E893FF6306E5F89778505E34</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA02F6F4D5C7A8CD74A5B895</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>37AA0561F6F2B4F60E4A8637</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EBCC871F4CC35E7EC4EC29EA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NTJsonModelStoreExample-NTJsonStore.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>ED84C41DFF32C341E1B7DBFC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>07546FF834A93DD1E9D76E47</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EF1D7BDC01162617A36B0923</key>
-		<dict>
-			<key>fileRef</key>
-			<string>17B57264708B4A547BE00BA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F522509E2828EE13A268CAB0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NTJsonModel+NativeConversions.m</string>
-			<key>path</key>
-			<string>Classes/ios/NTJsonModel+NativeConversions.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F60D173A74ABA300509B4258</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2E766483FF7A3D539F09ADF9</string>
-				<string>DC56D53F4488AA4FA056EA04</string>
-				<string>49DCF3A9D35BDAB7D56CD0BB</string>
-				<string>04065E4BF02B1D8C51134406</string>
-				<string>3DDBA704EC5B4EA491267AC7</string>
-				<string>7326130A15D757B7ECA0AAAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F69E8D4C0587CA9648B8BF82</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>01D2577394D37FE099E443F1</string>
-				<string>B3A33E39058F26C5035ABE49</string>
-				<string>9F0036041CBD258F4EFE1AFD</string>
-				<string>EBCC871F4CC35E7EC4EC29EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F6D08695B6CF1E5FDF9CF3D2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>181A62D333A90C90ACB3EF2A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore/Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F729DD0D8C210A5C9E342E98</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonStore+NTJsonModelStore_Private.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonStore+NTJsonModelStore_Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F7AB8FB5F00E92B55F5F5C33</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F901316F65DC111218B4F257</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NTJsonModelStoreExample-NTJsonModelStore.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FA018439489091A56EC5F423</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NTJsonModelStore.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NTJsonModelStore.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FCE71908CEE4568EE77BB8EB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSDictionary+NTJsonStorePrivate.m</string>
-			<key>path</key>
-			<string>Classes/ios/NSDictionary+NTJsonStorePrivate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEB527971AC32F6E08917D75</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>181A62D333A90C90ACB3EF2A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore/Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>71FF56C1B1203B0AA58324A9</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B6DEF79AE734CBE6638628 /* NTJsonModelCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 777F15F3AEEFB0E2D3514E64 /* NTJsonModelCollection.h */; };
+		01FC427E51E00769501C66AB /* NTJsonStorableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A130E617218B872314CAFC5C /* NTJsonStorableModel.m */; };
+		03D1441D9B5D4844378DDE35 /* NTJsonDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E4262319EA580D84A4470116 /* NTJsonDictionary.m */; };
+		047809A35F8651F3EA1F6373 /* NTJsonModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFC8C1CF4D24DE8BBB92A14 /* NTJsonModel.h */; };
+		06BDB4888F51DFB700FDCBB7 /* NTJsonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB6DF6DB5F757CC6A0F2C38 /* NTJsonCollection.m */; };
+		0937A1993A298E962F4CFA3D /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 584F452C84B0AFCDADFF6D9E /* NTJsonCollection+NTJsonModelStore_Private.m */; };
+		0FEA9CDFFC1A6CC047518A7C /* NTJsonModelCollection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB8E834776239852070EAAC /* NTJsonModelCollection+Private.h */; };
+		1A6EB16DCB98C7D71E9EDA2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720D1A1376DEA8908D66760 /* Foundation.framework */; };
+		1B585B3744B906DAD387711D /* NSDictionary+NTJsonModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EFDB47D24349F9354BDCA8 /* NSDictionary+NTJsonModel.h */; };
+		1EC635ED45DC0B50210D9062 /* NSArray+NTJsonStorePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F03B33E9904F5CFBE345C782 /* NSArray+NTJsonStorePrivate.h */; };
+		213431179E2703381B49E4D0 /* NTJsonModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A908F5A3C96D2A0D8D8455 /* NTJsonModelArray.m */; };
+		22E7E6D1791533A58E5EE406 /* NTJsonSqlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 52367AAE22BF1B333F174C39 /* NTJsonSqlConnection.m */; };
+		2A6626643F636CA17ED03DD5 /* NTJsonModel+NativeConversions.h in Headers */ = {isa = PBXBuildFile; fileRef = B85A4A1C96108A26F5E77907 /* NTJsonModel+NativeConversions.h */; };
+		2C7AFCB3AE807ADFD2BCC870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720D1A1376DEA8908D66760 /* Foundation.framework */; };
+		2F56F2358EBF4BC394F10760 /* NTJsonModel+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA977FB4C626C9851A53EEE /* NTJsonModel+Private.h */; };
+		2FD069015D5C8763621F2275 /* NTJsonModelStore+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A3ED61C59A1E24C66F20EB18 /* NTJsonModelStore+Private.h */; };
+		3B9ACF339070F761E91B226A /* NTJsonObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2DA7027B49A1F681EE1DB /* NTJsonObjectCache.m */; };
+		58E02E9EAD2686DB08B56BD5 /* Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D52DD7137FEF8A32F42B6CD /* Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m */; };
+		5AE777514CAE7206E6C47A2D /* __NTJsonModelSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA24A2F6ACA6234F4E9961A /* __NTJsonModelSupport.h */; };
+		5B006F318D21A122DC849BEB /* NTJsonStoreTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FD715E97DE26042A8AC90E /* NTJsonStoreTypes.h */; };
+		5B4836A6A079C3B84A02D532 /* NSDictionary+NTJsonStorePrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 238BE44D5E0D05816E0269C1 /* NSDictionary+NTJsonStorePrivate.m */; };
+		63FD59CE39EC51EC9D04CEE4 /* NTJsonSqlConnection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 396732F3738F3C49CFAEA746 /* NTJsonSqlConnection+Private.h */; };
+		66EA434E7FF4F515E8ACA497 /* NTJsonStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE1EB433A629496259B317B /* NTJsonStore.h */; };
+		6B5D4E9407AD9693A24874FC /* NTJsonCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB2123D77912BC8AF0A99A0 /* NTJsonCollection.h */; };
+		767728CB07B7F546A03701C0 /* NTJsonCollection+NTJsonModelStore_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D700FF433B4DDBFBCF30429 /* NTJsonCollection+NTJsonModelStore_Private.h */; };
+		778579D0BE2F19B16DE0042D /* NSDictionary+NTJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C08EB1130B0749C590AC24 /* NSDictionary+NTJsonModel.m */; };
+		7F5B994366CEBB5F218CB8B3 /* NTJsonColumn+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B266CDFE3261806555137FC4 /* NTJsonColumn+Private.h */; };
+		8529148601CE39D6B36B8EE1 /* NTJsonModelArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D03ACD1FB4BAEEB477718A /* NTJsonModelArray+Private.h */; };
+		86FA6AEEA94DB9DA384E6871 /* NTJsonStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5FB4980FC0C03C1660F947 /* NTJsonStore.m */; };
+		8763D8DFEE2579BDC64EDD62 /* NTJsonColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0080BFC7410528AA2D60A696 /* NTJsonColumn.m */; };
+		94E65BC5645FE373B63B22FC /* NSArray+NTJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD174A3290AB694813CC2286 /* NSArray+NTJsonModel.m */; };
+		9612D1394C6E0C4878827C25 /* NSError+NTJsonStorePrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0375874F9218F830B25FB4E0 /* NSError+NTJsonStorePrivate.m */; };
+		975348DAD5A55AC4B155A0FD /* NTJsonModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA9B6A556663EB7CE76B1F6 /* NTJsonModelCollection.m */; };
+		9BF087AFF7F2CF87ED1DF710 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720D1A1376DEA8908D66760 /* Foundation.framework */; };
+		9DBC799B01266FA7349D108E /* NTJsonModelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D012C86B7FD78FA9AC86F2 /* NTJsonModelStore.m */; };
+		A3B9E2931659B9803D3F133C /* NTJsonStore+NTJsonModelStore_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DA7AC2615F6708D52E6FF9 /* NTJsonStore+NTJsonModelStore_Private.h */; };
+		A3C66BEE309135E5CB5D1777 /* NTJsonPropertyInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A12097C21BEB7A1EC919F7BE /* NTJsonPropertyInfo.h */; };
+		A82711F28138E8DC515D652F /* NTJsonDictionary+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EB48B12B2D6A6A9AB21A4B2C /* NTJsonDictionary+Private.h */; };
+		A9015696B78895C09DDE5057 /* Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B4B9F4344B3C08547DD61F /* Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m */; };
+		AB95A397C7B383227DB21F9E /* NSArray+NTJsonStorePrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD4C8FFF2395B3CA1D991A6 /* NSArray+NTJsonStorePrivate.m */; };
+		B5DD59FD7783F0896A8F1C64 /* NTJsonStore+NTJsonModelStore_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 081E1230E7FBA1AE67EB3C89 /* NTJsonStore+NTJsonModelStore_Private.m */; };
+		B672B8438DEA46D44ED2ACFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720D1A1376DEA8908D66760 /* Foundation.framework */; };
+		B789F8364E13801F2D5C7BC0 /* NTJsonStore+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D46056BB6DE20486B044A6 /* NTJsonStore+Private.h */; };
+		BCCF36D0685694AAF6527B7D /* NTJsonProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D76DE1AD6BAD9D0230CE9A /* NTJsonProp.m */; };
+		C1F9584B60CC6DD3560D2F91 /* NTJsonStoreTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = FFACDD40828640F2C705400F /* NTJsonStoreTypes.m */; };
+		C565C17F1C328192202966C5 /* NTJsonIndex+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1067737CB7C820E18A87DEB3 /* NTJsonIndex+Private.h */; };
+		D116955E7F021FAF8A34B819 /* NTJsonStorableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 093D85EB3C6A05A376E9AF61 /* NTJsonStorableModel.h */; };
+		D4B448746527881A28E49C17 /* NSError+NTJsonStorePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8384EBFDCDD58567F31C2269 /* NSError+NTJsonStorePrivate.h */; };
+		DA07DC8ECA12512D8D02D505 /* Pods-NTJsonModelStoreExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8501C64E2887DBBB42EF42B1 /* Pods-NTJsonModelStoreExample-dummy.m */; };
+		DBA353044690472FEACA6173 /* NSDictionary+NTJsonStorePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E6DBF6F622280ECA73471C /* NSDictionary+NTJsonStorePrivate.h */; };
+		DFE45AFEF67032B6A79D0DFA /* NSArray+NTJsonModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F854259BF0DD9140EDE1E4C7 /* NSArray+NTJsonModel.h */; };
+		E1032465D3A3B6F5415F0A9F /* Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A992D0CF74BCECFE6ED83D /* Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m */; };
+		E5DED9657022C22B36748167 /* NTJsonObjectCache+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 44BD58DE28EB59A778C3150E /* NTJsonObjectCache+Private.h */; };
+		E77531920510B1D7A5085909 /* NTJsonCollection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C148B4892B6C3AACCF410D /* NTJsonCollection+Private.h */; };
+		E7ACBA86941A646440FC9476 /* NTJsonModel+NativeConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7051C56407312B9BD8C305E0 /* NTJsonModel+NativeConversions.m */; };
+		F0CED3D64E3BF84F92486F1E /* NTJsonIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CEA455CD5A3AD3FD966B5C /* NTJsonIndex.m */; };
+		F0F2F13EEBF3322A834A6438 /* __NTJsonModelSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1204477FD10A3610850B37 /* __NTJsonModelSupport.m */; };
+		F2FF713E1781C8F0AC3F3452 /* NTJsonPropertyConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2540C721DDC67DDC3E4FAEFB /* NTJsonPropertyConversion.h */; };
+		F57E52C9E72DE78033587AA5 /* NTJsonModelStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D1255FA31F32E29F693F3B05 /* NTJsonModelStore.h */; };
+		F7A0738F5F703F937F5E064C /* NTJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3D848DC35A6904DDFE9B35 /* NTJsonModel.m */; };
+		FA889F60A8A2A1A007DB0B4B /* NTJsonProp+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D48FAC587EC85AEDD84406A5 /* NTJsonProp+Private.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		286E1E9E9E5E912DA3DD3491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86995200299E74667269072D;
+			remoteInfo = "Pods-NTJsonModelStoreExample-NTJsonModel";
+		};
+		4573B99E3B14DD8673F2623D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93E3F9035E53C9DBE7C812C1;
+			remoteInfo = "Pods-NTJsonModelStoreExample-NTJsonStore";
+		};
+		66C3BFD2518D515336F2DF6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86995200299E74667269072D;
+			remoteInfo = "Pods-NTJsonModelStoreExample-NTJsonModel";
+		};
+		CFA025148A6555924D1F9BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D7FA95C1D5669B245A688D9;
+			remoteInfo = "Pods-NTJsonModelStoreExample-NTJsonModelStore";
+		};
+		DD9BA6639B948B42A94C0B62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93E3F9035E53C9DBE7C812C1;
+			remoteInfo = "Pods-NTJsonModelStoreExample-NTJsonStore";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0080BFC7410528AA2D60A696 /* NTJsonColumn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonColumn.m; path = Classes/ios/NTJsonColumn.m; sourceTree = "<group>"; };
+		0375874F9218F830B25FB4E0 /* NSError+NTJsonStorePrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+NTJsonStorePrivate.m"; path = "Classes/ios/NSError+NTJsonStorePrivate.m"; sourceTree = "<group>"; };
+		081E1230E7FBA1AE67EB3C89 /* NTJsonStore+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTJsonStore+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
+		093D85EB3C6A05A376E9AF61 /* NTJsonStorableModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NTJsonStorableModel.h; sourceTree = "<group>"; };
+		09C148B4892B6C3AACCF410D /* NTJsonCollection+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonCollection+Private.h"; path = "Classes/ios/NTJsonCollection+Private.h"; sourceTree = "<group>"; };
+		0CFC8C1CF4D24DE8BBB92A14 /* NTJsonModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonModel.h; path = Classes/ios/NTJsonModel.h; sourceTree = "<group>"; };
+		0FA977FB4C626C9851A53EEE /* NTJsonModel+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonModel+Private.h"; path = "Classes/ios/NTJsonModel+Private.h"; sourceTree = "<group>"; };
+		1067737CB7C820E18A87DEB3 /* NTJsonIndex+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonIndex+Private.h"; path = "Classes/ios/NTJsonIndex+Private.h"; sourceTree = "<group>"; };
+		17D76DE1AD6BAD9D0230CE9A /* NTJsonProp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonProp.m; path = Classes/ios/NTJsonProp.m; sourceTree = "<group>"; };
+		21C08EB1130B0749C590AC24 /* NSDictionary+NTJsonModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NTJsonModel.m"; path = "Classes/ios/NSDictionary+NTJsonModel.m"; sourceTree = "<group>"; };
+		21CEA455CD5A3AD3FD966B5C /* NTJsonIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonIndex.m; path = Classes/ios/NTJsonIndex.m; sourceTree = "<group>"; };
+		238BE44D5E0D05816E0269C1 /* NSDictionary+NTJsonStorePrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NTJsonStorePrivate.m"; path = "Classes/ios/NSDictionary+NTJsonStorePrivate.m"; sourceTree = "<group>"; };
+		23E6DBF6F622280ECA73471C /* NSDictionary+NTJsonStorePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NTJsonStorePrivate.h"; path = "Classes/ios/NSDictionary+NTJsonStorePrivate.h"; sourceTree = "<group>"; };
+		2540C721DDC67DDC3E4FAEFB /* NTJsonPropertyConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonPropertyConversion.h; path = Classes/ios/NTJsonPropertyConversion.h; sourceTree = "<group>"; };
+		25D012C86B7FD78FA9AC86F2 /* NTJsonModelStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelStore.m; sourceTree = "<group>"; };
+		33092E982D7D44F7CB6ED6D2 /* Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch"; sourceTree = "<group>"; };
+		338B3F6A1011097B875919FD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		396732F3738F3C49CFAEA746 /* NTJsonSqlConnection+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonSqlConnection+Private.h"; path = "Classes/ios/NTJsonSqlConnection+Private.h"; sourceTree = "<group>"; };
+		44BD58DE28EB59A778C3150E /* NTJsonObjectCache+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonObjectCache+Private.h"; path = "Classes/ios/NTJsonObjectCache+Private.h"; sourceTree = "<group>"; };
+		45AC304778D0D375889BD6E1 /* Pods-NTJsonModelStoreExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NTJsonModelStoreExample-resources.sh"; sourceTree = "<group>"; };
+		47A992D0CF74BCECFE6ED83D /* Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m"; sourceTree = "<group>"; };
+		47DF7192EBD2413A1C208F68 /* Pods-NTJsonModelStoreExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NTJsonModelStoreExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4C6A711DD702C7BB23B03C13 /* Pods-NTJsonModelStoreExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample.debug.xcconfig"; sourceTree = "<group>"; };
+		4CA24A2F6ACA6234F4E9961A /* __NTJsonModelSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = __NTJsonModelSupport.h; path = Classes/ios/__NTJsonModelSupport.h; sourceTree = "<group>"; };
+		4DE698C95EEA88E3E299A3E4 /* Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig"; sourceTree = "<group>"; };
+		52367AAE22BF1B333F174C39 /* NTJsonSqlConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonSqlConnection.m; path = Classes/ios/NTJsonSqlConnection.m; sourceTree = "<group>"; };
+		584F452C84B0AFCDADFF6D9E /* NTJsonCollection+NTJsonModelStore_Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTJsonCollection+NTJsonModelStore_Private.m"; sourceTree = "<group>"; };
+		58D03ACD1FB4BAEEB477718A /* NTJsonModelArray+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonModelArray+Private.h"; path = "Classes/ios/NTJsonModelArray+Private.h"; sourceTree = "<group>"; };
+		5A40A2ADC92F86CC05542D38 /* Pods-NTJsonModelStoreExample-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NTJsonModelStoreExample-environment.h"; sourceTree = "<group>"; };
+		6D52DD7137FEF8A32F42B6CD /* Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m"; sourceTree = "<group>"; };
+		7051C56407312B9BD8C305E0 /* NTJsonModel+NativeConversions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NTJsonModel+NativeConversions.m"; path = "Classes/ios/NTJsonModel+NativeConversions.m"; sourceTree = "<group>"; };
+		777F15F3AEEFB0E2D3514E64 /* NTJsonModelCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NTJsonModelCollection.h; sourceTree = "<group>"; };
+		7D700FF433B4DDBFBCF30429 /* NTJsonCollection+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTJsonCollection+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
+		7EE1EB433A629496259B317B /* NTJsonStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonStore.h; path = Classes/ios/NTJsonStore.h; sourceTree = "<group>"; };
+		7F5FB4980FC0C03C1660F947 /* NTJsonStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonStore.m; path = Classes/ios/NTJsonStore.m; sourceTree = "<group>"; };
+		8384EBFDCDD58567F31C2269 /* NSError+NTJsonStorePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+NTJsonStorePrivate.h"; path = "Classes/ios/NSError+NTJsonStorePrivate.h"; sourceTree = "<group>"; };
+		84DA7AC2615F6708D52E6FF9 /* NTJsonStore+NTJsonModelStore_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTJsonStore+NTJsonModelStore_Private.h"; sourceTree = "<group>"; };
+		8501C64E2887DBBB42EF42B1 /* Pods-NTJsonModelStoreExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NTJsonModelStoreExample-dummy.m"; sourceTree = "<group>"; };
+		93EFDB47D24349F9354BDCA8 /* NSDictionary+NTJsonModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NTJsonModel.h"; path = "Classes/ios/NSDictionary+NTJsonModel.h"; sourceTree = "<group>"; };
+		9AF2DA7027B49A1F681EE1DB /* NTJsonObjectCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonObjectCache.m; path = Classes/ios/NTJsonObjectCache.m; sourceTree = "<group>"; };
+		9CB6DF6DB5F757CC6A0F2C38 /* NTJsonCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonCollection.m; path = Classes/ios/NTJsonCollection.m; sourceTree = "<group>"; };
+		9FB8E834776239852070EAAC /* NTJsonModelCollection+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelCollection+Private.h"; sourceTree = "<group>"; };
+		A12097C21BEB7A1EC919F7BE /* NTJsonPropertyInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonPropertyInfo.h; path = Classes/ios/NTJsonPropertyInfo.h; sourceTree = "<group>"; };
+		A130E617218B872314CAFC5C /* NTJsonStorableModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NTJsonStorableModel.m; sourceTree = "<group>"; };
+		A3ED61C59A1E24C66F20EB18 /* NTJsonModelStore+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTJsonModelStore+Private.h"; sourceTree = "<group>"; };
+		A82DA51B200A395DB4EA38A2 /* Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig"; sourceTree = "<group>"; };
+		A8B4B9F4344B3C08547DD61F /* Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m"; sourceTree = "<group>"; };
+		AD174A3290AB694813CC2286 /* NSArray+NTJsonModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NTJsonModel.m"; path = "Classes/ios/NSArray+NTJsonModel.m"; sourceTree = "<group>"; };
+		AEA9B6A556663EB7CE76B1F6 /* NTJsonModelCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NTJsonModelCollection.m; sourceTree = "<group>"; };
+		B266CDFE3261806555137FC4 /* NTJsonColumn+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonColumn+Private.h"; path = "Classes/ios/NTJsonColumn+Private.h"; sourceTree = "<group>"; };
+		B85A4A1C96108A26F5E77907 /* NTJsonModel+NativeConversions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonModel+NativeConversions.h"; path = "Classes/ios/NTJsonModel+NativeConversions.h"; sourceTree = "<group>"; };
+		BFB2123D77912BC8AF0A99A0 /* NTJsonCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonCollection.h; path = Classes/ios/NTJsonCollection.h; sourceTree = "<group>"; };
+		C1B5F1ACCE83260941BBCDF3 /* Pods-NTJsonModelStoreExample-NTJsonStore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonStore.xcconfig"; sourceTree = "<group>"; };
+		C3A908F5A3C96D2A0D8D8455 /* NTJsonModelArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonModelArray.m; path = Classes/ios/NTJsonModelArray.m; sourceTree = "<group>"; };
+		C4FD715E97DE26042A8AC90E /* NTJsonStoreTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NTJsonStoreTypes.h; path = Classes/ios/NTJsonStoreTypes.h; sourceTree = "<group>"; };
+		C55A9B4354EEC8F9F03CDF6D /* Pods-NTJsonModelStoreExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NTJsonModelStoreExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD1204477FD10A3610850B37 /* __NTJsonModelSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = __NTJsonModelSupport.m; path = Classes/ios/__NTJsonModelSupport.m; sourceTree = "<group>"; };
+		D0D46056BB6DE20486B044A6 /* NTJsonStore+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonStore+Private.h"; path = "Classes/ios/NTJsonStore+Private.h"; sourceTree = "<group>"; };
+		D1255FA31F32E29F693F3B05 /* NTJsonModelStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NTJsonModelStore.h; sourceTree = "<group>"; };
+		D41ECF1B7A124B30AFD2E7B1 /* Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch"; sourceTree = "<group>"; };
+		D48FAC587EC85AEDD84406A5 /* NTJsonProp+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonProp+Private.h"; path = "Classes/ios/NTJsonProp+Private.h"; sourceTree = "<group>"; };
+		D720D1A1376DEA8908D66760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D7A2B9962B4805EFBE046297 /* Pods-NTJsonModelStoreExample-NTJsonModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonModel.xcconfig"; sourceTree = "<group>"; };
+		D88507E8A990C5FA72E341E1 /* Pods-NTJsonModelStoreExample-NTJsonModelStore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonModelStore.xcconfig"; sourceTree = "<group>"; };
+		D8EE567B4CAD7253132086FE /* libPods-NTJsonModelStoreExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D953B1BBF4887A94F3F033D2 /* Pods-NTJsonModelStoreExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample.release.xcconfig"; sourceTree = "<group>"; };
+		DA3D848DC35A6904DDFE9B35 /* NTJsonModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonModel.m; path = Classes/ios/NTJsonModel.m; sourceTree = "<group>"; };
+		DE2FC212A11B228E4F903F3C /* libPods-NTJsonModelStoreExample-NTJsonStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreExample-NTJsonStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4262319EA580D84A4470116 /* NTJsonDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonDictionary.m; path = Classes/ios/NTJsonDictionary.m; sourceTree = "<group>"; };
+		E97EED374075D4193A3E793A /* libPods-NTJsonModelStoreExample-NTJsonModelStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreExample-NTJsonModelStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB48B12B2D6A6A9AB21A4B2C /* NTJsonDictionary+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NTJsonDictionary+Private.h"; path = "Classes/ios/NTJsonDictionary+Private.h"; sourceTree = "<group>"; };
+		F03B33E9904F5CFBE345C782 /* NSArray+NTJsonStorePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+NTJsonStorePrivate.h"; path = "Classes/ios/NSArray+NTJsonStorePrivate.h"; sourceTree = "<group>"; };
+		F166B8DD3B2B005ECD3F5BEF /* Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig"; sourceTree = "<group>"; };
+		F854259BF0DD9140EDE1E4C7 /* NSArray+NTJsonModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+NTJsonModel.h"; path = "Classes/ios/NSArray+NTJsonModel.h"; sourceTree = "<group>"; };
+		FA88C5A04B8DFC72DD6BFA4B /* Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch"; sourceTree = "<group>"; };
+		FA959CB983AEA92A15B53C9C /* libPods-NTJsonModelStoreExample-NTJsonModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTJsonModelStoreExample-NTJsonModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFACDD40828640F2C705400F /* NTJsonStoreTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NTJsonStoreTypes.m; path = Classes/ios/NTJsonStoreTypes.m; sourceTree = "<group>"; };
+		FFD4C8FFF2395B3CA1D991A6 /* NSArray+NTJsonStorePrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NTJsonStorePrivate.m"; path = "Classes/ios/NSArray+NTJsonStorePrivate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		127D3D3662EF9E3D39DAF453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C7AFCB3AE807ADFD2BCC870 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E1A85A3BB1C2491AD37462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6EB16DCB98C7D71E9EDA2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98AF71918B0C43A08512373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B672B8438DEA46D44ED2ACFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACC8FA84711C88070C195E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BF087AFF7F2CF87ED1DF710 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F6007267FDA26858E0890D1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				823AB7ED15997ABB3B6B6830 /* NTJsonModelStore */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3606316770D53A58F98101B8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D700FF433B4DDBFBCF30429 /* NTJsonCollection+NTJsonModelStore_Private.h */,
+				584F452C84B0AFCDADFF6D9E /* NTJsonCollection+NTJsonModelStore_Private.m */,
+				777F15F3AEEFB0E2D3514E64 /* NTJsonModelCollection.h */,
+				AEA9B6A556663EB7CE76B1F6 /* NTJsonModelCollection.m */,
+				9FB8E834776239852070EAAC /* NTJsonModelCollection+Private.h */,
+				D1255FA31F32E29F693F3B05 /* NTJsonModelStore.h */,
+				25D012C86B7FD78FA9AC86F2 /* NTJsonModelStore.m */,
+				A3ED61C59A1E24C66F20EB18 /* NTJsonModelStore+Private.h */,
+				093D85EB3C6A05A376E9AF61 /* NTJsonStorableModel.h */,
+				A130E617218B872314CAFC5C /* NTJsonStorableModel.m */,
+				84DA7AC2615F6708D52E6FF9 /* NTJsonStore+NTJsonModelStore_Private.h */,
+				081E1230E7FBA1AE67EB3C89 /* NTJsonStore+NTJsonModelStore_Private.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3B2944A4C8460804A139C7AB /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3606316770D53A58F98101B8 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		41C11AFB29BD90768240E91F = {
+			isa = PBXGroup;
+			children = (
+				338B3F6A1011097B875919FD /* Podfile */,
+				2F6007267FDA26858E0890D1 /* Development Pods */,
+				C8BDD6002A7813BA6EB49F1B /* Frameworks */,
+				D13F9FBA0DB96234BD90E5B5 /* Pods */,
+				88E4CB5562AEBED95F438A57 /* Products */,
+				DF4BC620DAEC9E5A16C77BA4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		78D45321E60E8E0D02BD71CB /* NTJsonStore */ = {
+			isa = PBXGroup;
+			children = (
+				F03B33E9904F5CFBE345C782 /* NSArray+NTJsonStorePrivate.h */,
+				FFD4C8FFF2395B3CA1D991A6 /* NSArray+NTJsonStorePrivate.m */,
+				23E6DBF6F622280ECA73471C /* NSDictionary+NTJsonStorePrivate.h */,
+				238BE44D5E0D05816E0269C1 /* NSDictionary+NTJsonStorePrivate.m */,
+				8384EBFDCDD58567F31C2269 /* NSError+NTJsonStorePrivate.h */,
+				0375874F9218F830B25FB4E0 /* NSError+NTJsonStorePrivate.m */,
+				BFB2123D77912BC8AF0A99A0 /* NTJsonCollection.h */,
+				9CB6DF6DB5F757CC6A0F2C38 /* NTJsonCollection.m */,
+				09C148B4892B6C3AACCF410D /* NTJsonCollection+Private.h */,
+				0080BFC7410528AA2D60A696 /* NTJsonColumn.m */,
+				B266CDFE3261806555137FC4 /* NTJsonColumn+Private.h */,
+				E4262319EA580D84A4470116 /* NTJsonDictionary.m */,
+				EB48B12B2D6A6A9AB21A4B2C /* NTJsonDictionary+Private.h */,
+				21CEA455CD5A3AD3FD966B5C /* NTJsonIndex.m */,
+				1067737CB7C820E18A87DEB3 /* NTJsonIndex+Private.h */,
+				9AF2DA7027B49A1F681EE1DB /* NTJsonObjectCache.m */,
+				44BD58DE28EB59A778C3150E /* NTJsonObjectCache+Private.h */,
+				52367AAE22BF1B333F174C39 /* NTJsonSqlConnection.m */,
+				396732F3738F3C49CFAEA746 /* NTJsonSqlConnection+Private.h */,
+				7EE1EB433A629496259B317B /* NTJsonStore.h */,
+				7F5FB4980FC0C03C1660F947 /* NTJsonStore.m */,
+				D0D46056BB6DE20486B044A6 /* NTJsonStore+Private.h */,
+				C4FD715E97DE26042A8AC90E /* NTJsonStoreTypes.h */,
+				FFACDD40828640F2C705400F /* NTJsonStoreTypes.m */,
+				B9C9A034E38DA144C55BD18D /* Support Files */,
+			);
+			path = NTJsonStore;
+			sourceTree = "<group>";
+		};
+		823AB7ED15997ABB3B6B6830 /* NTJsonModelStore */ = {
+			isa = PBXGroup;
+			children = (
+				3B2944A4C8460804A139C7AB /* Pod */,
+				F8365B253A3F308697C50E73 /* Support Files */,
+			);
+			name = NTJsonModelStore;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		88E4CB5562AEBED95F438A57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE567B4CAD7253132086FE /* libPods-NTJsonModelStoreExample.a */,
+				FA959CB983AEA92A15B53C9C /* libPods-NTJsonModelStoreExample-NTJsonModel.a */,
+				E97EED374075D4193A3E793A /* libPods-NTJsonModelStoreExample-NTJsonModelStore.a */,
+				DE2FC212A11B228E4F903F3C /* libPods-NTJsonModelStoreExample-NTJsonStore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B8D99F02557B4CDB238C85C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D720D1A1376DEA8908D66760 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9ED62F87E66592DE5B2D505F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7A2B9962B4805EFBE046297 /* Pods-NTJsonModelStoreExample-NTJsonModel.xcconfig */,
+				A82DA51B200A395DB4EA38A2 /* Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig */,
+				47A992D0CF74BCECFE6ED83D /* Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m */,
+				FA88C5A04B8DFC72DD6BFA4B /* Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel";
+			sourceTree = "<group>";
+		};
+		9F0D0D6505C39D5B976CE4EE /* Pods-NTJsonModelStoreExample */ = {
+			isa = PBXGroup;
+			children = (
+				47DF7192EBD2413A1C208F68 /* Pods-NTJsonModelStoreExample-acknowledgements.markdown */,
+				C55A9B4354EEC8F9F03CDF6D /* Pods-NTJsonModelStoreExample-acknowledgements.plist */,
+				8501C64E2887DBBB42EF42B1 /* Pods-NTJsonModelStoreExample-dummy.m */,
+				5A40A2ADC92F86CC05542D38 /* Pods-NTJsonModelStoreExample-environment.h */,
+				45AC304778D0D375889BD6E1 /* Pods-NTJsonModelStoreExample-resources.sh */,
+				4C6A711DD702C7BB23B03C13 /* Pods-NTJsonModelStoreExample.debug.xcconfig */,
+				D953B1BBF4887A94F3F033D2 /* Pods-NTJsonModelStoreExample.release.xcconfig */,
+			);
+			name = "Pods-NTJsonModelStoreExample";
+			path = "Target Support Files/Pods-NTJsonModelStoreExample";
+			sourceTree = "<group>";
+		};
+		B9C9A034E38DA144C55BD18D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5F1ACCE83260941BBCDF3 /* Pods-NTJsonModelStoreExample-NTJsonStore.xcconfig */,
+				4DE698C95EEA88E3E299A3E4 /* Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig */,
+				A8B4B9F4344B3C08547DD61F /* Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m */,
+				D41ECF1B7A124B30AFD2E7B1 /* Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore";
+			sourceTree = "<group>";
+		};
+		C8BDD6002A7813BA6EB49F1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B8D99F02557B4CDB238C85C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D13F9FBA0DB96234BD90E5B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAED0FA42C9A269D66AC68FB /* NTJsonModel */,
+				78D45321E60E8E0D02BD71CB /* NTJsonStore */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DAED0FA42C9A269D66AC68FB /* NTJsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				F854259BF0DD9140EDE1E4C7 /* NSArray+NTJsonModel.h */,
+				AD174A3290AB694813CC2286 /* NSArray+NTJsonModel.m */,
+				93EFDB47D24349F9354BDCA8 /* NSDictionary+NTJsonModel.h */,
+				21C08EB1130B0749C590AC24 /* NSDictionary+NTJsonModel.m */,
+				0CFC8C1CF4D24DE8BBB92A14 /* NTJsonModel.h */,
+				DA3D848DC35A6904DDFE9B35 /* NTJsonModel.m */,
+				B85A4A1C96108A26F5E77907 /* NTJsonModel+NativeConversions.h */,
+				7051C56407312B9BD8C305E0 /* NTJsonModel+NativeConversions.m */,
+				0FA977FB4C626C9851A53EEE /* NTJsonModel+Private.h */,
+				C3A908F5A3C96D2A0D8D8455 /* NTJsonModelArray.m */,
+				58D03ACD1FB4BAEEB477718A /* NTJsonModelArray+Private.h */,
+				17D76DE1AD6BAD9D0230CE9A /* NTJsonProp.m */,
+				D48FAC587EC85AEDD84406A5 /* NTJsonProp+Private.h */,
+				2540C721DDC67DDC3E4FAEFB /* NTJsonPropertyConversion.h */,
+				A12097C21BEB7A1EC919F7BE /* NTJsonPropertyInfo.h */,
+				4CA24A2F6ACA6234F4E9961A /* __NTJsonModelSupport.h */,
+				CD1204477FD10A3610850B37 /* __NTJsonModelSupport.m */,
+				9ED62F87E66592DE5B2D505F /* Support Files */,
+			);
+			path = NTJsonModel;
+			sourceTree = "<group>";
+		};
+		DF4BC620DAEC9E5A16C77BA4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D0D6505C39D5B976CE4EE /* Pods-NTJsonModelStoreExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F8365B253A3F308697C50E73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D88507E8A990C5FA72E341E1 /* Pods-NTJsonModelStoreExample-NTJsonModelStore.xcconfig */,
+				F166B8DD3B2B005ECD3F5BEF /* Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig */,
+				6D52DD7137FEF8A32F42B6CD /* Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m */,
+				33092E982D7D44F7CB6ED6D2 /* Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/NTJsonModelStoreExample/Pods/Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0812188967D4942F997B8B7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767728CB07B7F546A03701C0 /* NTJsonCollection+NTJsonModelStore_Private.h in Headers */,
+				0FEA9CDFFC1A6CC047518A7C /* NTJsonModelCollection+Private.h in Headers */,
+				01B6DEF79AE734CBE6638628 /* NTJsonModelCollection.h in Headers */,
+				2FD069015D5C8763621F2275 /* NTJsonModelStore+Private.h in Headers */,
+				F57E52C9E72DE78033587AA5 /* NTJsonModelStore.h in Headers */,
+				D116955E7F021FAF8A34B819 /* NTJsonStorableModel.h in Headers */,
+				A3B9E2931659B9803D3F133C /* NTJsonStore+NTJsonModelStore_Private.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FAD14631A03C9645164A9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC635ED45DC0B50210D9062 /* NSArray+NTJsonStorePrivate.h in Headers */,
+				DBA353044690472FEACA6173 /* NSDictionary+NTJsonStorePrivate.h in Headers */,
+				D4B448746527881A28E49C17 /* NSError+NTJsonStorePrivate.h in Headers */,
+				E77531920510B1D7A5085909 /* NTJsonCollection+Private.h in Headers */,
+				6B5D4E9407AD9693A24874FC /* NTJsonCollection.h in Headers */,
+				7F5B994366CEBB5F218CB8B3 /* NTJsonColumn+Private.h in Headers */,
+				A82711F28138E8DC515D652F /* NTJsonDictionary+Private.h in Headers */,
+				C565C17F1C328192202966C5 /* NTJsonIndex+Private.h in Headers */,
+				E5DED9657022C22B36748167 /* NTJsonObjectCache+Private.h in Headers */,
+				63FD59CE39EC51EC9D04CEE4 /* NTJsonSqlConnection+Private.h in Headers */,
+				B789F8364E13801F2D5C7BC0 /* NTJsonStore+Private.h in Headers */,
+				66EA434E7FF4F515E8ACA497 /* NTJsonStore.h in Headers */,
+				5B006F318D21A122DC849BEB /* NTJsonStoreTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		460E64B6BF0C823012F49407 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE45AFEF67032B6A79D0DFA /* NSArray+NTJsonModel.h in Headers */,
+				1B585B3744B906DAD387711D /* NSDictionary+NTJsonModel.h in Headers */,
+				2A6626643F636CA17ED03DD5 /* NTJsonModel+NativeConversions.h in Headers */,
+				2F56F2358EBF4BC394F10760 /* NTJsonModel+Private.h in Headers */,
+				047809A35F8651F3EA1F6373 /* NTJsonModel.h in Headers */,
+				8529148601CE39D6B36B8EE1 /* NTJsonModelArray+Private.h in Headers */,
+				FA889F60A8A2A1A007DB0B4B /* NTJsonProp+Private.h in Headers */,
+				F2FF713E1781C8F0AC3F3452 /* NTJsonPropertyConversion.h in Headers */,
+				A3C66BEE309135E5CB5D1777 /* NTJsonPropertyInfo.h in Headers */,
+				5AE777514CAE7206E6C47A2D /* __NTJsonModelSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		364735C2BA72A32572126251 /* Pods-NTJsonModelStoreExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BEE2E8495FDB55D5B71D9FD /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample" */;
+			buildPhases = (
+				DDEADBCCB084CB8A0528B9FA /* Sources */,
+				EACC8FA84711C88070C195E2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35E2DD68AF13B093710129F5 /* PBXTargetDependency */,
+				6688F03F5A19F431E2B406EE /* PBXTargetDependency */,
+				224B8549818BB65692AA1676 /* PBXTargetDependency */,
+			);
+			name = "Pods-NTJsonModelStoreExample";
+			productName = "Pods-NTJsonModelStoreExample";
+			productReference = D8EE567B4CAD7253132086FE /* libPods-NTJsonModelStoreExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7D7FA95C1D5669B245A688D9 /* Pods-NTJsonModelStoreExample-NTJsonModelStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B254B32E84EFDF5C86DD905 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonModelStore" */;
+			buildPhases = (
+				5A52DC782098AAD6EBA1501F /* Sources */,
+				C4E1A85A3BB1C2491AD37462 /* Frameworks */,
+				0812188967D4942F997B8B7A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				677FBE0C0122E33AC7080FFC /* PBXTargetDependency */,
+				639FE10062B3262AC5E4BF4D /* PBXTargetDependency */,
+			);
+			name = "Pods-NTJsonModelStoreExample-NTJsonModelStore";
+			productName = "Pods-NTJsonModelStoreExample-NTJsonModelStore";
+			productReference = E97EED374075D4193A3E793A /* libPods-NTJsonModelStoreExample-NTJsonModelStore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		86995200299E74667269072D /* Pods-NTJsonModelStoreExample-NTJsonModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B7B51E3BB6B4EA45FE3C14 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonModel" */;
+			buildPhases = (
+				24AD7203BE1B8B35992FE5B3 /* Sources */,
+				127D3D3662EF9E3D39DAF453 /* Frameworks */,
+				460E64B6BF0C823012F49407 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NTJsonModelStoreExample-NTJsonModel";
+			productName = "Pods-NTJsonModelStoreExample-NTJsonModel";
+			productReference = FA959CB983AEA92A15B53C9C /* libPods-NTJsonModelStoreExample-NTJsonModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		93E3F9035E53C9DBE7C812C1 /* Pods-NTJsonModelStoreExample-NTJsonStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8794FA4543D2CE0AE88BAF53 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonStore" */;
+			buildPhases = (
+				EC6595A7A0DA4982B093FA6E /* Sources */,
+				C98AF71918B0C43A08512373 /* Frameworks */,
+				40FAD14631A03C9645164A9E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NTJsonModelStoreExample-NTJsonStore";
+			productName = "Pods-NTJsonModelStoreExample-NTJsonStore";
+			productReference = DE2FC212A11B228E4F903F3C /* libPods-NTJsonModelStoreExample-NTJsonStore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 9BE22A38B43098F6D7F275AF /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41C11AFB29BD90768240E91F;
+			productRefGroup = 88E4CB5562AEBED95F438A57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				364735C2BA72A32572126251 /* Pods-NTJsonModelStoreExample */,
+				86995200299E74667269072D /* Pods-NTJsonModelStoreExample-NTJsonModel */,
+				7D7FA95C1D5669B245A688D9 /* Pods-NTJsonModelStoreExample-NTJsonModelStore */,
+				93E3F9035E53C9DBE7C812C1 /* Pods-NTJsonModelStoreExample-NTJsonStore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24AD7203BE1B8B35992FE5B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E65BC5645FE373B63B22FC /* NSArray+NTJsonModel.m in Sources */,
+				778579D0BE2F19B16DE0042D /* NSDictionary+NTJsonModel.m in Sources */,
+				E7ACBA86941A646440FC9476 /* NTJsonModel+NativeConversions.m in Sources */,
+				F7A0738F5F703F937F5E064C /* NTJsonModel.m in Sources */,
+				213431179E2703381B49E4D0 /* NTJsonModelArray.m in Sources */,
+				BCCF36D0685694AAF6527B7D /* NTJsonProp.m in Sources */,
+				E1032465D3A3B6F5415F0A9F /* Pods-NTJsonModelStoreExample-NTJsonModel-dummy.m in Sources */,
+				F0F2F13EEBF3322A834A6438 /* __NTJsonModelSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A52DC782098AAD6EBA1501F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0937A1993A298E962F4CFA3D /* NTJsonCollection+NTJsonModelStore_Private.m in Sources */,
+				975348DAD5A55AC4B155A0FD /* NTJsonModelCollection.m in Sources */,
+				9DBC799B01266FA7349D108E /* NTJsonModelStore.m in Sources */,
+				01FC427E51E00769501C66AB /* NTJsonStorableModel.m in Sources */,
+				B5DD59FD7783F0896A8F1C64 /* NTJsonStore+NTJsonModelStore_Private.m in Sources */,
+				58E02E9EAD2686DB08B56BD5 /* Pods-NTJsonModelStoreExample-NTJsonModelStore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDEADBCCB084CB8A0528B9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA07DC8ECA12512D8D02D505 /* Pods-NTJsonModelStoreExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6595A7A0DA4982B093FA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB95A397C7B383227DB21F9E /* NSArray+NTJsonStorePrivate.m in Sources */,
+				5B4836A6A079C3B84A02D532 /* NSDictionary+NTJsonStorePrivate.m in Sources */,
+				9612D1394C6E0C4878827C25 /* NSError+NTJsonStorePrivate.m in Sources */,
+				06BDB4888F51DFB700FDCBB7 /* NTJsonCollection.m in Sources */,
+				8763D8DFEE2579BDC64EDD62 /* NTJsonColumn.m in Sources */,
+				03D1441D9B5D4844378DDE35 /* NTJsonDictionary.m in Sources */,
+				F0CED3D64E3BF84F92486F1E /* NTJsonIndex.m in Sources */,
+				3B9ACF339070F761E91B226A /* NTJsonObjectCache.m in Sources */,
+				22E7E6D1791533A58E5EE406 /* NTJsonSqlConnection.m in Sources */,
+				86FA6AEEA94DB9DA384E6871 /* NTJsonStore.m in Sources */,
+				C1F9584B60CC6DD3560D2F91 /* NTJsonStoreTypes.m in Sources */,
+				A9015696B78895C09DDE5057 /* Pods-NTJsonModelStoreExample-NTJsonStore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224B8549818BB65692AA1676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NTJsonModelStoreExample-NTJsonStore";
+			target = 93E3F9035E53C9DBE7C812C1 /* Pods-NTJsonModelStoreExample-NTJsonStore */;
+			targetProxy = DD9BA6639B948B42A94C0B62 /* PBXContainerItemProxy */;
+		};
+		35E2DD68AF13B093710129F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NTJsonModelStoreExample-NTJsonModel";
+			target = 86995200299E74667269072D /* Pods-NTJsonModelStoreExample-NTJsonModel */;
+			targetProxy = 66C3BFD2518D515336F2DF6D /* PBXContainerItemProxy */;
+		};
+		639FE10062B3262AC5E4BF4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NTJsonModelStoreExample-NTJsonStore";
+			target = 93E3F9035E53C9DBE7C812C1 /* Pods-NTJsonModelStoreExample-NTJsonStore */;
+			targetProxy = 4573B99E3B14DD8673F2623D /* PBXContainerItemProxy */;
+		};
+		6688F03F5A19F431E2B406EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NTJsonModelStoreExample-NTJsonModelStore";
+			target = 7D7FA95C1D5669B245A688D9 /* Pods-NTJsonModelStoreExample-NTJsonModelStore */;
+			targetProxy = CFA025148A6555924D1F9BE5 /* PBXContainerItemProxy */;
+		};
+		677FBE0C0122E33AC7080FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NTJsonModelStoreExample-NTJsonModel";
+			target = 86995200299E74667269072D /* Pods-NTJsonModelStoreExample-NTJsonModel */;
+			targetProxy = 286E1E9E9E5E912DA3DD3491 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04A587670A31561F79112BB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		270A37FA59DF321C6FA1B14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82DA51B200A395DB4EA38A2 /* Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel/Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		31723EA9E215E32A6EF6A600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C6A711DD702C7BB23B03C13 /* Pods-NTJsonModelStoreExample.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6E4F50C4116959A432F35EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D953B1BBF4887A94F3F033D2 /* Pods-NTJsonModelStoreExample.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A10DE99A4B903E55AFC4E80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE698C95EEA88E3E299A3E4 /* Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore/Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AAE540B09D85BAEB69D7329B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE698C95EEA88E3E299A3E4 /* Pods-NTJsonModelStoreExample-NTJsonStore-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonStore/Pods-NTJsonModelStoreExample-NTJsonStore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BB6432591FAA0DB0E64F9FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82DA51B200A395DB4EA38A2 /* Pods-NTJsonModelStoreExample-NTJsonModel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModel/Pods-NTJsonModelStoreExample-NTJsonModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DCC801C2E5B268BABEB0FC91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E1629EC03B65DF4D6500973E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F166B8DD3B2B005ECD3F5BEF /* Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore/Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E2D54177682899CCA950A4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F166B8DD3B2B005ECD3F5BEF /* Pods-NTJsonModelStoreExample-NTJsonModelStore-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NTJsonModelStoreExample-NTJsonModelStore/Pods-NTJsonModelStoreExample-NTJsonModelStore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B254B32E84EFDF5C86DD905 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonModelStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1629EC03B65DF4D6500973E /* Debug */,
+				E2D54177682899CCA950A4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B7B51E3BB6B4EA45FE3C14 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6432591FAA0DB0E64F9FB0 /* Debug */,
+				270A37FA59DF321C6FA1B14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BEE2E8495FDB55D5B71D9FD /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31723EA9E215E32A6EF6A600 /* Debug */,
+				6E4F50C4116959A432F35EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8794FA4543D2CE0AE88BAF53 /* Build configuration list for PBXNativeTarget "Pods-NTJsonModelStoreExample-NTJsonStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10DE99A4B903E55AFC4E80B /* Debug */,
+				AAE540B09D85BAEB69D7329B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE22A38B43098F6D7F275AF /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC801C2E5B268BABEB0FC91 /* Debug */,
+				04A587670A31561F79112BB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A5AB5D2E5A26B8BC2E3E9E2 /* Project object */;
+}

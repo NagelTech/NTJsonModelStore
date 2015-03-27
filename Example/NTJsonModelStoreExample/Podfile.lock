@@ -1,36 +1,20 @@
 PODS:
-  - NTJsonModel (0.50)
+  - NTJsonModel (1.00)
   - NTJsonModelStore (0.50):
-    - NTJsonModel
-    - NTJsonStore
-  - NTJsonStore (0.20)
+    - NTJsonModel (~> 1.00)
+    - NTJsonStore (~> 1.00)
+  - NTJsonStore (1.00)
 
 DEPENDENCIES:
-  - NTJsonModel (from `https://github.com/NagelTech/NTJsonModel.git`, branch `develop`)
   - NTJsonModelStore (from `../../`)
-  - NTJsonStore (from `https://github.com/NagelTech/NTJsonStore.git`, branch `develop`)
 
 EXTERNAL SOURCES:
-  NTJsonModel:
-    :branch: develop
-    :git: https://github.com/NagelTech/NTJsonModel.git
   NTJsonModelStore:
     :path: ../../
-  NTJsonStore:
-    :branch: develop
-    :git: https://github.com/NagelTech/NTJsonStore.git
-
-CHECKOUT OPTIONS:
-  NTJsonModel:
-    :commit: e6b453d347932f4b2e3c391c8285c32ca015e8bc
-    :git: https://github.com/NagelTech/NTJsonModel.git
-  NTJsonStore:
-    :commit: 82cb49f66f8a701f3dae22c97bbfbc5a982c419d
-    :git: https://github.com/NagelTech/NTJsonStore.git
 
 SPEC CHECKSUMS:
-  NTJsonModel: 031276b518db023ad09c314a45b2389835d77e21
-  NTJsonModelStore: 87f278b9b8e067983829841dd427482e24a706a1
-  NTJsonStore: 7c79ecc2f02b17d9e3ffa68235640029923edc59
+  NTJsonModel: 12acd96dccf8d5247e12cbfa6ff02e3e5bd32555
+  NTJsonModelStore: 8fb55c7950c430d42a5e7df81778dd0013230b58
+  NTJsonStore: 4c9fbdb4348042546018009923f3dda47e78540a
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.0

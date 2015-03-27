@@ -1,0 +1,28 @@
+{
+  "name": "NTJsonStore",
+  "version": "0.20",
+  "summary": "[In development] A No-SQL-like JSON data store, transparently leveraging SQLITE for storage and indexing.",
+  "homepage": "https://github.com/NagelTech/NTJsonStore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ethan Nagel": "eanagel@gmail.com"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source": {
+    "git": "https://github.com/NagelTech/NTJsonStore.git",
+    "tag": "0.20"
+  },
+  "requires_arc": true,
+  "libraries": "sqlite3",
+  "source_files": "Classes/ios/*.{h,m}",
+  "public_header_files": [
+    "NTJsonStore.h",
+    "NTJsonCollection.h",
+    "NTJsonStoreTypes.h"
+  ]
+}

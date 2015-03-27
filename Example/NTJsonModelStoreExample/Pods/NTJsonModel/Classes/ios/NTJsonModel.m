@@ -25,12 +25,34 @@
 @implementation NTJsonModel
 
 
-#pragma mark - One-time initialization
+#pragma mark - Class properties
 
 
 +(__NTJsonModelSupport *)__ntJsonModelSupport
 {
-    return objc_getAssociatedObject(self, @selector(__ntJsonModelSupport));
+    __NTJsonModelSupport *support = objc_getAssociatedObject(self, @selector(__ntJsonModelSupport));
+
+    if ( !support )
+    {
+        // Don't allow this to run more than once, even on multiple threads...
+
+        @synchronized(self)
+        {
+           support = objc_getAssociatedObject(self, @selector(__ntJsonModelSupport));
+
+            if ( !support )
+            {
+                support = [[__NTJsonModelSupport alloc] initWithModelClass:self];
+
+                if ( !support ) // unlikely, but just in case...
+                    @throw [NSException exceptionWithName:@"NTJsonPropertyError" reason:@"Unknown error initializing NTJsonModel class" userInfo:nil];
+
+                objc_setAssociatedObject(self, @selector(__ntJsonModelSupport), support, OBJC_ASSOCIATION_RETAIN);
+            }
+        } // synchronized
+    } // if
+
+    return support;
 }
 
 
@@ -40,22 +62,16 @@
 }
 
 
-+(void)initialize
+#pragma mark - resolveInstanceMethod
+
+
++(BOOL)resolveInstanceMethod:(SEL)sel
 {
-    if ( ![self __ntJsonModelSupport] )
-    {
-        // The init call here does all initialization, including adding property getter/setters.
-        // If it fails, an exception will be thrown.
-        
-        __NTJsonModelSupport *support = [[__NTJsonModelSupport alloc] initWithModelClass:self];
-        
-        if ( !support ) // unlikely, but just in case...
-            @throw [NSException exceptionWithName:@"NTJsonPropertyError" reason:@"Unknown error initializing NTJsonModel class" userInfo:nil];
-        
-        objc_setAssociatedObject(self, @selector(__ntJsonModelSupport), support, OBJC_ASSOCIATION_RETAIN);
-        
-        return ;
-    }
+    // This ensures that we have been initialized and our property getters/setters have been implemented
+
+    [self __ntJsonModelSupport];
+
+    return [super resolveInstanceMethod:sel];
 }
 
 

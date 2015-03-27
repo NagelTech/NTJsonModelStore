@@ -15,4 +15,6 @@
 +(id)convertJsonToValue:(id)json;
 +(id)convertValueToJson:(id)value;
 
++(id)validateCachedValue:(id)value forJson:(id)json;
+
 @end

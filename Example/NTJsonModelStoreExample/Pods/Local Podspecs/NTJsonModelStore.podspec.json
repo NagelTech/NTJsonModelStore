@@ -1,0 +1,36 @@
+{
+  "name": "NTJsonModelStore",
+  "version": "0.50",
+  "summary": "[In development]",
+  "homepage": "https://github.com/NagelTech/NTJsonModelStore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ethan Nagel": "eanagel@gmail.com"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source": {
+    "git": "https://github.com/NagelTech/NTJsonModelStore.git",
+    "branch": "develop"
+  },
+  "requires_arc": true,
+  "libraries": "sqlite3",
+  "source_files": "Pod/Classes/*.{h,m}",
+  "public_header_files": [
+    "NTJsonModelStore.h",
+    "NTJsonModelCollection.h",
+    "NTJsonStorableModel.h"
+  ],
+  "dependencies": {
+    "NTJsonStore": [
+      "~> 1.00"
+    ],
+    "NTJsonModel": [
+      "~> 1.00"
+    ]
+  }
+}

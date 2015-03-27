@@ -40,11 +40,13 @@ typedef enum
 @property (nonatomic,readonly) BOOL shouldCache;
 @property (nonatomic,readonly) BOOL cachedObject;
 @property (nonatomic,readonly) BOOL isReadOnly;
+@property (nonatomic,readonly) BOOL supportsCacheValidation;
 
 // conversion
 
 -(id)object_convertValueToJson:(id)object;
 -(id)object_convertJsonToValue:(id)json;
+-(id)object_validateCachedValue:(id)object forJson:(id)json;
 
 -(id)convertValueToJson:(id)object;
 -(id)convertJsonToValue:(id)json;
